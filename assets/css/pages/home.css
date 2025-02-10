@@ -21,64 +21,28 @@
     height: 100%;
     object-fit:cover;
   }
-  
-  .slide-caption {
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 40px;
-    font-family: 'Montserrat';
-  }
   .carousel-caption{
     position: absolute;
-    --translateX: 15%;
-    --translateY: -150% !important;
-    transform: translate(var(--translateX), var(--translateY));
-     z-index: 100;
-     backdrop-filter: blur(15px);
-     background: rgba(255, 255, 255, 0.425);
-     width: 70%;
-     max-width: 55%;
-  }
-  /* .carousel-caption::after {
-    content: "";
-    display: block;
-    width: 100px; 
-    height: 3px; 
-    background-color: #68afe2; 
-    margin: 5px auto 0;  
-    border-radius: 2px; 
-  } */
-  .carousel-caption h1{
-    width: 100%;
+    --translateX: 0%;
+  --translateY: -100% !important;
+  transform: translate(var(--translateX), var(--translateY));
+    z-index: 100;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
   }
-  .carousel-caption small{
-    font-size: 14px;
-    position: relative;
-    left: 120px;
+  .nadpus img{
+    filter:brightness(0) invert(1);
+    height: 40%;
   }
-  .swiper-button-next,
-.swiper-button-prev {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.swiper-button-next {
-  background-image: url('/assets/images/home/arrow-right.svg'); /* Ваше зображення для наступної стрілки */
-}
-
-.swiper-button-prev {
-  background-image: url('/assets/images/home/arrow-left.svg'); /* Ваше зображення для попередньої стрілки */
-}
+  .logo-zhydychun img{
+    height: 200px;
+  }
+  swiper-container::part(button-prev),
+  swiper-container::part(button-next) {
+      color: white;
+  }
   .none{
     height: 1000px;
   }
