@@ -1,0 +1,79 @@
+.social-media svg{
+    fill: var(--bs-heading-color);
+    transform: scale(2.3);
+    transition: 0.3s ease;
+  }
+  .nav-item{
+    width: 70%;
+  }
+  #footer-container{
+    background-color: #393e42;
+    padding-top:20px;
+    font-family:'Montserrat';
+    color:white !important;
+    text-decoration: none;
+  }
+  .col-6 .text-body-secondary{
+    margin-top:40px;
+    color: white !important;
+  }
+  .text-body-secondary{
+    color:white !important;
+  }
+  footer .row{
+    flex-wrap:nowrap;
+  }
+  .col{
+    font-weight:normal;
+  }
+  .mb-5{
+    display: flex;
+    align-items: flex-end;
+    justify-content:center;
+  }
+  .social-media .bi.bi-youtube{
+    margin-left:40px;
+    fill:white;
+  }
+  .social-media .bi.bi-facebook{
+    fill:white;
+  }
+  .social-media .bi.bi-facebook:hover, .bi.bi-youtube:hover{
+    transform: scale(2.5);
+  }
+  .logo img{
+    transform: scale(0.9);
+  }
+  .logo{
+    border: none;
+    background-color: transparent;
+  }
+  .mb-4{
+    filter:brightness(0) invert(1);
+  }
+  
+  @media screen and (max-width: 990px){
+    .mb-3{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 770px) {
+    .container{
+      margin: 0;
+    }
+    .row{
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .container{
+      margin: 0;
+    }
+    .row{
+      flex-direction: column;
+    }
+    .col-6{
+      width: 100%;
+    }
+  }
+  
