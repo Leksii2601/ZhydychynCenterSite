@@ -10,15 +10,15 @@
     background-color: #393e42;
     padding-top:20px;
     font-family:'Montserrat';
-    color:white !important;
+    color:#f4f4f4 !important;
     text-decoration: none;
   }
   .col-6 .text-body-secondary{
     margin-top:40px;
-    color: white !important;
+    color: #f4f4f4 !important;
   }
   .text-body-secondary{
-    color:white !important;
+    color:#f4f4f4 !important;
   }
   footer .row{
     flex-wrap:nowrap;
@@ -33,10 +33,10 @@
   }
   .social-media .bi.bi-youtube{
     margin-left:40px;
-    fill:white;
+    fill:#f4f4f4;
   }
   .social-media .bi.bi-facebook{
-    fill:white;
+    fill:#f4f4f4;
   }
   .social-media .bi.bi-facebook:hover, .bi.bi-youtube:hover{
     transform: scale(2.5);

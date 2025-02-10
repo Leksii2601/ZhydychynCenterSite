@@ -51,7 +51,7 @@ window.addEventListener("scroll", function () {
       header.classList.add("scrolled");
       header.classList.remove("transparent");
       document.getElementById("logoforchange").src = "/assets/images/common/black-logo.png";
-      document.getElementById("logoforchange").style.height = "108px";
+      document.getElementById("logoforchange").style.height = "90px";
     } else {
       header.classList.add("transparent");
       header.classList.remove("scrolled");

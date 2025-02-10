@@ -1,5 +1,8 @@
+body{
+  background-color: #f4f4f4;
+}
 .carousel{
-    height: 750px;
+    height: 730px;
   }
   swiper-container {
     width: 100%;
@@ -21,29 +24,104 @@
     height: 100%;
     object-fit:cover;
   }
-  .carousel-caption{
-    position: absolute;
-    --translateX: 0%;
-  --translateY: -100% !important;
-  transform: translate(var(--translateX), var(--translateY));
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    width: 80%;
-    justify-content: space-between;
-  }
-  .nadpus img{
-    filter:brightness(0) invert(1);
-    height: 40%;
-  }
-  .logo-zhydychun img{
-    height: 200px;
-  }
   swiper-container::part(button-prev),
   swiper-container::part(button-next) {
-      color: white;
+      color: #f4f4f4;
   }
-  .none{
-    height: 1000px;
+  .aboutus{
+    height: 700px;
+    margin: 30px 10px 10px 0;
+    color: #383849;
+    display: flex;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .missionandwave{
+    width: 50%;
+  }
+  .missionandwave::before{  
+    content:url(/assets/images/home/dots.svg);
+    display:block;
+    position: absolute;
+    transform: translateY(10%) scale(0.5);
+    left: 35%;
+  }
+  .missionandwave img{
+    height:100%;
+  }
+  .missionandwave h1{
+    position: absolute;
+    left: 300px;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .headings{
+    width: auto;
+  }
+  .headingandtext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .headings h2{
+    font-size: 50px;
+    font-weight: normal;
+  }
+  h2.first {
+    position: relative;
+    left: 150px;
+  }
+  h2.second {
+    position: relative;
+    left: 350px;
+    width: 70%;
+  }
+  .description{
+    font-size: 27px;
+    font-weight: lighter;
+    padding-bottom: 50px;
+    width: 75%;
+  }
+  hr{
+    border: 2px solid #383849;
+    outline: none;
+  }
+  hr.linetwo{
+    width: 60%;
+  }
+  hr.linethree{
+    width: 30%;
+  }
+  .button{
+    display: flex;
+    justify-content: end;
+  }
+  .buttonMore{
+    height: 70px;
+    width: 400px;
+    background-color: #383849;
+    border-radius: 20px;
+    color: #f4f4f4;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+  }
+  .buttonMore:hover{
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border:2px solid #383849;
+    color: #383849;
+  }
+  .pictograms{
+    height: 500px;
   }
   
