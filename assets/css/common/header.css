@@ -7,8 +7,8 @@
     transform: translateY(0);
     color:#f4f4f4;
     transition: transform 0.4s ease, background 0.3s ease;
+    
   }
-  
   #header-container.hidden {
     transform: translateY(-110%);
   }
@@ -24,7 +24,7 @@
     z-index: 1000;
     width: 100%;
     padding: 10px 20px 10px 20px;
-    
+    height: 90px;
   }
   #header-container.transparent {
     background: rgba(255, 255, 255, 0); 
@@ -121,7 +121,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background-color: #68afe2;
+      background-color: #393e42;
       transition: width 0.5s ease;
     }
     .navbar-nav .nav-item:hover::after{
