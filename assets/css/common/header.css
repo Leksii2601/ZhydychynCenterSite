@@ -97,6 +97,65 @@
   .nav-link.active {
     border-bottom: 2px solid #000;
   }
+
+
+  .collapse-menu {
+    list-style: none;
+    padding: 0;
+    width: 50% !important;
+    
+  }
+  .link,
+  .collapse-btn {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+  }
+  
+  .collapse-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Відступ між текстом і стрілкою */
+    padding: 0;
+
+  }
+  
+  .collapse-btn::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease;
+  }
+  
+  .collapse-btn.collapsed::after {
+    transform: rotate(45deg);
+  }
+  
+  .submenu {
+    list-style: none;
+    padding-left: 16px;
+    margin-top: 8px;
+  }
+  
+  .sublink {
+    display: block;
+    padding: 6px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+
+  
   @media (max-width: 1060px) {
     header{
       justify-content: space-between;
