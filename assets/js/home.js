@@ -19,3 +19,18 @@ const observer = new IntersectionObserver((entries) => {
 elements.forEach(element => {
   observer.observe(element);
 });
+window.addEventListener("scroll", function () {
+  var boxes = document.querySelectorAll('.big-box, .box-1, .box-2, .box-3, .box-4');
+  
+  boxes.forEach(function(box) {
+    var rect = box.getBoundingClientRect();
+    
+    // Перевіряємо, чи елемент видимий у вьюпорті
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+      box.classList.add("highlight");
+    } else {
+      box.classList.remove("highlight");
+    }
+  });
+});
+
