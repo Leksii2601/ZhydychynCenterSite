@@ -264,10 +264,13 @@ body{
         font-size: 60px;
       }
       .small-text span{
-        font-size: 12px;
+        font-size: 11px;
+       
       }
-      .religious-sites h5{
+      .small-text h5{
         font-size: 16px !important;
+        margin-top: 20px !important;
+
       }
       .small-text{
         padding: 0 10px 0 10px;

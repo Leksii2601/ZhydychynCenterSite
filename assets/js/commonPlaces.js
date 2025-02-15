@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', async function () {
             item.style.color = "#393e42";
         });
         document.getElementById("header-container").style.backgroundColor = "#f4f4f4";
+        document.querySelector(".navbar-toggler svg").style.color = "#393e42";
+
 
         
         
