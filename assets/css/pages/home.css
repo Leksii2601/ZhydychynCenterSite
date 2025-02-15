@@ -1,3 +1,18 @@
+
+#header-container.transparent {
+  background: rgba(255, 255, 255, 0); 
+  box-shadow: none;
+}
+
+
+#header-container.scrolled {
+  background: #f4f4f4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+  color:#393e42;
+}
+
+
+
 body{
   background-color: #f4f4f4;
 }
@@ -289,9 +304,6 @@ i.bi-arrow-up-right {
   opacity: 1;  
   transform: translate(0); 
 }
-
-
-
 
 .traveller{
   height: 900px;

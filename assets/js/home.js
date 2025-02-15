@@ -25,12 +25,26 @@ window.addEventListener("scroll", function () {
   boxes.forEach(function(box) {
     var rect = box.getBoundingClientRect();
     
-    // Перевіряємо, чи елемент видимий у вьюпорті
+    
     if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
       box.classList.add("highlight");
     } else {
       box.classList.remove("highlight");
     }
   });
+});
+
+window.addEventListener("scroll", function () {
+  var header = document.querySelector('#header-container');
+  if (window.scrollY > 150) {
+    header.classList.add("scrolled");
+    header.classList.remove("transparent");
+    document.getElementById("logoforchange").src = "/assets/images/common/black-logo.png";
+    document.getElementById("logoforchange").style.height = "90px";
+  } else {
+    header.classList.add("transparent");
+    header.classList.remove("scrolled");
+    document.getElementById("logoforchange").src = "/assets/images/common/white-logo.svg";
+  }
 });
 
