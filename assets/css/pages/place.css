@@ -240,15 +240,15 @@ body{
     }
     @media (max-width: 576px) {
       .hero-image{
-        height: 60vh;
+        height: 45vh;
       }
       .backgroundHeading{
-        margin-bottom: 3vh;
+        margin-bottom: 2vh;
         height: 50%;
       }
       .content-overlay{
         width: 100%;
-        margin-bottom: 0;
+        margin-bottom: -63px;
         height: 200px;
         padding: 64px;
       }
