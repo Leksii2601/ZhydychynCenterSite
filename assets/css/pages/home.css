@@ -469,7 +469,7 @@ i.bi-arrow-up-right {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 0.5s ease;
   }
 
   /* Стилі для активного стану (highlight) */
@@ -492,26 +492,26 @@ i.bi-arrow-up-right {
   .text-overlay {
     z-index: 2;
     opacity: 0;
-    transition: opacity 2s ease;
+    transition: opacity 0.5s ease;
   }
 
   .overlay-text,
   .overlay-smalltext {
     opacity: 0;
     transform: translateY(20px);
-    transition: all 2s ease;
+    transition: all 0.4s ease;
   }
   
   .overlay-smalltext {
     opacity: 0;
     transform: translateY(-20px);
-    transition: all 2s ease;
+    transition: all 0.4s ease;
   }
 
   i.bi-arrow-up-right {
     z-index: 2;
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 0.4s ease;
   }
 
   /* Активні стани для тексту та іконок */
