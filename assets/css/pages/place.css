@@ -12,6 +12,7 @@ body{
     grid-area: 1/1;      
     width: 100%;
     height: 90vh;
+    max-height: 500px;
     object-fit: cover;  
   }
   
@@ -24,7 +25,7 @@ body{
     text-align: center;
     width: 80%;
     max-width: 900px;
-    margin-bottom: -18vh; 
+    transform: translateY(50%);
   } 
   .content-overlay h3{
     font-size: 55px !important;
@@ -35,7 +36,7 @@ body{
   .textInside{
     display: flex;
     justify-content: center;
-    margin-top: 39.5vh;
+    transform: translateY(50%);
     background-color:rgb(238, 236, 236);
     padding: 50px 0 50px 0;
     height: 300px;
@@ -57,7 +58,7 @@ body{
   }
 
   .bixText{
-    padding-bottom: 50px;
+    padding: 20vh 0 5vh 0;
   }
   .bixText h3{
     font-size: 130px;
@@ -158,6 +159,11 @@ body{
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 1.5rem;
     }
+    @media (min-width:1920px) {
+      .bixText{
+        padding: 11vh 0 5vh 0;
+      }
+    }
     @media (max-width: 1200px) {
       .text-overlay{
         width:70% ;
@@ -180,7 +186,7 @@ body{
         font-size: 20px;
       }
       .bixText{
-        margin-top: 20px;
+        margin-top: 25px;
       }
       .bixText h3{
         font-size: 90px;
@@ -218,7 +224,7 @@ body{
         font-size: 17px;
       }
       .bixText{
-        margin-top: 40px;
+        margin-top: 45px;
         display: flex;
         justify-content: center;
       }
@@ -233,13 +239,16 @@ body{
       }
     }
     @media (max-width: 576px) {
+      .hero-image{
+        height: 60vh;
+      }
       .backgroundHeading{
-        margin-bottom: 67vh;
+        margin-bottom: 3vh;
         height: 50%;
       }
       .content-overlay{
         width: 100%;
-        margin-bottom: -200px;
+        margin-bottom: 0;
         height: 200px;
         padding: 64px;
       }
