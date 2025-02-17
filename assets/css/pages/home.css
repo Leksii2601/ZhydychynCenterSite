@@ -13,6 +13,7 @@
 
 
 
+
 body{
   background-color: #f4f4f4;
 }
@@ -157,6 +158,7 @@ body{
   }
   .pictograms{
     margin: 100px 0 100px 0;
+    
   }
   .heading-section h2{
     font-size: 45px;
@@ -305,11 +307,7 @@ i.bi-arrow-up-right {
   transform: translate(0); 
 }
 
-.traveller{
-  height: 900px;
-  
 
-}
 .traveller .heading-section h2{
   font-size:90px
 }
@@ -343,12 +341,113 @@ i.bi-arrow-up-right {
 }
 
 
+.whatToDo{
+  margin-bottom: 50px;
+
+}
+.whatToDo .heading-section{
+  margin-bottom: 30px;
+}
+.mosaic {
+  display: grid; 
+  max-width: 70%;
+  grid-template-columns: repeat(3, minmax(100px, 1fr)); 
+  gap: 20px;
+  width: 50%;
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+.panel{
+  aspect-ratio: 1.3;
+  border: 2px solid #393e42 ;
+  z-index: 10;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.3s ease;
+  padding: 10px;
+}
+.panel svg{
+  height: 8vh;
+  width: 8vw;
+  fill:#393e42;
+  transition: transform 0.3s ease;
+}
+.panel h3{
+  font-size: 20px;
+  text-align: center;
+  font-family:'Montserrat';
+}
+.panel:hover{
+  background-color: #393e42;
+  color: #f4f4f4;
+}
+.panel:hover svg{
+  fill:#f4f4f4;
+  transform: scale(1.2);
+}
+.events h4{
+  margin-bottom: 0 !important;
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color:#939393;
+  font-weight: 300;
+  letter-spacing: 7px;
+}
+.events h1{
+  font-size: 120px;
+  background-image: url(/assets/images/churchcomplex/churchucomplex\ \(1\).jpg);
+  background-size:cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color:transparent;
+  letter-spacing: 20px;
+  font-weight: 1000;
+  
+  text-transform: uppercase;
+}
+
+.threeEvent {
+  display: grid;
+  width: 90%;
+  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.event{
+  aspect-ratio: 1.1;
+  border: 2px solid #383849;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.event .more{
+  height: 17%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  border: 2px solid #383849;
+  justify-content: center;
+  
+}
 
 
 
 
 
 
+  @media (min-width:1400px) {
+    .mosaic{
+      max-width: 80%;
+    }
+  }
   @media (max-width:1200px){
     h2.first{
       left: 0;
@@ -366,6 +465,11 @@ i.bi-arrow-up-right {
       position: relative;
       left: 50px;
       
+    }
+  }
+  @media (max-width: 1024px) {
+    .mosaic {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
   @media (max-width:992px) {
@@ -529,10 +633,20 @@ i.bi-arrow-up-right {
     opacity: 1;
     transform: translateY(-3px);
   }
-
-
-
-  
+  .mosaic{
+    width: 100%;
+  }
+  .events h4{
+    font-size: 18px;
+  }
+  .events h1{
+    font-size: 100px;
+  }
+  .threeEvent{
+    grid-template-columns: repeat(2, 1fr);
+    gap:15px;
+    width: 100% !important;
+  }
 
 
 
@@ -560,6 +674,33 @@ i.bi-arrow-up-right {
     .textandicon p{
       font-size: 20px;
       
+    }
+    .mosaic {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .panel svg {
+      width: 12vw;
+      height: 12vh;
+    }
+    .events h4{
+      font-size: 15px;
+    }
+    .events h1{
+      font-size: 80px;
+    }
+    .threeEvent {
+      width: 100%;
+      padding: 10px;
+      gap: 15px;
+    }
+    
+    .event {
+      min-height: 200px;
+      width: 100%;
+    }
+    
+    .event .more {
+      height: 45px;
     }
   }
   @media (max-width:576px) {
@@ -599,6 +740,33 @@ i.bi-arrow-up-right {
     }
     .textandicon p{
       font-size: 20px;
+    }
+    .whatToDo{
+      margin-top: 90px;
+    }
+    .mosaic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    
+  }
+  .panel {
+     
+    min-width: 120px;
+    aspect-ratio: 1.2;
+    min-height: 110px;
+  }
+    .panel h3{
+      font-size: 14px;
+    }
+    .events h4{
+      font-size: 13px;
+    }
+    .events h1{
+      font-size: 34px;
+    }
+    .threeEvent {
+      grid-template-columns: 1fr;
+      padding: 10px;
     }
   }
   

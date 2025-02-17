@@ -18,10 +18,10 @@ body{
   
   .content-overlay {
     grid-area: 1/1;
-    height: 300px;
+    height: 150px;
     place-self: end center;
     z-index: 1; 
-    padding: 7rem 4rem;
+    padding: 3rem 4rem;
     text-align: center;
     width: 80%;
     max-width: 900px;
