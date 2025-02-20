@@ -1,0 +1,150 @@
+main{
+    padding: 0 10% 0 10%;
+}
+.photoGallery{
+    height: 500px;
+}
+.photoGallery img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.heading-section h2{
+    width: 100%;
+}
+.infoContainer{
+    display: flex;
+    justify-content: center;
+}
+.info{
+    width: 100%;
+    background-color: #ededed;
+    padding: 30px;
+}
+.tablist {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 228.8px;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    
+}
+.tablist li {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: 383849;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+.tablist li:hover {
+    background-color: #ccc;
+}
+.tablist li:last-child {
+    border-right: none;
+}
+.tablist li.active {
+    background-color: #383849;
+    color: #f4f4f4;
+}
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.tab-content.active {
+    display: block;
+}
+.smallInfo svg{
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+    
+}
+.smallInfo{
+    display: flex;
+    gap:10px
+}
+#tab-0.active{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.map-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 60%;
+}
+#tab-1.active{
+    display: flex;
+    height: 80%;
+    justify-content: space-around;
+}
+.items{
+    display: flex;
+    flex-direction: column;
+    
+}
+.item img{
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+}
+.items .item{
+    display: flex;
+    gap:10px;
+}
+
+.empty{
+    height: 700px;
+}
+@media (max-width:1200px) {
+    .info{
+        height: 100% !important;
+    }
+}
+@media (max-width:992px) {
+    #tab-1.active{
+        height: 100% !important;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+    }
+    #tab-0.active{
+        grid-template-columns: repeat(1,1fr) 
+    }
+    #tab-1.active{
+        flex-direction:column;
+    }
+    
+}
+@media (max-width: 768px) {
+    main{
+        padding: 0 10px 0 10px;
+    }
+    .tablist{
+        padding: 0;
+    }
+   
+    .info{
+        padding:10px;
+    }
+    .map-container{
+        margin-bottom: 20px;
+    }
+   
+    .tab-content {
+        padding: 10px 5px 10px 5px;
+    }
+}

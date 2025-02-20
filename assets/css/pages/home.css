@@ -422,7 +422,7 @@ i.bi-arrow-up-right {
 }
 .event{
   aspect-ratio: 1.1;
-  border: 2px solid #383849;
+  padding: 30px 20px 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -433,11 +433,60 @@ i.bi-arrow-up-right {
   width: 50%;
   display: flex;
   align-items: center;
-  border: 2px solid #383849;
   justify-content: center;
-  
+  z-index: 1;
+  background-color: #f4f4f4;
+  color:#383849;
+  font-family:'Montserrat';
+  transition: 0.3s ease;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+.event .more:hover{
+  border:2px solid #f4f4f4;
+  background-color: transparent;
+  color: white;
+}
+.event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ступінь затемнення */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+.event h3{
+  z-index: 1;
+  color: #f4f4f4;
+  font-family:'Montserrat';
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
+.event img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+  
+}
+.event{
+  position: relative;
+}
+.event span{
+  font-weight: 200;
+  
+}
+.event small{
+  z-index: 2;
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
 
 
 
@@ -753,7 +802,7 @@ i.bi-arrow-up-right {
      
     min-width: 120px;
     aspect-ratio: 1.2;
-    min-height: 110px;
+    min-height: 125px;
   }
     .panel h3{
       font-size: 14px;

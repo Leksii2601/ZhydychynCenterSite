@@ -64,6 +64,7 @@ body{
     font-size: 130px;
     font-weight: 700;
     opacity: 0.5;
+    letter-spacing: 5px;
   }
 
 
@@ -159,6 +160,16 @@ body{
         --bs-gutter-x: 1.5rem;
         --bs-gutter-y: 1.5rem;
     }
+    .text h5{
+      position: relative;
+      top: -5px;
+      font-weight: 500;
+      font-style: italic;
+      display: flex;
+      width: 85%;
+      justify-content: end;
+    }
+
     @media (min-width:1920px) {
       .bixText{
         padding: 11vh 0 5vh 0;
@@ -207,7 +218,10 @@ body{
     .highlight .overlay {
         background: rgba(0, 0, 0, 0.3);  /* Тінь на фоні */
     }
-
+    .text h5{
+      font-size: 17px;
+    }
+    
       
     }
     @media (max-width: 768px) {
@@ -236,6 +250,9 @@ body{
       }
       .religious-sites h5{
         font-size: 16px !important;
+      }
+      .text h5{
+        font-size: 14px;
       }
     }
     @media (max-width: 576px) {
@@ -283,6 +300,9 @@ body{
       }
       .small-text{
         padding: 0 10px 0 10px;
+      }
+      .text h5{
+        font-size: 12px;
       }
     }
     @media (hover: hover) {
