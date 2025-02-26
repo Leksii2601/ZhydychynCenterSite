@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="../../assets/css/common/header.css">
     <link rel="stylesheet" href="../../assets/css/common/footer.css">
     <link rel="stylesheet" href="/assets/css/pages/placeDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,14 +27,107 @@
         
     </div>
      <section class="photoGallery">
-        <img src="/assets/images/churchcomplex/churchucomplex (1).jpg" alt="">
+        <div class="gallery-container" id="gallery">
+            <div class="main-image">
+                <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (1).jpg" 
+                   data-fancybox="gallery-images">
+                    <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (1).jpg" alt="St Paul's Cathedral main view">
+                </a>
+            </div>
+            <div class="side-images">
+                <div class="gallery-item">
+                    <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (2).jpg" 
+                       data-fancybox="gallery-images">
+                        <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (2).jpg" alt="St Paul's Cathedral sunset view">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (3).jpg" 
+                       data-fancybox="gallery-images">
+                        <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (3).jpg" alt="St Paul's Cathedral front facade">
+                    </a>
+                </div>
+                <div class="gallery-item">
+                    <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (4).jpg" 
+                       data-fancybox="gallery-images">
+                        <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (4).jpg" alt="St Paul's Cathedral interior">
+                        <div class="more-photos">+6</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Мобільна версія галереї (Swiper карусель) -->
+        <div class="mobile-gallery">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                       
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (1).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (2).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (3).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (4).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (5).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (6).jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (7).jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (8).jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (9).jpg" alt="">
+              </div>
+            <div class="swiper-slide">
+              <img class="no-lightbox" src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (10).jpg" alt="">
+          </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    
+       
+        <div class="hidden-images">
+            <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (5).jpg" data-fancybox="gallery-images">
+                <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (5).jpg" alt="St Paul's Cathedral additional image 1">
+            </a>
+            <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (6).jpg" data-fancybox="gallery-images">
+                <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (6).jpg" alt="St Paul's Cathedral additional image 2">
+            </a>
+            <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (7).jpg" data-fancybox="gallery-images">
+              <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (7).jpg" alt="St Paul's Cathedral additional image 2">
+          </a>
+          <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (8).jpg" data-fancybox="gallery-images">
+            <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (8).jpg" alt="St Paul's Cathedral additional image 2">
+        </a>
+        <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (9).jpg" data-fancybox="gallery-images">
+          <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (9).jpg" alt="St Paul's Cathedral additional image 2">
+      </a>
+      <a href="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (10).jpg" data-fancybox="gallery-images">
+        <img src="/assets/images/MykolaivskyiHram/photoMykolaivskyiHram (10).jpg" alt="St Paul's Cathedral additional image 2">
+    </a>
+        </div>
      </section>
      <div class="col-lg-12">
         <div class="heading-section">
             <h2 style="text-align: start;">Миколаївський храм</h2>
         </div>
     </div>
-     <section class="infoContainer">
+    <section class="contentInside">
+      <section class="infoContainer">
         <div class="info">
             <ul class="tablist" role="tablist">
                 <li class="tab active" role="tab" onclick="showTab(0)">Огляд</li>
@@ -44,7 +139,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
                     <div class="textInfo">
                     <h4>Графік</h4>
-                    <p>Пн-Сб з 8.30 до 16.30 (останній вхід 46.00), по середах собор відкривається о 10 ранку. Купольні галереї відкриті щодня, останній вхід 16.15.</p>
+                    <p>Пн-Сб з 8.30 до 16.30 (останній вхід 46.00), по середах собор відкривається о 10 ранку</p>
                   </div>
                   </div>
 
@@ -113,14 +208,21 @@
             </div>
         </div>
      </section>
-     <section class="empty">
-
+    </section>
+    <section class="description">
+      <p>Свято-Миколаївський храм (XVI-XVIII ст.) – пам'ятка архітектури національного значення. Центральна споруда архітектурного ансамблю Свято-Миколаївського Жидичинського монастиря. Храм було зведено у 1517 році на кошти князя Костянтина Острозького. У 1723 році церкву перебудовано греко-католицьким єпископом Йосифом Левицьким. Споруда має форму трьохнавної базиліки з напівкруглою вівтарною частиною. Високу мистецьку цінність становлять царські врата XVIII ст., які є взірцем українського різьблення по дереву. В церкві зберігається чудотворна ікона Святителя Миколая XVII ст., а також унікальний образ Богоматері Жидичинської у срібній ризі. У 2020 році у нижньому ярусі приміщення храму було виявлено монастирську усипальницю – підземне місце поховання братії монастиря, архімандритів, митрополитів.
+      </p>
      </section>
+    
    </main>
     <div id="footer-container"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
     <script src="../../assets/js/commonPlaces.js"></script>
     <script src="../../assets/js/placeDetails.js"></script>
+    
     
 </body>
 </html>
