@@ -1,79 +1,105 @@
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Додаємо відступи між іконками */
+}
+
 .social-media svg{
     fill: var(--bs-heading-color);
     transform: scale(2.3);
     transition: 0.3s ease;
-  }
-  .nav-item{
+}
+
+.nav-item{
     width: 70%;
-  }
-  #footer-container{
+}
+
+#footer-container{
     background-color: #393e42;
     padding-top:20px;
     font-family:'Montserrat';
     color:#f4f4f4 !important;
     text-decoration: none;
-  }
-  .col-6 .text-body-secondary{
+}
+
+.col-6 .text-body-secondary{
     margin-top:40px;
     color: #f4f4f4 !important;
-  }
-  .text-body-secondary{
+}
+
+.text-body-secondary{
     color:#f4f4f4 !important;
-  }
-  footer .row{
+}
+
+footer .row{
     flex-wrap:nowrap;
-  }
-  .col{
+}
+
+.col{
     font-weight:normal;
-  }
-  .mb-5{
+}
+
+.mb-5{  
     display: flex;
     align-items: flex-end;
     justify-content:center;
-  }
-  .social-media .bi.bi-youtube{
-    margin-left:40px;
+}
+
+.social-media .bi.bi-youtube{
     fill:#f4f4f4;
-  }
-  .social-media .bi.bi-facebook{
+}
+
+.social-media .bi.bi-facebook{
     fill:#f4f4f4;
-  }
-  .social-media .bi.bi-facebook:hover, .bi.bi-youtube:hover{
+}
+
+.social-media .bi.bi-facebook:hover, .bi.bi-youtube:hover{
     transform: scale(2.5);
-  }
-  .logo img{
+}
+
+.logo img{
     transform: scale(0.9);
-  }
-  .logo{
+}
+
+.logo{
     border: none;
     background-color: transparent;
-  }
-  .mb-4{
+}
+
+.mb-4{
     filter:brightness(0) invert(1);
-  }
-  
-  @media screen and (max-width: 990px){
+}
+
+@media screen and (max-width: 990px){
     .mb-3{
-      display: none;
+        display: none;
     }
-  }
-  @media screen and (max-width: 770px) {
+}
+
+@media screen and (max-width: 770px) {
     .container{
-      margin: 0;
+        margin: 0;
     }
     .row{
-      flex-direction: column;
+        flex-direction: column;
     }
-  }
-  @media screen and (max-width: 576px) {
+    .social-media {
+        flex-direction: column; /* Додаємо для вертикального розташування іконок */
+    }
+}
+
+@media screen and (max-width: 576px) {
     .container{
-      margin: 0;
+        margin: 0;
     }
     .row{
-      flex-direction: column;
+        flex-direction: column;
     }
     .col-6{
-      width: 100%;
+        width: 100%;
     }
-  }
-  
+    .social-media {
+        flex-direction: column; /* Додаємо для вертикального розташування іконок */
+    }
+}

@@ -1,80 +1,213 @@
-main{
-    padding: 0 10% 0 10%;
+main {
+    padding: 0 10%;
+    font-family: 'Montserrat', sans-serif;
 }
-.photoGallery{
-    height: 500px;
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 4px;
+    width: auto;
+    margin: 0 auto;
+    height: auto;
+    margin: 90px 0 40px 0;
 }
-.photoGallery img{
-    height: 100%;
+
+.main-image {
+    grid-row: 1 / span 1;
+    grid-column: 1;
+    position: relative;
+}
+
+.side-images {
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.gallery-item {
+    position: relative;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
-.heading-section h2{
+
+.more-photos {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 8px 16px;
+    font-size: 30px;
+    font-weight: bold;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.infoContainer{
+
+.hidden-images {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+}
+
+.fancybox__thumbs .carousel__slide {
+    width: var(--fancybox-thumbs-width, 112px) !important;
+}
+
+/* Мобільна карусель */
+.mobile-gallery {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px; /* Додаємо відступ зверху */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #ededed !important;
+    top: 50%; /* Центруємо вертикально */
+    transform: translateY(-50%);
+}
+
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide .no-lightbox {
+    pointer-events: none;
+}
+
+:root {
+    --swiper-theme-color: white;
+}
+
+.swiper-pagination {
+    display: none;
+}
+
+.heading-section h2 {
+    width: 100%;
+    font-size: 50px;
+}
+
+.infoContainer {
     display: flex;
     justify-content: center;
 }
-.info{
+
+.info {
     width: 100%;
     background-color: #ededed;
-    padding: 30px;
+    padding: 10px 20px 5px 20px;
 }
+.info h4{
+    font-size: 16px;
+}
+.info p{
+    font-size: 14px;
+}
+
 .tablist {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 228.8px;
+    width: 300px;
     border: 1px solid black;
     border-radius: 30px;
     margin-bottom: 30px;
-    
+    box-sizing: border-box;
 }
+
 .tablist li {
+    flex-grow: 1;
     padding: 10px 20px;
     cursor: pointer;
-    color: 383849;
+    color: #383849;
     border-radius: 30px;
     transition: 0.3s ease;
+    text-align: center;
 }
+
 .tablist li:hover {
     background-color: #ccc;
 }
+
 .tablist li:last-child {
     border-right: none;
 }
+
 .tablist li.active {
     background-color: #383849;
     color: #f4f4f4;
 }
+
 .tab-content {
     display: none;
-    padding: 20px;
-    border: 1px solid #ccc;
 }
+
 .tab-content.active {
     display: block;
 }
-.smallInfo svg{
-    height: 30px;
-    width: 30px;
+
+.smallInfo svg {
+    height: 20px;
+    width: 20px;
     flex-shrink: 0;
-    
 }
-.smallInfo{
+
+.smallInfo {
     display: flex;
-    gap:10px
+    gap: 10px;
 }
-#tab-0.active{
+
+#tab-0.active {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
 .map-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
 }
 
@@ -85,66 +218,140 @@ main{
     width: 90%;
     height: 60%;
 }
-#tab-1.active{
+
+#tab-1.active {
     display: flex;
     height: 80%;
     justify-content: space-around;
 }
-.items{
+
+.items {
     display: flex;
     flex-direction: column;
-    
 }
-.item img{
+
+.item img {
     height: 20px;
     width: 20px;
     flex-shrink: 0;
 }
-.items .item{
+
+.items .item {
     display: flex;
-    gap:10px;
+    gap: 10px;
+}
+.contentInside{
+    padding-right: 250px;
+}
+.description {
+    margin-top: 20px;
+    text-align: justify;
 }
 
-.empty{
-    height: 700px;
-}
-@media (max-width:1200px) {
-    .info{
+@media (max-width: 1200px) {
+    .info {
         height: 100% !important;
     }
+    .contentInside{
+        padding: 0;
+    }
 }
-@media (max-width:992px) {
-    #tab-1.active{
+
+@media (max-width: 992px) {
+    #tab-1.active {
         height: 100% !important;
     }
     .map-container iframe {
         width: 100%;
         height: 100%;
     }
-    #tab-0.active{
-        grid-template-columns: repeat(1,1fr) 
+    #tab-0.active {
+        grid-template-columns: repeat(1, 1fr);
     }
-    #tab-1.active{
-        flex-direction:column;
+    #tab-1.active {
+        flex-direction: column;
     }
-    
+    .heading-section h2 {
+        font-size: 35px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 50%; /* Центруємо вертикально */
+        transform: translateY(80%);
+    }
 }
+
 @media (max-width: 768px) {
-    main{
+    main {
+        padding: 0 10px;
+    }
+    .tablist {
+        padding: 0;
+    }
+    .info {
+        padding: 10px;
+    }
+    .map-container {
+        margin-bottom: 20px;
+    }
+    .tab-content {
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gallery-container {
+        display: none;
+    }
+    .mobile-gallery {
+        display: block;
+    }
+    .swiper {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .heading-section h2 {
+        width: 100%;
+        font-size: 30px;
+        padding: 0 5px 0 5px;
+    }
+    .description{
         padding: 0 10px 0 10px;
     }
-    .tablist{
+    .swiper {
+        margin-top: 30px;
+    }
+    .swiper-slide {
+        margin-top: 40px; /* Зменшуємо відступ зверху */
+        margin-bottom: 10px; /* Додаємо відступ знизу, якщо потрібно */
+    }
+    main{
         padding: 0;
     }
    
-    .info{
-        padding:10px;
+}
+
+@media (min-width: 1400px) {
+    main {
+        padding: 0 15%;
     }
-    .map-container{
-        margin-bottom: 20px;
+    .swiper {
+        height: 60vh;
     }
-   
-    .tab-content {
-        padding: 10px 5px 10px 5px;
+}
+
+@media (min-width: 1600px) {
+    main {
+        padding: 0 20%;
+    }
+    .swiper {
+        height: 70vh;
     }
 }

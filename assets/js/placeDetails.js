@@ -14,8 +14,35 @@ function showTab(tabIndex) {
 
     // Змінюємо висоту блоку .info залежно від вибраної вкладки
     if (tabIndex === 1) { // Якщо натиснуто "Розташування"
-        infoContainer.style.height = "600px";
+        infoContainer.style.height = "400px";
     } else {
         infoContainer.style.height = "100%"; // Повертаємо стандартний розмір
     }
 }
+// Ініціалізація FancyBox для десктопної версії
+Fancybox.bind('[data-fancybox="gallery-images"]', {
+    Thumbs: {
+        autoStart: true,
+    },
+    Toolbar: {
+        display: [
+            "close"
+        ]
+    }
+});
+
+// Ініціалізація Swiper для мобільних пристроїв
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop:true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+       
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+});
