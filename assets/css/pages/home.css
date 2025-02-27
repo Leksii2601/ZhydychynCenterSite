@@ -1,4 +1,3 @@
-
 #header-container.transparent {
   background: rgba(255, 255, 255, 0); 
   box-shadow: none;
@@ -11,6 +10,67 @@
   color:#393e42;
 }
 
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    background-color: transparent !important;
+    overflow: hidden !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    background: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: none !important; 
+}
+
+/* Додаємо плавний перехід між слайдами */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: none !important; /* Змінено */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+/* Налаштовуємо ефект fade */
+.swiper-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+    transition: none !important;
+}
+
+.swiper-fade .swiper-slide-active {
+    pointer-events: auto;
+}
+
+/* Прибираємо білий фон під час анімації */
+.swiper-wrapper {
+    background-color: transparent !important;
+    transition-timing-function: linear !important;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+}
+
+/* Додаткові фікси для плавності */
+.swiper-container {
+    background: transparent !important;
+}
+
+.swiper-slide-active {
+    z-index: 2;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+    z-index: 1;
+}
 
 
 
@@ -18,49 +78,84 @@ body{
   background-color: #f4f4f4;
 }
 .carousel{
-    height: 730px;
-  }
-  picture {
+   
+    background: #000000; 
+    max-height: 730px;
+    overflow: hidden;
+}
+picture {
     display: block;
     width: 100%;
     height: 100%;
-  }
+    background: transparent !important;
+}
   
-  picture img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  swiper-container {
+picture img {
     width: 100%;
     height: 100%;
-  }
+    object-fit: cover;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+swiper-container {
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+}
   
-  swiper-slide {
+swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: transparent !important;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    overflow: hidden;
+}
   
-  swiper-slide img {
+swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit:cover;
-  }
-  swiper-container::part(button-prev),
-  swiper-container::part(button-next) {
-      color: #f4f4f4;
-  }
-  swiper-container::part(pagination) {
+    object-fit: cover;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    will-change: transform;
+}
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+    color: #f4f4f4;
+    transform: translateZ(0);
+}
+swiper-container::part(pagination) {
     --swiper-pagination-color: #f4f4f4;
     --swiper-pagination-bullet-inactive-color: #f4f4f4;
     --swiper-pagination-bullet-inactive-opacity: 0.5;
     --swiper-pagination-bullet-active-color: #f4f4f4;
-  }
+    transform: translateZ(0);
+}
+/* Прибираємо анімації для кращої продуктивності */
+.swiper-fade .swiper-slide {
+    pointer-events: none;
+    transition-property: none !important;
+}
+
+.swiper-fade .swiper-slide-active {
+    pointer-events: auto;
+}
+
+@media (max-width: 576px) {
+    swiper-container::part(button-prev),
+    swiper-container::part(button-next) {
+        display: none !important;
+    }
+}
+   .aboutUsContainer{
+    display: flex;
+    justify-content: center;
+   }
   .aboutus{
     height: 700px;
     margin: 30px 10px 10px 0;
@@ -69,6 +164,7 @@ body{
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-out;
+    max-width: 1620px;
   }
   .visible {
     opacity: 1;
@@ -149,6 +245,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: 0.5s ease;
+    border:2px solid #383849;
   }
   .buttonMore:hover{
     cursor: pointer;
@@ -350,7 +447,7 @@ i.bi-arrow-up-right {
 }
 .mosaic {
   display: grid; 
-  max-width: 70%;
+  max-width: 800px;
   grid-template-columns: repeat(3, minmax(100px, 1fr)); 
   gap: 20px;
   width: 50%;
@@ -374,6 +471,7 @@ i.bi-arrow-up-right {
 .panel svg{
   height: 8vh;
   width: 8vw;
+ 
   fill:#393e42;
   transition: transform 0.3s ease;
 }
@@ -389,6 +487,9 @@ i.bi-arrow-up-right {
 .panel:hover svg{
   fill:#f4f4f4;
   transform: scale(1.2);
+}
+.events{
+  margin-bottom: 80px;
 }
 .events h4{
   margin-bottom: 0 !important;
@@ -427,6 +528,7 @@ i.bi-arrow-up-right {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  
 }
 .event .more{
   height: 17%;
@@ -488,15 +590,22 @@ i.bi-arrow-up-right {
   text-transform: uppercase;
 }
 
-
-
-
-
-  @media (min-width:1400px) {
-    .mosaic{
-      max-width: 80%;
-    }
+@media (min-width:1600px) {
+  .container{
+    max-width: 1500px !important;
   }
+}
+@media (min-width: 1400px) {
+  .panel svg{
+    width: 70px;
+    height: 70px;
+  }
+  .carousel {
+    height: 100vh;
+    min-height: 730px;
+    max-height: 1200px;
+}
+}
   @media (max-width:1200px){
     h2.first{
       left: 0;
@@ -818,4 +927,3 @@ i.bi-arrow-up-right {
       padding: 10px;
     }
   }
-  

@@ -3,6 +3,7 @@ main {
     font-family: 'Montserrat', sans-serif;
 }
 
+
 .gallery-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -206,8 +207,8 @@ a {
 
 .map-container {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
+    width: 60%;
+    padding-bottom: 60.25%;
     height: 0;
 }
 
@@ -215,7 +216,7 @@ a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: 60%;
 }
 
@@ -228,6 +229,7 @@ a {
 .items {
     display: flex;
     flex-direction: column;
+    margin-left: -30px;
 }
 
 .item img {
@@ -241,22 +243,39 @@ a {
     gap: 10px;
 }
 .contentInside{
-    padding-right: 250px;
+    padding-right: 262px;
+  
 }
 .description {
-    margin-top: 20px;
+    margin:20px 0 100px 0;
     text-align: justify;
+    color: #383849;
+    font-family: 'montserrat', sans-serif;
 }
-
+.description svg{
+    height: 40px;
+    fill: #383849;
+}
+@media (min-width: 1400px) {
+    .gallery-container {
+        max-width: 1300px;
+        margin: 90px auto 40px auto;
+    }
+}
+@media (min-width: 1600px) {
+    .gallery-container {
+        max-width: 1500px;
+        margin: 90px auto 40px auto;
+    }
+}
 @media (max-width: 1200px) {
     .info {
         height: 100% !important;
     }
-    .contentInside{
+    .contentInside {
         padding: 0;
     }
 }
-
 @media (max-width: 992px) {
     #tab-1.active {
         height: 100% !important;
@@ -279,6 +298,9 @@ a {
         top: 50%; /* Центруємо вертикально */
         transform: translateY(80%);
     }
+    .map-container {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -291,9 +313,7 @@ a {
     .info {
         padding: 10px;
     }
-    .map-container {
-        margin-bottom: 20px;
-    }
+    
     .tab-content {
         padding: 10px 5px;
     }
@@ -324,6 +344,7 @@ a {
     }
     .description{
         padding: 0 10px 0 10px;
+        
     }
     .swiper {
         margin-top: 30px;
@@ -334,6 +355,13 @@ a {
     }
     main{
         padding: 0;
+    }
+    .map-container{
+        width: 100%;
+    }
+    .items {
+        
+        margin-left:0;
     }
    
 }

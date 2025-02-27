@@ -100,6 +100,6 @@ footer .row{
         width: 100%;
     }
     .social-media {
-        flex-direction: column; /* Додаємо для вертикального розташування іконок */
+        flex-direction: row;
     }
 }
