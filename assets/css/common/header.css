@@ -205,16 +205,15 @@
     content: '';
     width: 8px;
     height: 8px;
-    
     border-right: 2px solid currentColor;
     border-bottom: 2px solid currentColor;
-    transform: rotate(-135deg);
+    transform: rotate(45deg);
     transition: transform 0.3s ease;
   }
   
-  .collapse-btn.collapsed::after {
-    transform: rotate(45deg);
-  }
+  .collapse-btn[aria-expanded="true"]::after {
+    transform: rotate(-45deg);
+  } 
   
   .submenu {
     list-style: none;
@@ -349,10 +348,6 @@
         border-bottom: 2px solid #f4f4f4;
         transform: rotate(45deg);
         transition: transform 0.3s ease;
-    }
-
-    .collapse-btn:not(.collapsed)::after {
-        transform: rotate(-135deg);
     }
 
     /* Submenu */

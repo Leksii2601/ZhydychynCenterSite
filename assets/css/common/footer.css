@@ -67,7 +67,7 @@ footer .row{
     background-color: transparent;
 }
 
-.mb-4{
+#footer-container .mb-4{
     filter:brightness(0) invert(1);
 }
 
