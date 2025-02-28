@@ -45,6 +45,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         console.error('Помилка завантаження компонентів:', error);
     }
 
+    
 });
+
 
   
