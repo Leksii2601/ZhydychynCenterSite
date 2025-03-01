@@ -2,8 +2,6 @@
   background: rgba(255, 255, 255, 0); 
   box-shadow: none;
 }
-
-
 #header-container.scrolled {
   background: #f4f4f4;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
@@ -468,6 +466,7 @@ i.bi-arrow-up-right {
   transition: 0.3s ease;
   padding: 10px;
 }
+
 .panel svg{
   height: 8vh;
   width: 8vw;
@@ -479,6 +478,10 @@ i.bi-arrow-up-right {
   font-size: 20px;
   text-align: center;
   font-family:'Montserrat';
+}
+a{
+  text-decoration: none !important;
+  color:#393e42;
 }
 .panel:hover{
   background-color: #393e42;
@@ -529,6 +532,9 @@ i.bi-arrow-up-right {
   align-items: center;
   justify-content: space-around;
   
+}
+.event a{
+  text-decoration: none;
 }
 .event .more{
   height: 17%;
@@ -947,6 +953,9 @@ i.bi-arrow-up-right {
   }
   .headings {
     left: 20px;
+}
+.heading-section h2 {
+  font-size: 35px;
 }
 
   .buttonMore {

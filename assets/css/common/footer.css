@@ -11,8 +11,8 @@
     transition: 0.3s ease;
 }
 
-.nav-item{
-    width: 70%;
+#footer-container .nav-item{
+    width: 105%;
 }
 
 #footer-container{
@@ -101,5 +101,8 @@ footer .row{
     }
     .social-media {
         flex-direction: row;
+    }
+    #footer-container .nav-item{
+        width: 70%;
     }
 }

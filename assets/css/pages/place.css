@@ -304,6 +304,18 @@ body{
       .text h5{
         font-size: 12px;
       }
+      .church-title {
+        font-size: 1.25rem;
+    }
+    .church-subtitle {
+        font-size: 0.875rem;
+    }
+    .blog-category {
+        font-size: 0.75rem;
+    }
+    .post-details {
+        padding: 0.75rem;
+    }
     }
     @media (hover: hover) {
       .church-card:hover .blog-post-image img {
@@ -313,20 +325,6 @@ body{
           background: rgba(0, 0, 0, 0.3);
       }
       }
-      @media (max-width: 576px) {
-        .church-title {
-            font-size: 1.25rem;
-        }
-        .church-subtitle {
-            font-size: 0.875rem;
-        }
-        .blog-category {
-            font-size: 0.75rem;
-        }
-        .post-details {
-            padding: 0.75rem;
-        }
-        }
         @media (max-width:991px) {
           .religious-sites .row{
           align-items: center;
