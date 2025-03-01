@@ -8,8 +8,8 @@ main {
 }
 .mainHeading h1{
     font-size: 70px;
-    color: white; /* changed text color to white */
-    text-shadow: 0px 0px 40px rgb(0, 0, 0); /* added shadow */
+    color: white; 
+    text-shadow: 0 0 40px rgb(0, 0, 0);
     font-weight: 500;
     font-family: 'montserrat', sans-serif;
 }
