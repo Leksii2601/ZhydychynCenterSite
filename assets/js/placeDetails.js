@@ -14,7 +14,7 @@ function showTab(tabIndex) {
 
     // Змінюємо висоту блоку .info залежно від вибраної вкладки
     if (tabIndex === 1) { // Якщо натиснуто "Розташування"
-        infoContainer.style.height = "500px";
+        infoContainer.style.height = "auto";
     } else {
         infoContainer.style.height = "100%"; // Повертаємо стандартний розмір
     }

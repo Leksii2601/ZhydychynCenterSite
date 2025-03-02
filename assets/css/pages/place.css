@@ -42,9 +42,11 @@ body{
     height: 300px;
     align-items: center;
     text-align: justify;
+   
   }
   .text-overlay{
     width: 55%;
+    max-width: 1200px;
   }
   .text-overlay h1{
     float: left;
@@ -57,19 +59,32 @@ body{
     font-weight: 300;
   }
 
-  .bixText{
-    padding: 20vh 0 5vh 0;
-  }
-  .bixText h3{
-    font-size: 130px;
+  .bixText {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 360px; /* Фіксована висота 360px */
+    overflow: hidden;
+}
+
+.bixText .container {
+    position: relative;
+    z-index: 2;
+}
+
+.bixText h3 {
+    font-size: 160px;
     font-weight: 700;
     opacity: 0.5;
     letter-spacing: 5px;
-  }
-
-
-
-
+    margin: 0;
+    text-align: center;
+    line-height: 1;
+}
   .religious-sites{
     display: flex;
     justify-content: center;
@@ -169,19 +184,14 @@ body{
       width: 85%;
       justify-content: end;
     }
-
-    @media (min-width:1920px) {
-      .bixText{
-        padding: 11vh 0 5vh 0;
-      }
-    }
     @media (max-width: 1200px) {
       .text-overlay{
         width:70% ;
       }
       .bixText h3{
-        font-size: 110px;
+        font-size: 140px;
       }
+      
     }
     @media (max-width: 992px) {
       .content-overlay h3{
@@ -196,11 +206,8 @@ body{
       .text-overlay h4{
         font-size: 20px;
       }
-      .bixText{
-        margin-top: 25px;
-      }
       .bixText h3{
-        font-size: 90px;
+        font-size: 120px;
       }
       .religious-sites span{
         font-size: 14px;
@@ -237,13 +244,8 @@ body{
       .text-overlay h4{
         font-size: 17px;
       }
-      .bixText{
-        margin-top: 45px;
-        display: flex;
-        justify-content: center;
-      }
       .bixText h3{
-        font-size: 60px;
+        font-size: 100px;
       }
       .small-text span{
         font-size: 12px;
@@ -282,12 +284,14 @@ body{
         font-size: 16px;
       }
       .bixText{
-        margin-top: 45px;
         display: flex;
         justify-content: center;
       }
+          .bixText h3 {
+              font-size: 80px;
+          }
       .bixText h3{
-        font-size: 60px;
+        font-size: 80px;
       }
       .small-text span{
         font-size: 11px;
@@ -346,3 +350,78 @@ body{
                 padding: 1.5rem;
             }
         }
+
+        @media (min-width: 1920px) {
+          .bixText {
+              height: 305px; /* Зберігаємо висоту 360px */
+              padding: 7vh 0 3vh 0;
+          }
+          .bixText h3 {
+              font-size: 180px;
+          }
+      }
+      
+      @media (max-width: 1200px) {
+          .bixText {
+              height: 360px; /* Зберігаємо висоту 360px */
+          }
+          .bixText h3 {
+              font-size: 140px;
+          }
+      }
+      
+      @media (max-width: 992px) {
+          .bixText {
+              height: 360px; /* Зберігаємо висоту 360px */
+          }
+          .bixText h3 {
+              font-size: 120px;
+          }
+      }
+      
+      @media (max-width: 768px) {
+          .bixText {
+              height: 360px; /* Зберігаємо висоту 360px */
+          }
+          .bixText h3 {
+              font-size: 100px;
+          }
+      }
+      
+      @media (max-width: 576px) {
+        .bixText {
+          height: 375px; /* Зберігаємо висоту 360px */
+      }
+      .bixText h3 {
+          font-size: 80px;
+      }
+      }
+      
+      @media (max-width: 480px) {
+          .bixText {
+              height: 385px; /* Виправлено з 200px на 360px для консистентності */
+          }
+          .bixText h3 {
+              font-size: 70px; /* Зменшено з 80px для кращої адаптивності */
+          }
+          .religious-sites{
+            margin-top: -80px;
+          }
+      }
+      
+      @media (max-width: 380px) {
+          .bixText {
+              height: 400px; /* Зберігаємо висоту 360px */
+          }
+          .bixText h3 {
+              font-size: 50px;
+          }
+          .religious-sites{
+            margin-top: -180px;
+          }
+      }
+      @media (max-height:624px) {
+        .mainHeading {
+            margin-bottom: 50px;
+        }
+      }

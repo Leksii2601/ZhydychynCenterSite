@@ -12,7 +12,7 @@
 }
 
 #footer-container .nav-item{
-    width: 105%;
+    width: 140% !important;
 }
 
 #footer-container{
@@ -75,6 +75,9 @@ footer .row{
     .mb-3{
         display: none;
     }
+    #footer-container .nav-item{
+        width: 70% !important;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -87,6 +90,7 @@ footer .row{
     .social-media {
         flex-direction: column; /* Додаємо для вертикального розташування іконок */
     }
+    
 }
 
 @media screen and (max-width: 576px) {
@@ -102,7 +106,5 @@ footer .row{
     .social-media {
         flex-direction: row;
     }
-    #footer-container .nav-item{
-        width: 70%;
-    }
+   
 }
