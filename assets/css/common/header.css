@@ -7,6 +7,7 @@
   transform: translateY(0);
   color:#f4f4f4;
   transition: transform 0.4s ease, background 0.3s ease;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.433);
   
 }
 #header-container.hidden {

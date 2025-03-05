@@ -1,69 +1,150 @@
-main{
-    font-family: 'montserrat', sans-serif;
+main {
+    font-family: 'Montserrat', sans-serif;
 }
-.heading{
-    margin: 200px 0 100px 0;
+
+.heading {
+    margin: 100px 0;
     text-align: center;
 }
-.events{
+
+.heading h1 {
+    font-size: 120px;
+    background-image: url(/assets/images/churchcomplex/churchucomplex\ \(1\).jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 20px;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+.events {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
 }
-.heading h1{
-    font-size: 70px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 7px;
-}
-.events .container{
+
+.events .container {
     display: flex;
     margin-bottom: 200px;
     align-items: center;
+    background-color: #f4f4f4;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.348);
+    width: 100%;
+    max-width: 1200px;
 }
-.event{
+
+.event {
     padding: 40px;
+    flex: 1;
 }
-.events img{
-    width: min(800px, 90vw);
-    height: calc(min(800px, 90vw) * 0.5); /* Maintains 2:1 aspect ratio */
+
+.events img {
+    width: 50%;
+    max-width: 800px;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 1.5/1;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1400px) {
+    .events .container {
+        max-width: 1140px;
+        margin: 0 20px 100px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
-    .heading h1{
-        font-size: 60px;
+    .heading h1 {
+        
+        letter-spacing: 10px;
     }
 }
+
 @media screen and (max-width: 992px) {
-    .heading h1{
-        font-size: 50px;
+    .heading h1 {
+        font-size: 100px;
+        letter-spacing: 5px;
     }
-    .events .container{
-       margin: 0 20px 40px 20px;
-       flex-direction: column !important;
+
+    .events .container {
+        flex-direction: column !important;
+        margin: 0 20px 80px;
+    }
+
+    .events img {
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+
+    .event {
+        padding: 25px;
+        text-align: center;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .heading h1{
-        font-size: 40px;
+    .heading h1 {
+       
+        letter-spacing: 3px;
     }
-    .events img{
-        height: 250px;
-        width: 500px;
+
+    .events .container {
+        margin: 0 15px 60px;
     }
-    .event{
-        padding: 5px;
+
+    .events img {
+        aspect-ratio: 4/3;
+    }
+
+    .event {
+        padding: 15px;
     }
 }
+
 @media screen and (max-width: 576px) {
-    .heading h1{
-        font-size: 30px;
+    .heading h1 {
+        font-size: 65px;
+        letter-spacing: 2px;
     }
-    .events img{
-        height: 200px;
-        width: 300px;
+
+    .events .container {
+        margin: 0 10px 40px;
     }
-    .event{
+
+    .events img {
+        aspect-ratio: 1/1;
+    }
+
+    .event {
         padding: 10px;
+    }
+
+    .event h3 {
+        font-size: 1.2rem;
+    }
+
+    .event p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .heading h1 {
+        font-size: 50px;
+        letter-spacing: 1px;
+    }
+
+    .events .container {
+        margin: 0 5px 30px;
+    }
+    .events img {
+      padding: 10px;
+    }
+    .event {
+        padding: 5px;
     }
 }
