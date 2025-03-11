@@ -401,6 +401,9 @@ a {
         background: linear-gradient(to bottom, white 50%, #ededed 50%);
         margin-bottom: 10px; 
     }
+    .tablist{
+        width: 100%;
+    }
     main{
         padding: 0;
     }
@@ -435,11 +438,85 @@ a {
     }
 }
 
+   
+
+
 @media (min-width: 1600px) {
     main {
         padding: 0 20%;
     }
     .swiper {
         height: 70vh;
+    }
+}
+
+/* Оновлений стиль для heading-section */
+.heading-section {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    overflow: hidden; /* Запобігає переповненню на малих екранах */
+}
+
+.heading-section h2 {
+    font-size: 45px;
+    font-weight: 500;
+    color: #383849;
+    position: relative;
+    display: inline-block;
+    margin: 0; /* Видаляємо стандартні відступи */
+    transform: none; /* Видаляємо початкову трансформацію */
+    
+}
+
+/* Адаптивність для різних екранів */
+@media (max-width: 1200px) {
+    .heading-section h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .heading-section {
+        margin-bottom: 30px;
+    }
+    
+    .heading-section h2 {
+        font-size: 35px;
+        padding-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading-section {
+        margin-bottom: 25px;
+        text-align: center; /* Центрування на середніх екранах */
+    }
+    
+    .heading-section h2 {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+    
+    .heading-section h2::after {
+        left: 50%;
+        transform: translateX(-50%) scaleX(0.7);
+    }
+    
+    .heading-section:hover h2::after {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+@media (max-width: 576px) {
+    .heading-section {
+        margin-bottom: 20px;
+        margin-top: 15px;
+    }
+    
+    .heading-section h2 {
+        font-size: 25px;
+        padding: 0 5px 8px;
     }
 }
