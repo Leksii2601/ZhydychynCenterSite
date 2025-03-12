@@ -1,427 +1,505 @@
-body{
-    font-family:'Montserrat';
-    background-color: #faf8f8;
+body {
+  font-family: 'Montserrat';
+  background-color: #faf8f8;
 }
 
 .backgroundHeading {
-    display: grid;        
-    height: 500px;        
-  }
-  
-  .hero-image {
-    grid-area: 1/1;      
-    width: 100%;
-    height: 90vh;
-    max-height: 500px;
-    object-fit: cover;  
-  }
-  
-  .content-overlay {
-    grid-area: 1/1;
-    height: 150px;
-    place-self: end center;
-    z-index: 1; 
-    padding: 3rem 4rem;
-    text-align: center;
-    width: 80%;
-    max-width: 900px;
-    transform: translateY(50%);
-  } 
-  .content-overlay h3{
-    font-size: 55px !important;
-    font-weight: 600;
-    color: #f4f4f4;
-    font-family:'Montserrat';
-  }
-  .textInside{
-    display: flex;
-    justify-content: center;
-    transform: translateY(50%);
-    background-color:rgb(238, 236, 236);
-    padding: 50px 0 50px 0;
-    height: 300px;
-    align-items: center;
-    text-align: justify;
-   
-  }
-  .text-overlay{
-    width: 55%;
-    max-width: 1200px;
-  }
-  .text-overlay h1{
-    float: left;
-    padding-right: 10px;
-    font-size: 80px;
-    margin-top: -15px;
-    margin-bottom: 0px;
-  }
-  .text-overlay h4{
-    font-weight: 300;
-  }
+  display: grid;
+  height: 500px;
+  margin-top: 60px;
+}
 
-  .bixText {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    height: 360px; /* Фіксована висота 360px */
-    overflow: hidden;
+.hero-image {
+  grid-area: 1/1;
+  width: 100%;
+  height: 90vh;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.content-overlay {
+  grid-area: 1/1;
+  height: 150px;
+  place-self: end center;
+  z-index: 1;
+  padding: 3rem 4rem;
+  text-align: center;
+  width: 80%;
+  max-width: 900px;
+  transform: translateY(50%);
+}
+
+.content-overlay h3 {
+  font-size: 55px !important;
+  font-weight: 600;
+  color: #f4f4f4;
+  font-family: 'Montserrat';
+}
+
+.textInside {
+  display: flex;
+  justify-content: center;
+  transform: translateY(50%);
+  background-color: rgb(238, 236, 236);
+  padding: 50px 0 50px 0;
+  height: 300px;
+  align-items: center;
+  text-align: justify;
+
+}
+
+.text-overlay {
+  width: 55%;
+  max-width: 1200px;
+}
+
+.text-overlay h1 {
+  float: left;
+  padding-right: 10px;
+  font-size: 80px;
+  margin-top: -15px;
+  margin-bottom: 0px;
+}
+
+.text-overlay h4 {
+  font-weight: 300;
+}
+
+.bixText {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 360px;
+  /* Фіксована висота 360px */
+  overflow: hidden;
 }
 
 .bixText .container {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .bixText h3 {
-    font-size: 160px;
-    font-weight: 700;
-    opacity: 0.5;
-    letter-spacing: 5px;
-    margin: 0;
-    text-align: center;
-    line-height: 1;
+  font-size: 160px;
+  font-weight: 700;
+  opacity: 0.5;
+  letter-spacing: 5px;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
 }
-  .religious-sites{
+
+.religious-sites {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row {
+  margin-right: 0;
+}
+
+.religious-sites h5 {
+  margin-top: 15px;
+}
+
+.church-card {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.church-card:hover .overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.blog-post-image {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.blog-post-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s ease;
+}
+
+.blog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.post-details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+}
+
+.blog-category {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 1rem;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.church-title {
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  display: block;
+  word-wrap: break-word;
+}
+
+.church-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  display: block;
+  word-wrap: break-word;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 1.5rem;
+}
+
+.text h5 {
+  position: relative;
+  top: -5px;
+  font-weight: 500;
+  font-style: italic;
+  display: flex;
+  width: 85%;
+  justify-content: end;
+}
+
+@media (max-width: 1200px) {
+  .text-overlay {
+    width: 70%;
+  }
+
+  .bixText h3 {
+    font-size: 140px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .content-overlay h3 {
+    font-size: 40px !important;
+  }
+
+  .text-overlay {
+    width: 80%;
+  }
+
+  .text-overlay h1 {
+    font-size: 70px;
+  }
+
+  .text-overlay h4 {
+    font-size: 20px;
+  }
+
+  .bixText h3 {
+    font-size: 120px;
+  }
+
+  .religious-sites span {
+    font-size: 14px;
+  }
+
+  .religious-sites h5 {
+    font-size: 25px !important;
+  }
+
+
+
+  .highlight .blog-post-image img {
+    transform: scale(1.09);
+    /* Збільшення при активності */
+  }
+
+  .highlight .overlay {
+    background: rgba(0, 0, 0, 0.3);
+    /* Тінь на фоні */
+  }
+
+  .text h5 {
+    font-size: 17px;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+  .content-overlay h3 {
+    font-size: 35px !important;
+  }
+
+  .text-overlay {
+    width: 80%;
+  }
+
+  .text-overlay h1 {
+    font-size: 55px;
+  }
+
+  .text-overlay h4 {
+    font-size: 17px;
+  }
+
+  .bixText h3 {
+    font-size: 100px;
+  }
+
+  .small-text span {
+    font-size: 12px;
+  }
+
+  .religious-sites h5 {
+    font-size: 16px !important;
+  }
+
+  .text h5 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    height: 45vh;
+  }
+
+  .backgroundHeading {
+    margin-bottom: 8vh;
+    height: 50%;
+  }
+
+  .content-overlay {
+    width: 100%;
+    margin-bottom: -110px;
+    height: 200px;
+    padding: 64px;
+  }
+
+  .content-overlay h3 {
+    font-size: 35px !important;
+  }
+
+  .text-overlay {
+    width: 80%;
+  }
+
+  .text-overlay h1 {
+    font-size: 55px;
+  }
+
+  .text-overlay h4 {
+    font-size: 16px;
+  }
+
+  .bixText {
     display: flex;
     justify-content: center;
-    flex-direction: column;
   }
-  .row{
-    margin-right: 0;
+
+  .bixText h3 {
+    font-size: 80px;
   }
-  .religious-sites h5{
-    margin-top: 15px;
+
+  .bixText h3 {
+    font-size: 80px;
   }
-  .church-card{ 
-    transition: transform 0.3s ease;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    position: relative;
-    }
-    .overlay {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0, 0, 0, 0);
-    transition: all 0.3s ease;
-    z-index: 100;
-    pointer-events: none; 
-    }
-    .church-card:hover .overlay {
-        background: rgba(0, 0, 0, 0.3);
-    }
-    .blog-post-image {
-        position: relative;
-        padding-top: 56.25%; 
-        overflow: hidden;
-    }
-    
-    .blog-post-image img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.9s ease;
-    }
-    
-    .blog-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
-    }
-    
-    .post-details {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        padding: 1rem;
-    }
-    .blog-category {
-        display: inline-block;
-        background-color: rgba(255,255,255,0.2);
-        padding: 0.25rem 1rem;
-        color: white;
-        text-decoration: none;
-        margin-bottom: 1rem;
-    }
-    
-    .church-title {
-        font-weight: 600;
-        color: white;
-        text-decoration: none;
-        display: block;
-        word-wrap: break-word;
-    }
-    
-    .church-subtitle {
-        color: rgba(255,255,255,0.9);
-        text-decoration: none;
-        display: block;
-        word-wrap: break-word;
-    }
-    
-    .row {
-        --bs-gutter-x: 1.5rem;
-        --bs-gutter-y: 1.5rem;
-    }
-    .text h5{
-      position: relative;
-      top: -5px;
-      font-weight: 500;
-      font-style: italic;
-      display: flex;
-      width: 85%;
-      justify-content: end;
-    }
-    @media (max-width: 1200px) {
-      .text-overlay{
-        width:70% ;
-      }
-      .bixText h3{
-        font-size: 140px;
-      }
-      
-    }
-    @media (max-width: 992px) {
-      .content-overlay h3{
-        font-size: 40px !important;
-      }
-      .text-overlay{
-        width:80%;
-      }
-      .text-overlay h1{
-        font-size: 70px;
-      }
-      .text-overlay h4{
-        font-size: 20px;
-      }
-      .bixText h3{
-        font-size: 120px;
-      }
-      .religious-sites span{
-        font-size: 14px;
-      }
-      .religious-sites h5{
-        font-size: 25px !important;
-      }
 
+  .small-text span {
+    font-size: 11px;
 
+  }
 
-      .highlight .blog-post-image img {
-        transform: scale(1.09);  /* Збільшення при активності */
-    }
-    
-    .highlight .overlay {
-        background: rgba(0, 0, 0, 0.3);  /* Тінь на фоні */
-    }
-    .text h5{
-      font-size: 17px;
-    }
-    
-      
-    }
-    @media (max-width: 768px) {
-      .content-overlay h3{
-        font-size: 35px !important;
-      }
-      .text-overlay{
-        width:80%;
-      }
-      .text-overlay h1{
-        font-size: 55px;
-      }
-      .text-overlay h4{
-        font-size: 17px;
-      }
-      .bixText h3{
-        font-size: 100px;
-      }
-      .small-text span{
-        font-size: 12px;
-      }
-      .religious-sites h5{
-        font-size: 16px !important;
-      }
-      .text h5{
-        font-size: 14px;
-      }
-    }
-    @media (max-width: 576px) {
-      .hero-image{
-        height: 45vh;
-      }
-      .backgroundHeading{
-        margin-bottom: 8vh;
-        height: 50%;
-      }
-      .content-overlay{
-        width: 100%;
-        margin-bottom: -110px;
-        height: 200px;
-        padding: 64px;
-      }
-      .content-overlay h3{
-        font-size: 35px !important;
-      }
-      .text-overlay{
-        width:80%;
-      }
-      .text-overlay h1{
-        font-size: 55px;
-      }
-      .text-overlay h4{
-        font-size: 16px;
-      }
-      .bixText{
-        display: flex;
-        justify-content: center;
-      }
-          .bixText h3 {
-              font-size: 80px;
-          }
-      .bixText h3{
-        font-size: 80px;
-      }
-      .small-text span{
-        font-size: 11px;
-       
-      }
-      .small-text h5{
-        font-size: 16px !important;
-        margin-top: 20px !important;
+  .small-text h5 {
+    font-size: 16px !important;
+    margin-top: 20px !important;
 
-      }
-      .small-text{
-        padding: 0 10px 0 10px;
-      }
-      .text h5{
-        font-size: 12px;
-      }
-      .church-title {
-        font-size: 1.25rem;
-    }
-    .church-subtitle {
-        font-size: 0.875rem;
-    }
-    .blog-category {
-        font-size: 0.75rem;
-    }
-    .post-details {
-        padding: 0.75rem;
-    }
-    }
-    @media (hover: hover) {
-      .church-card:hover .blog-post-image img {
-          transform: scale(1.09);
-      }
-      .church-card:hover .overlay {
-          background: rgba(0, 0, 0, 0.3);
-      }
-      }
-        @media (max-width:991px) {
-          .religious-sites .row{
-          align-items: center;
-          justify-content: center;
-        }
-        }
+  }
 
-        @media (min-width: 577px) {
-            .church-title {
-                font-size: 1.5rem;
-            }
-            .church-subtitle {
-                font-size: 1rem;
-            }
-            .blog-category {
-                font-size: 0.9rem;
-            }
-            .post-details {
-                padding: 1.5rem;
-            }
-        }
+  .small-text {
+    padding: 0 10px 0 10px;
+  }
 
-        @media (min-width: 1920px) {
-          .bixText {
-              height: 305px; /* Зберігаємо висоту 360px */
-              padding: 7vh 0 3vh 0;
-          }
-          .bixText h3 {
-              font-size: 180px;
-          }
-      }
-      
-      @media (max-width: 1200px) {
-          .bixText {
-              height: 360px; /* Зберігаємо висоту 360px */
-          }
-          .bixText h3 {
-              font-size: 140px;
-          }
-      }
-      
-      @media (max-width: 992px) {
-          .bixText {
-              height: 360px; /* Зберігаємо висоту 360px */
-          }
-          .bixText h3 {
-              font-size: 120px;
-          }
-      }
-      
-      @media (max-width: 768px) {
-          .bixText {
-              height: 360px; /* Зберігаємо висоту 360px */
-          }
-          .bixText h3 {
-              font-size: 100px;
-          }
-      }
-      
-      @media (max-width: 576px) {
-        .bixText {
-          height: 375px; /* Зберігаємо висоту 360px */
-      }
-      .bixText h3 {
-          font-size: 80px;
-      }
-      }
-      
-      @media (max-width: 480px) {
-          .bixText {
-              height: 385px; /* Виправлено з 200px на 360px для консистентності */
-          }
-          .bixText h3 {
-              font-size: 70px; /* Зменшено з 80px для кращої адаптивності */
-          }
-          .religious-sites{
-            margin-top: -80px;
-          }
-      }
-      
-      @media (max-width: 380px) {
-          .bixText {
-              height: 400px; /* Зберігаємо висоту 360px */
-          }
-          .bixText h3 {
-              font-size: 50px;
-          }
-          .religious-sites{
-            margin-top: -180px;
-          }
-      }
-      @media (max-height:624px) {
-        .mainHeading {
-            margin-bottom: 50px;
-        }
-      }
+  .text h5 {
+    font-size: 12px;
+  }
+
+  .church-title {
+    font-size: 1.25rem;
+  }
+
+  .church-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .blog-category {
+    font-size: 0.75rem;
+  }
+
+  .post-details {
+    padding: 0.75rem;
+  }
+}
+
+@media (hover: hover) {
+  .church-card:hover .blog-post-image img {
+    transform: scale(1.09);
+  }
+
+  .church-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width:991px) {
+  .religious-sites .row {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 577px) {
+  .church-title {
+    font-size: 1.5rem;
+  }
+
+  .church-subtitle {
+    font-size: 1rem;
+  }
+
+  .blog-category {
+    font-size: 0.9rem;
+  }
+
+  .post-details {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .bixText {
+    height: 305px;
+    /* Зберігаємо висоту 360px */
+    padding: 7vh 0 3vh 0;
+  }
+
+  .bixText h3 {
+    font-size: 180px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .bixText {
+    height: 360px;
+    /* Зберігаємо висоту 360px */
+  }
+
+  .bixText h3 {
+    font-size: 140px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bixText {
+    height: 360px;
+    /* Зберігаємо висоту 360px */
+  }
+
+  .bixText h3 {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bixText {
+    height: 360px;
+    /* Зберігаємо висоту 360px */
+  }
+
+  .bixText h3 {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bixText {
+    height: 375px;
+    /* Зберігаємо висоту 360px */
+  }
+
+  .bixText h3 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bixText {
+    height: 385px;
+    /* Виправлено з 200px на 360px для консистентності */
+  }
+
+  .bixText h3 {
+    font-size: 70px;
+    /* Зменшено з 80px для кращої адаптивності */
+  }
+
+  .religious-sites {
+    margin-top: -80px;
+  }
+}
+
+@media (max-width: 380px) {
+  .bixText {
+    height: 400px;
+    /* Зберігаємо висоту 360px */
+  }
+
+  .bixText h3 {
+    font-size: 50px;
+  }
+
+  .religious-sites {
+    margin-top: -180px;
+  }
+}
+
+@media (max-height:624px) {
+  .mainHeading {
+    margin-bottom: 50px;
+  }
+}
