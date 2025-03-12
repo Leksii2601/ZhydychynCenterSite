@@ -20,7 +20,7 @@ main {
     width: auto;
     margin: 0 auto;
     height: auto;
-    margin: 90px 0 40px 0;
+    margin: 40px 0 40px 0;
 }
 
 .main-image {
@@ -279,14 +279,14 @@ a {
 @media (min-width: 1400px) {
     .gallery-container {
         max-width: 1300px;
-        margin: 90px auto 40px auto;
+        margin: 40px auto 40px auto;
     }
 }
 
 @media (min-width: 1600px) {
     .gallery-container {
         max-width: 1600px;
-        margin: 90px auto 40px auto;
+        margin: 50px auto 40px auto;
     }
 }
 @media (max-width: 1200px) {
@@ -462,7 +462,6 @@ a {
 .heading-section h2 {
     font-size: 45px;
     font-weight: 500;
-    color: #383849;
     position: relative;
     display: inline-block;
     margin: 0; /* Видаляємо стандартні відступи */
