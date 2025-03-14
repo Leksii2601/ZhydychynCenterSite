@@ -125,11 +125,28 @@ body {
     margin-top: 0;
     margin-bottom: 15px;
 }
-
-.smallInfo {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
+.info-section span{
+    font-weight: bold;
+    color: #000;
+}
+.info-section li{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.info-section a{
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: italic;
+}
+table{
+    max-width: 800px !important;
+}
+table tr{
+    font-size: 20px;
+}
+table td, tr{
+    border:2px solid rgba(0, 0, 0, 0.736)
 }
 
 .smallInfo svg {
@@ -206,10 +223,36 @@ body {
 .position-relative {
     position: relative;
 }
+.excursion{
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background-color: #393e424d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    box-sizing: border-box;
+}
+.threeVariants{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
 
+/* Адаптивність для різних екранів */
 @media (max-width: 1200px) {
     .howToGetTo .container {
         max-width: 95%;
+    }
+    .orderExcursion h1{
+        font-size: 42px;
+    }
+    .excursion {
+        max-width: 280px;
     }
 }
 
@@ -225,6 +268,19 @@ body {
     
     .info-section {
         font-size: 15px;
+    }
+    .orderExcursion h1{
+        font-size: 36px;
+    }
+    .threeVariants {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .excursion {
+        max-width: 260px;
+        margin: 10px;
     }
 }
 
@@ -290,12 +346,18 @@ body {
         padding: 15px;
     }
     
-    .smallInfo {
+    .orderExcursion h1{
+        font-size: 32px;
+    }
+    .threeVariants {
         flex-direction: column;
+        align-items: center;
+        gap: 30px;
     }
     
-    .smallInfo svg {
-        margin-bottom: 10px;
+    .excursion {
+        max-width: 350px;
+        margin: 0;
     }
 }
 
@@ -344,6 +406,12 @@ body {
     .textInfo p {
         font-size: 14px;
     }
+    .orderExcursion h1{
+        font-size: 28px;
+    }
+    .excursion {
+        max-width: 90%;
+    }
 }
 
 @media (max-width: 375px) {
@@ -358,6 +426,20 @@ body {
     
     .transport-name {
         font-size: 12px;
+    }
+    .howToGetTo .container {
+        max-width: 100%;
+    }
+    .howToGetTo .mt-4{
+        padding: 0;
+    }
+    .howToGetTo td, tr{
+        font-size: 15px;
+    }
+    .excursion {
+        max-width: 100%;
+        aspect-ratio: 1 / 0.9;
+        border-radius: 15px;
     }
 }
 
