@@ -15,7 +15,7 @@ body {
     font-size: 48px;
     margin-bottom: 40px;
     margin-top: 200px;
-    font-weight: bold;
+    text-align: center;
 }
 
 .howToGetTo h2 {
@@ -120,33 +120,269 @@ body {
     line-height: 1.6;
     margin-bottom: 20px;
 }
-
+.info-section p{
+    font-size: 18px;
+    text-align: justify;
+}
 .info-section h3 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
 }
-.info-section span{
-    font-weight: bold;
-    color: #000;
-}
+
 .info-section li{
     margin-bottom: 10px;
     font-size: 16px;
+    list-style:none;
+    display: flex;
 }
+.mapAndInput{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10px;
+}
+.mapAndInput b{
+    width: 30%;
+}
+.mapAndInput img{
+    height: 100px;
+    width: 100px;
+}
+.mapAndInput:last-of-type{
+    gap: 25px;
+    transition: all 0.3s ease; 
+    font-style: normal; 
+}
+.mapAndInput:last-of-type:hover{
+    transform: scale(1.1);
+}
+.mapAndInput:last-of-type a{
+    width: 29%;
+    
+}
+.info-section li svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #333 !important;
+    flex-shrink: 0; 
+}
+#bus-content .useful-links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Два рівні стовпці */
+    gap: 10px; /* Відстань між елементами */
+    list-style-type: none;
+    justify-items: center;
+    margin:30px 0 30px 0;
+}
+#bus-content .useful-links li{
+    transition: all 0.3s ease;  
+   
+}
+#bus-content .useful-links a{
+    width: fit-content;
+  
+   
+}
+#bus-content .useful-links li:hover{
+    transform: scale(1.1);
+}  
+
+#bus-content .route-list svg{
+    flex-shrink: 0; 
+}
+#bus-content .mapAndInput{
+    margin-bottom: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#bus-content .mapAndInput p{
+    width: 40%;
+}
+#bus-content .allTables{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+    gap:40px;
+}
+#bus-content .route-info svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #333;
+    vertical-align: middle;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-left: 10px;
+    align-self: center; 
+}
+#bus-content .table-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    
+}
+#bus-content .route-info h4{
+    font-size: 18px;
+}
+#bus-content .route-info p{
+    transition: all 0.3s ease;
+}
+#bus-content .route-info p:hover{
+    transform: translateY(-3px);
+}
+#bus-content td{
+    padding: 5px;
+}
+#train-content td{
+    padding: 5px;
+}
+
+
+#train-content .useful-links{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Два рівні стовпці */
+    gap: 10px; /* Відстань між елементами */
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+#train-content .useful-links a{
+display: block;
+}
+#train-content .useful-links li svg{
+    flex-shrink: 0; 
+}
+
+#train-content .useful-links li{
+    transition: all 0.3s ease;  
+}
+#train-content .useful-links li:hover{
+    transform: scale(1.1);
+}  
+
+#train-content .route-list li svg{
+    flex-shrink: 0; 
+}
+#train-content .mapAndInput{
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#train-content .mapAndInput p{
+    width: 40%;
+}
+#train-content .allTables{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+#train-content .route-info svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #333;
+    vertical-align: middle;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-left: 10px;
+    align-self: center; 
+}
+#train-content .table-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 300px;
+}
+#train-content .route-info h4{
+    font-size: 18px;
+}
+#train-content .route-info p{
+    transition: all 0.3s ease;
+}
+#train-content .route-info p:hover{
+    transform: translateY(-3px);
+}
+#social-content ul img{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+#social-content .TextAndIcons li:nth-of-type(2) img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+#social-content li{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#social-content ul span{
+    width: 50%;
+    font-size: 17px;
+}
+#social-content ul{
+    margin-bottom: 40px;
+}
+
+
 .info-section a{
-    color: #000;
-    text-decoration: underline;
     font-weight: bold;
-    font-style: italic;
+    
 }
+.info-section h4{
+    text-align: center;
+    font-weight: 600;
+}
+.textVideo p{
+    width: 70%;
+}
+.textVideo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
 table{
     max-width: 800px !important;
+    margin-bottom: 0 !important;
 }
 table tr{
     font-size: 20px;
 }
 table td, tr{
-    border:2px solid rgba(0, 0, 0, 0.736)
+    border:2px solid rgba(0, 0, 0, 0.736);
+    vertical-align: middle;
+}
+table thead svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #333;
+    vertical-align: middle;
+    display: inline-block;
+}
+.howToGetTo .mt-4{
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+.howToGetTo .mt-4 img{
+    width: 40%;
+    height: 30%;
 }
 
 .smallInfo svg {
@@ -163,6 +399,13 @@ table td, tr{
 .textInfo p {
     margin: 0;
     color: #666;
+}
+.orderLiving h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    margin-top: 80px;
+    font-weight: bold;
+    text-align: center;
 }
 .orderExcursion h1 {
     font-size: 48px;
@@ -186,7 +429,7 @@ table td, tr{
 
 /* Gradient overlay */
 .bg-gradient-light-violet-light-orange {
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(to top, rgba(255, 174, 75, 0.76), rgba(170, 120, 220, 0.5));
     position: absolute;
     top: 0;
     left: 0;
@@ -219,28 +462,315 @@ table td, tr{
 .last-paragraph-no-margin p:last-child {
     margin-bottom: 0;
 }
-
+ .orderLiving h1{
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 75px;
+}.orderExcursion h1{
+    font-family: 'montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 75px;
+}
 .position-relative {
     position: relative;
 }
-.excursion{
+.excursion {
+    background: white;
+    box-shadow: 0 0px 40px rgba(0, 0, 0, 0.432);
+    overflow: hidden;
+    text-align: center;
+    width: 380px;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.excursion .image-container {
+    position: relative;
     width: 100%;
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
-    border-radius: 20px;
-    background-color: #393e424d;
+    height: 200px;
+    overflow: hidden;
+}
+.variantsToOrder h1{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.excursion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+    transition: filter 0.3s ease;
+    filter: brightness(0.7);
+}
+
+.excursion small {
+    top: 120px;
+    font-size: 15px;
+}
+
+.excursion .Text {
+    bottom: 80px;
+    font-size: 25px;
+    padding: 8px 12px;
+    font-weight: 600;
+    border:2px solid #f4f4f4;
+    width: 200px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 0;
-    box-sizing: border-box;
 }
 .threeVariants{
     display: flex;
     justify-content: space-around;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 20px 10px;
+    
+}
+.excursion small,
+.excursion .Text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 10px;
+    z-index: 2;
+    
+}
+
+
+
+.threeVariants {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.excursion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.excursion-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 80px;
+   
+}
+.excursion-image, .excursion-text {
+    flex: 1;
+    padding: 10px;
+}
+.excursion-image {
+    position: relative;
+    align-self: center;
+    object-fit: contain;
+}
+.excursion-image img {
+    width: 600px;
+    height: auto;
+    border-radius: 5px;
+}
+.excursion-caption {
+    position: absolute;
+    height: auto;
+    min-height: 120px;
+    width: 340px;
+    bottom: -10px;
+    left: -30px;
+    background: #8b5e3b;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+}
+.excursion-text {
+    margin-left: 70px;
+    width: 500px;
+    max-height: 70vh;
+    background-color: #f4f4f4;
+    padding: 50px;
+    
+}
+.excursion-text h1 {
+    font-size: 25px;
+   font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.excursion-text ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.excursion-info {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    width:fit-content;
+}
+.nutrition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6b473b;
+   
+}
+
+.nutrition-content {
+    display: flex;
+    max-width: 1600px;
+    align-items: center;
+    gap: 40px;
+}
+
+.nutrition-image {
+    flex: 1;
+}
+
+.nutrition-image img {
+    width: 100%;
+    height: auto;
+   
+}
+
+.nutrition-text {
+    flex: 1;
+}
+
+.nutrition-text h1 {
+    font-size: 50px;
+    color:#f4f4f4;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+
+
+.nutrition-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color:#f4f4f4;
+}
+
+/* Стилі для секції nutrition */
+.nutrition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6b473b;
+    
+}
+
+.nutrition-content {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+.nutrition-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.nutrition-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.nutrition-text {
+    flex: 1;
+    padding: 20px;
+    max-width: 50%;
+}
+
+.nutrition-text h1 {
+    font-size: 42px;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.nutrition-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #f4f4f4;
+}
+.nutrition-options{
+    justify-content: space-around;
+}
+.nutrition-choose{
+    margin-bottom: 100px;
+}
+.living-choose{
+    margin-bottom: 100px;
+}
+
+/* Адаптивність для планшетів */
+@media (max-width: 992px) {
+    .nutrition-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .nutrition-image, 
+    .nutrition-text {
+        max-width: 90%;
+    }
+    
+    .nutrition-text h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .nutrition-info p {
+        text-align: center;
+    }
+}
+
+/* Адаптивність для мобільних телефонів */
+@media (max-width: 576px) {
+    
+    .nutrition-image, 
+    .nutrition-text {
+        max-width: 100%;
+    }
+    
+    .nutrition-text h1 {
+        font-size: 28px;
+    }
+    
+    .nutrition-info p {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+/* Забезпечення плавної зміни розмірів */
+@media (max-width: 768px) and (min-width: 577px) {
+    .nutrition-text h1 {
+        font-size: 32px;
+    }
 }
 
 /* Адаптивність для різних екранів */
@@ -248,11 +778,33 @@ table td, tr{
     .howToGetTo .container {
         max-width: 95%;
     }
+   .orderLiving h1{
+        font-size: 42px;
+    }
     .orderExcursion h1{
         font-size: 42px;
     }
     .excursion {
         max-width: 280px;
+    }
+    .mapAndInput:last-of-type a{
+        width: 40%;
+        
+    }
+    .mapAndInput b{
+        width: 40%;
+    }
+    .excursion-content{
+        padding: 20px;
+    }
+    .excursion-text{
+        margin-left: 20px;
+    }
+    .excursion-container{
+        margin-bottom:100px;
+    }
+    .variantsToOrder{
+        margin-bottom: 100px;
     }
 }
 
@@ -269,6 +821,9 @@ table td, tr{
     .info-section {
         font-size: 15px;
     }
+     .orderLiving h1{
+        font-size: 36px;
+    }
     .orderExcursion h1{
         font-size: 36px;
     }
@@ -281,6 +836,58 @@ table td, tr{
     .excursion {
         max-width: 260px;
         margin: 10px;
+    }
+    .mapAndInput:last-of-type a{
+        width: 70%;
+        
+    }
+    .mapAndInput b{
+        width: 70%;
+    }
+    .mapAndInput img{
+        height: 80px;
+        width: 80px;
+    }
+    .textVideo p{
+        width: 80%;
+    }
+    .howToGetTo .mt-4{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+    .howToGetTo .mt-4 img{
+        width: 100%;
+        height: 30%;
+        margin-bottom: 20px;
+    }
+    #train-content .useful-links{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    #train-content .allTables {
+        gap: 20px;
+    }
+    #bus-content .useful-links{
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    #bus-content .allTables {
+        gap: 20px;
+    }
+    .excursion-caption {
+        width: 300px;
+        min-height: 100px;
+        font-size: 18px;
+        bottom: -15px;
+        left: -20px;
+    }
+    
+    .excursion-image {
+        margin-bottom: 50px;
+    }
+    .excursion-content{
+        flex-direction: column;
+    }.excursion-container{
+        margin-bottom:150px;
     }
 }
 
@@ -346,6 +953,9 @@ table td, tr{
         padding: 15px;
     }
     
+    .orderLiving h1{
+        font-size: 32px;
+    }
     .orderExcursion h1{
         font-size: 32px;
     }
@@ -358,6 +968,75 @@ table td, tr{
     .excursion {
         max-width: 350px;
         margin: 0;
+    }
+
+    .mapAndInput:last-of-type a{
+        width: 85%;
+        
+    }
+    .mapAndInput b{
+        width: 85%;
+    }
+    .mapAndInput img{
+        height: 70px;
+        width: 70px;
+    }
+    .textVideo p{
+        width: 90%;
+    }
+    thead th:nth-child(2) svg {
+        margin-right: 0;
+    }
+    .excursion-content {
+        flex-direction: column;
+    }
+    
+    
+    .excursion-text {
+        width: 450px;
+        height: 400px;
+        padding: 30px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    
+    .excursion-caption {
+        width: 280px;
+        min-height: 90px;
+        font-size: 16px;
+        padding: 12px;
+        bottom: -15px;
+        left: 0;
+    }
+    .excursion-image img{
+        width: 450px;
+    }
+
+    .excursion-text {
+        padding: 30px;
+        margin-top: 50px;
+    }
+    
+    .excursion-text h1 {
+        font-size: 28px;
+        margin-bottom: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    
+    .excursion-text ul {
+        font-size: 16px;
+    }
+    
+    .excursion-info {
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .excursion-text li {
+        text-align: center;
     }
 }
 
@@ -391,12 +1070,17 @@ table td, tr{
     }
     
     .transport-content {
-        padding: 12px;
+        padding: 5px;
         margin-top: 15px;
     }
     
     .info-section h3 {
-        font-size: 16px;
+        font-size: 20px;
+    }
+    .info-section h4 {
+        font-size: 17px;
+    }.info-section p {
+        text-align: justify;
     }
     
     .textInfo h4 {
@@ -406,11 +1090,113 @@ table td, tr{
     .textInfo p {
         font-size: 14px;
     }
+    .orderLiving h1{
+        font-size: 28px;
+    }
     .orderExcursion h1{
         font-size: 28px;
     }
     .excursion {
         max-width: 90%;
+    }
+
+    .mapAndInput:last-of-type a{
+        width: 100%;
+        
+    }
+    .mapAndInput b{
+        width: 100%;
+    }
+    .mapAndInput img{
+        height: 60px;
+        width: 60px;
+    }
+    .textVideo p{
+        width: 100%;
+    }
+    .howToGetTo .mt-4{
+        padding: 0;
+    }
+    .excursion-caption {
+        width: 250px;
+        min-height: 80px;
+        font-size: 15px;
+        bottom: -15px;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+    
+    .excursion-image {
+        margin-bottom: 40px;
+    }
+
+    #social-content ul img{
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+    #social-content li{
+        flex-direction: column;
+    }
+    #social-content .TextAndIcons li:nth-of-type(2) img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    #social-content ul span{
+        width: 100%;
+        font-size: 15px;
+    }
+    #train-content .mapAndInput {
+        flex-direction: column;
+    }
+    #bus-content .mapAndInput {
+        flex-direction: column;
+    }
+
+    .excursion-content {
+        padding: 0;
+    }
+    .excursion-text {
+        width: 100%;
+        padding: 30px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    
+    .excursion-caption {
+        width: 180px;
+        min-height: 90px;
+        font-size: 13px;
+        padding: 12px;
+        bottom: -15px;
+        left: 120px;
+    }
+    .excursion-image img{
+        width: 90%;
+        padding-left: 50px;
+    }
+    .excursion-text {
+        padding: 25px 20px;
+        margin-top: 40px;
+    }
+    
+    .excursion-text h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .excursion-text ul {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .excursion-info {
+        gap: 15px;
+    }
+    
+    .excursion-text li {
+        margin-bottom: 10px;
     }
 }
 
@@ -418,7 +1204,10 @@ table td, tr{
     .howToGetTo h1 {
         font-size: 28px;
     }
-    
+   
+    thead th{
+        font-size: 14px;
+    }
     .transport-option {
         min-width: 110px;
         padding: 10px 0;
@@ -430,17 +1219,60 @@ table td, tr{
     .howToGetTo .container {
         max-width: 100%;
     }
-    .howToGetTo .mt-4{
-        padding: 0;
-    }
+   
     .howToGetTo td, tr{
         font-size: 15px;
     }
     .excursion {
         max-width: 100%;
-        aspect-ratio: 1 / 0.9;
-        border-radius: 15px;
     }
+    .info-section li svg{
+        margin-right: 5px;
+    }
+    #bus-content .useful-links{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    #bus-content .allTables {
+        gap: 10px;
+    }
+    .info-section ul{
+        padding-left: 0 !important;
+    }
+    #bus-content .mapAndInput p{
+        width: 100%;
+    }
+    #train-content .mapAndInput p{
+        width: 100%;
+    }
+    
+    #train-content .useful-links{
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    #train-content .allTables {
+        gap: 10px;
+    }
+    .excursion-text {
+        padding: 20px 15px;
+    }
+    
+    .excursion-text h1 {
+        font-size: 22px;
+    }
+    
+    .excursion-text ul {
+        font-size: 14px;
+    }
+    
+    .excursion-info {
+        gap: 10px;
+    }
+    .excursion-container {
+        margin-bottom: -50px;
+    }
+    .threeVariants{
+        margin-bottom: -100px;
+    }
+    
 }
 
 @media (min-width: 1400px) {
@@ -451,5 +1283,6 @@ table td, tr{
     .howToGetTo h1 {
         font-size: 54px;
     }
+    
 }
 

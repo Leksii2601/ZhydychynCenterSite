@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -23,24 +24,17 @@
         rel="stylesheet">
 </head>
 
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
-    rel="stylesheet">
-
 <body style="background-color: white;">
     <div id="header-container"></div>
     <main>
         <section class="howToGetTo">
             <div class="container">
-                <h1>Плануйте подорож до Жидичина</h1>
+                <h1>ЯК ДІСТАТИСЯ ДО ЖИДИЧИНА</h1>
 
-                <h2>ЯК ДІСТАТИСЯ ДО ЖИДИЧИНА</h2>
+               
 
                 <div class="transport-options">
-                    <div class="transport-option" onclick="showTransport('car')" id="car-tab">
+                    <div class="transport-option" onclick="showTransport('car', 'transport')" id="car-tab">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -48,16 +42,9 @@
                             </svg></div>
                         <div class="transport-name">АВТОМОБІЛЕМ</div>
                     </div>
-                    <div class="transport-option" onclick="showTransport('social')" id="social-tab">
-                        <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M288 0C422.4 0 512 35.2 512 80l0 16 0 32c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l0 160c0 17.7-14.3 32-32 32l0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-192 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32c-17.7 0-32-14.3-32-32l0-160c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32c0 0 0 0 0 0l0-32s0 0 0 0l0-16C64 35.2 153.6 0 288 0zM128 160l0 96c0 17.7 14.3 32 32 32l112 0 0-160-112 0c-17.7 0-32 14.3-32 32zM304 288l112 0c17.7 0 32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-112 0 0 160zM144 400a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM384 80c0-8.8-7.2-16-16-16L208 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z" />
-                            </svg></div>
-                        <div class="transport-name">СОЦІАЛЬНИМ <br> ТРАНСПОРТОМ</div>
-                    </div>
 
-                    <div class="transport-option" onclick="showTransport('bus')" id="bus-tab">
+
+                    <div class="transport-option" onclick="showTransport('bus', 'transport')" id="bus-tab">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -65,7 +52,7 @@
                             </svg></div>
                         <div class="transport-name">АВТОБУСОМ</div>
                     </div>
-                    <div class="transport-option" onclick="showTransport('train')" id="train-tab">
+                    <div class="transport-option" onclick="showTransport('train', 'transport')" id="train-tab">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -73,217 +60,657 @@
                             </svg></div>
                         <div class="transport-name">ПОТЯГОМ</div>
                     </div>
+                    <div class="transport-option" onclick="showTransport('social','transport')" id="social-tab">
+                        <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M288 0C422.4 0 512 35.2 512 80l0 16 0 32c17.7 0 32 14.3 32 32l0 64c0 17.7-14.3 32-32 32l0 160c0 17.7-14.3 32-32 32l0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32-192 0 0 32c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-32c-17.7 0-32-14.3-32-32l0-160c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32c0 0 0 0 0 0l0-32s0 0 0 0l0-16C64 35.2 153.6 0 288 0zM128 160l0 96c0 17.7 14.3 32 32 32l112 0 0-160-112 0c-17.7 0-32 14.3-32 32zM304 288l112 0c17.7 0 32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-112 0 0 160zM144 400a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm288 0a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM384 80c0-8.8-7.2-16-16-16L208 64c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16z" />
+                            </svg></div>
+                        <div class="transport-name">СОЦІАЛЬНИМ <br> ТРАНСПОРТОМ</div>
+                    </div>
                 </div>
 
                 <!-- Train Content -->
                 <div id="train-content" class="transport-content">
                     <div class="info-section">
-                        <h3>Залізничне сполучення з Жидичином</h3>
-                        <p>Залізнична станція безпосередньо в селі Жидичин відсутня, проте, щоб дістатися сюди потягом
-                            Ви можете скористатися залізничним вокзалом у місті Луцьку. Він розміщений за 7 кілометрів
-                            від села Жидичин і має якісне сполучення з різним містами України та світу.
+                        <h3>Подорож до Жидичина поїздом</h3>
+                        <p>До Жидичинського Свято-Миколаївського монастиря можна дуже легко дістатися поїздом.
+                            Залізнична станція безпосередньо в селі Жидичин відсутня, проте, Ви можете скористатися
+                            залізничним вокзалом, який має якісне сполучення з різним містами України та світу та
+                            розташований у місті Луцьку, за 7 км від Жидичина. Від залізничного вокзалу Ви можете легко
+                            дістатися до Жидичина громадським транспортом.
                         </p>
-                        <h4>Перелік пасажирських потягів до станції Луцьк </h4>
-                        <ul>
-                            <li>
-                                <b>№ 78 Одеса-Ковель</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92734&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 88 Запоріжжя - Ковель</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92859&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 97 Київ - Ковель</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93094&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 755 ІНТЕРСІТІ Київ - Луцьк</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92915&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 98 Ковель - Київ</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93818&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 368 безпересадковий вагон Рахів - Ковель</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93658&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 367 Ужгород - Ковель</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93379&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                            <li>
-                                <b>№ 368 Ужгород - Луцьк</b>
-                                (<a href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93976&by_id=1"
-                                    target="_blank" rel="noopener noreferrer">Перелік станцій та розклад</a>)
-                            </li>
-                        </ul>
-                        <p>Із залізничного вокзалу Ви можете дістатися до Жидичина громадським транспортом або на таксі.
-                            Уся інформація про громадський транспорт міста Луцька представлена на сайті: <a
-                                target="_blank" href="https://transport.lutskrada.gov.ua/ua">ТУТ</a>
+                        <p>
+                            Корисні посилання, які допоможуть спланувати маршрут поїздом до станції Луцьк представлено
+                            нижче.
                         </p>
-                        <p>Маршрут Залізничний вокзал м. Луцьк - Жидичинський Свято-Миколаївський монастир на картах
-                            Google: <a target="_blank" href="https://maps.app.goo.gl/zPr6WXLmwhWyaoJq7">ТУТ</a> </p>
-                        <h2>Опис маршруту: Залізничний вокзал м. Луцьк → Жидичинський Свято-Миколаївський монастир</h2>
-
-                        <h5>Етап 1: Від Залізничного вокзалу до Проспекту Президента Грушевського</h5>
-                        <p>Від зупинки <b>Залізничний вокзал</b> проїхати до зупинки <b>Проспект Президента
-                                Грушевського</b>.
-                            Усі види громадського транспорту прямують до цієї зупинки, оберіть найбільш зручний для вас.
-                            Можна також прогулятися пішки (1.5 км).</p>
-
-                        <h5>Етап 2: Від Проспекту Президента Грушевського до Центральної бібліотеки для дітей</h5>
-                        <p>Від зупинки <b>Проспект Президента Грушевського</b> пройти 50 метрів до зупинки
-                            <b>Центральна бібліотека для дітей</b> (вул. Стрілецька, магазин "Родинна ковбаска").
-                        </p>
-
-                        <h5>Етап 3: Від Центральної бібліотеки для дітей до Жидичинського ліцею №31</h5>
-                        <p>Від зупинки <b>Центральна бібліотека для дітей</b> проїхати приблизно 7 км до зупинки
-                            <b>Жидичинський ліцей №31</b> (с. Жидичин, вул. Богдана Хмельницького).
-                        </p>
-
-                        <h4>Маршрутні таксі( розміщення автобуса в реальному часі):</h4>
-                        <ul>
-                            <li>
-                                <b>№ 51 (Луцьк-Кульчин)</b> –
-                                <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1092" target="_blank"
-                                    rel="noopener noreferrer">
-                                    переглянути маршрут
-                                </a>
-                            </li>
-                            <li>
-                                <b>№ 117 (Луцьк-Клепачів)</b> –
-                                <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1094" target="_blank"
-                                    rel="noopener noreferrer">
-                                    переглянути маршрут
-                                </a>
-                            </li>
-                            <li>
-                                <b>№ 149 (Луцьк-Озерце)</b> –
-                                <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1097" target="_blank"
-                                    rel="noopener noreferrer">
-                                    переглянути маршрут
-                                </a>
-                            </li>
-                        </ul>
-
-                        <p><b>Оплата:</b> Купити квитки можна безпосередньо у водія або розрахуватися карткою.
-                            Вартість проїзду – 20 грн.</p>
-                        <p><b>Розклад:</b> Завантажити розклад можна <a download="Розклад" href="/assets/images/traveller/Розклад.jpg">ТУТ</a></p>
+                        <ul class="useful-links">
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92734&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 78 Одеса-Ковель</li>
+                            </a>
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93094&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 97 Київ - Ковель </li>
+                            </a>
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92859&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 88 Запоріжжя - Ковель</li>
+                            </a>
                             
 
-                            <h5>Етап 4: Від Центральної бібліотеки для дітей до Жидичинського ліцею №31</h5>
-                        <p>Від зупинки <b>Жидичинський ліцей №31</b> пройдіть 300 метрі до території Жидичинського Свято-Миколаївського монастиря.
-                            <p> Увесь шлях у Вас займе орієнтовно 40 хв.
-                            </p>
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=92915&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 755 ІНТЕРСІТІ Київ- Луцьк</li>
+                            </a>
+                            
+                            
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93379&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 367 Ужгород - Ковель</li>
+                            </a>
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93658&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 368 Рахів-Ковель</li>
+                            </a>
+                            <a target="_blank" href="https://www.uz.gov.ua/passengers/timetable/?ntrain=93976&by_id=1">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>№ 368 Ужгород - Луцьк</li>
+                            </a>
+                        </ul>
+                        <h3>Як доїхати до Жидичина від залізничного вокзалу
+                            Покроковий маршрут</h3>
+                        <ul class="route-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Залізничний вокзал</b> проїхати до зупинки <b>Проспект Президента
+                                        Грушевського</b>. Усі види громадського транспорту прямують до цієї зупинки,
+                                    оберіть найбільш зручний для вас. Якщо фізичні сили дозволяють, до зупинки Проспект
+                                    Президента Грушевського можна пройти пішки, орієнтовно 1,5 кілометра.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Проспект Президента Грушевського</b> пройти пішки 50 метрів до
+                                    зупинки <b>Центральна бібліотека для дітей</b> (вул. Стрілецька, магазин Родинна
+                                    ковбаска).
+                                </span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Центральна бібліотека для дітей</b> проїхати близько 7 км. до
+                                    зупинки <b>Жидичинський ліцей №31</b>(с. Жидичин, вул. Богдана Хмельницького).
+                                    Маршрутні таксі № 51, № 117, № 149</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Жидичинський ліцей №31</b> (с. Жидичин, вул. Богдана Хмельницького)
+                                    пройти 300 метрі до території <b>Жидичинського Свято-Миколаївського
+                                        монастиря</b></span>
+                            </li>
+                        </ul>
+                        <a target="_blank" href="https://maps.app.goo.gl/bVRN5KLn5dhnnFK46">
+                            <div class="mapAndInput">
+                                <img src="/assets/images/traveller/map.svg" alt="">
+                                <p>Маршрут залізничний вокзал м. Луцьк - Жидичинський Свято-Миколаївський монастир на
+                                    картах Google</p>
+                            </div>
+                        </a>
+                        <h3>Графік руху маршрутних таксі до Жидичина</h3>
+                        <div class="allTables">
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4>№ 51 (Луцьк-Кульчин)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1092">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Кульчин</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>6:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6:50</td>
+                                                <td>7:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8:10</td>
+                                                <td>8:35</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:00</td>
+                                                <td>9:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:05</td>
+                                                <td>10:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:30</td>
+                                                <td>12:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:05</td>
+                                                <td>15:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16:35</td>
+                                                <td>17:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:40</td>
+                                                <td>18:25</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4>№ 117 (Луцьк-Клепачів)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1094">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Клепачів</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>6:10</td>
+                                                <td>6:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7:25</td>
+                                                <td>8:05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:30</td>
+                                                <td>11:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td>12:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:15</td>
+                                                <td>14:55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:40</td>
+                                                <td>16:25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:15</td>
+                                                <td>18:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20:40</td>
+                                                <td>21:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4>№ 149 (Луцьк-Озерце)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1097">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Озерце</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>7:00</td>
+                                                <td>7:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:40</td>
+                                                <td>10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:00</td>
+                                                <td>13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:10</td>
+                                                <td>17:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19:20</td>
+                                                <td>19:50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Купити квитки можна безпосередньо у водія або розрахуватися карткою. Вартість проїзду 20
+                            грн. 
                         </p>
+
                     </div>
                 </div>
                 <!-- Bus Content -->
                 <div id="bus-content" class="transport-content">
                     <div class="info-section">
-                        <h3>Автобусне сполучення з Жидичином</h3>
-                        <p>Автобусний вокзал безпосередньо в селі Жидичин відсутній. Проте ви можете скористатися автостанцією у <b>місті Луцьку</b>,  
-                            яка розташована за 7 км від Жидичина та має гарне транспортне сполучення.</p>
+                        <h3>Подорож до Жидичина автобусом</h3>
+                        <p>До Жидичинського Свято-Миколаївського монастиря можна дуже легко дістатися як автобусом, так
+                            і громадським транспортом. Автовокзал безпосередньо в селі Жидичин відсутній, проте Ви
+                            можете скористатися автостанцією, яка розташована у місті Луцьку за 7 км від Жидичина.
+                        </p>
+                        <p>
+                            Найбільш вигідним місцем для початку подорожі до села Жидичин є <b>кінотеатр Промінь</b>,
+                            зупинка Центральна бібліотека для дітей (вул. Стрілецька, магазин "Родинна ковбаска")
+                            Корисні посилання, які допоможуть спланувати маршрут автобусом або громадським транспортом
+                            представлено нижче. </p>
+                            <p>
+                                Корисні посилання, які допоможуть спланувати маршрут автобусом до станції Луцьк представлено нижче.
+                            </p>
+                        <ul class="useful-links">
+                            <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Громадський транспорт
+                                    міста Луцька</li>
+                            </a>
+                            <a target="_blank" href="https://vopas.com.ua/online/lutsk/">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Луцька Автостанція №1</li>
+                            </a>
+                            <a target="_blank" href="https://busfor.ua/uk">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Busfor</li>
+                            </a>
+                            <a target="_blank" href="https://infobus.eu/">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Infobus</li>
+                            </a>
+                        </ul>
+                        <ul class="route-list">
+                            <h3>Як доїхати до Жидичина з автостанції № 1 <br>
+                                Покроковий маршрут</h3>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від Автовокзалу пройти пішки 350 метрів до <b>ТЦ Караван</b>, піднятися на 3
+                                    поверх ТЦ та по переходу пройти до зупинки Залізничний вокзал</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Залізничний вокзал</b> проїхати до зупинки <b>Проспект Президента
+                                        Грушевського</b>. Усі види громадського транспорту прямують до цієї зупинки,
+                                    оберіть найбільш зручний для вас. Якщо фізичні сили дозволяють, до зупинки Проспект
+                                    Президента Грушевського можна пройти пішки, орієнтовно 1,5 кілометра.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Проспект Президента Грушевського</b> пройти пішки 50 метрів до
+                                    зупинки <b>Центральна бібліотека для дітей</b> (вул. Стрілецька, магазин Родинна
+                                    ковбаска).</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Центральна бібліотека для дітей</b> проїхати близько 7 км. до
+                                    зупинки <b>Жидичинський ліцей №31</b>(с. Жидичин, вул. Богдана Хмельницького).
+                                    Маршрутні таксі № 51, № 117, № 149</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Жидичинський ліцей №31</b> (с. Жидичин, вул. Богдана Хмельницького)
+                                    пройти 300 метрі до території <b>Жидичинського Свято-Миколаївського
+                                        монастиря</b></span>
+                            </li>
+                        </ul>
+                        <a target="_blank" href="https://maps.app.goo.gl/RB15LLH7J6qjWXqPA">
+                            <div class="mapAndInput">
+                                <img src="/assets/images/traveller/map.svg" alt="">
+                                <p>Маршрут автовокзал м. Луцьк - Жидичинський Свято-Миколаївський монастир на картах
+                                    Google</p>
+                            </div>
+                        </a>
+                        <h3>Графік руху маршрутних таксі до Жидичина</h3>
+                        <div class="allTables">
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4>№ 51 (Луцьк-Кульчин)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1092">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
 
-                            <h4>Перелік пасажирських автобусів до Луцька:</h4>
-                            <ul>
-                                <li><a href="https://vopas.com.ua/online/lutsk/" target="_blank" rel="noopener noreferrer">Сайт Луцької Автостанції</a></li>
-                                <li><a href="https://busfor.ua/uk" target="_blank" rel="noopener noreferrer">Busfor.ua</a></li>
-                                <li><a href="https://infobus.eu/" target="_blank" rel="noopener noreferrer">InfoBus</a></li>
-                            </ul>
-                        
-                            <h3>Маршрут: Автостанція №1 Луцьк → Жидичинський монастир</h3>
-                            
-                            <h4>Етап 1: Від автостанції до залізничного вокзалу</h4>
-                            <p>Пройти пішки 350 метрів до <b>ТЦ Караван</b>, піднятися на 3 поверх та скористатися переходом до зупинки <b>Залізничний вокзал</b>.</p>
-                        
-                            <h4>Етап 2: Від залізничного вокзалу до Проспекту Президента Грушевського</h4>
-                            <p>Від зупинки <b>Залізничний вокзал</b> проїхати до зупинки <b>Проспект Президента Грушевського</b>.  
-                            Усі види громадського транспорту слідують цим маршрутом, виберіть найбільш зручний.</p>
-                        
-                            <h4>Етап 3: Від Проспекту Президента Грушевського до Центральної бібліотеки для дітей</h4>
-                            <p>Пройти 50 метрів до зупинки <b>Центральна бібліотека для дітей</b> (вул. Стрілецька, магазин "Родинна ковбаска").</p>
-                        
-                            <h4>Етап 4: Від Центральної бібліотеки для дітей до Жидичинського ліцею №31</h4>
-                            <p>Проїхати приблизно 7 км до зупинки <b>Жидичинський ліцей №31</b> (с. Жидичин, вул. Богдана Хмельницького).</p>
-                        
-                            <h4>Маршрутні таксі(маршрут у реальному часі):</h4>
-                            <ul>
-                                <li>
-                                    <b>№ 51 (Луцьк-Кульчин)</b> – 
-                                    <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1092" target="_blank" rel="noopener noreferrer">
-                                        переглянути маршрут
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Кульчин</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>6:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6:50</td>
+                                                <td>7:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8:10</td>
+                                                <td>8:35</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:00</td>
+                                                <td>9:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:05</td>
+                                                <td>10:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:30</td>
+                                                <td>12:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:05</td>
+                                                <td>15:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16:35</td>
+                                                <td>17:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:40</td>
+                                                <td>18:25</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4> № 117 (Луцьк-Клепачів)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1094">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
                                     </a>
-                                </li>
-                                <li>
-                                    <b>№ 117 (Луцьк-Клепачів)</b> – 
-                                    <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1094" target="_blank" rel="noopener noreferrer">
-                                        переглянути маршрут
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Клепачів</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>6:10</td>
+                                                <td>6:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7:25</td>
+                                                <td>8:05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:30</td>
+                                                <td>11:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td>12:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:15</td>
+                                                <td>14:55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:40</td>
+                                                <td>16:25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:15</td>
+                                                <td>18:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20:40</td>
+                                                <td>21:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container">
+                                <div class="route-info">
+                                    <h4> № 149 (Луцьк-Озерце)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1097">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
                                     </a>
-                                </li>
-                                <li>
-                                    <b>№ 149 (Луцьк-Озерце)</b> – 
-                                    <a href="https://www.eway.in.ua/ua/cities/lutsk/routes/1097" target="_blank" rel="noopener noreferrer">
-                                        переглянути маршрут
-                                    </a>
-                                </li>
-                            </ul>
-                        
-                            <p><b>Оплата:</b> Квитки можна купити у водія або розрахуватися карткою.  
-                            Вартість проїзду – 20 грн.</p>
-                            <p><b>Розклад:</b> Завантажити розклад можна <a download="Розклад" href="/assets/images/traveller/Розклад.jpg">ТУТ</a></p>
-                        
-                            <h4>Етап 5: Від Жидичинського ліцею №31 до монастиря</h4>
-                            <p>Пройти пішки 300 метрів до території <b>Жидичинського Свято-Миколаївського монастиря</b>.</p>
-                        
-                            <p><b>Загальний час подорожі:</b> орієнтовно 40 хвилин.</p>
-                        
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Озерце</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>7:00</td>
+                                                <td>7:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:40</td>
+                                                <td>10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:00</td>
+                                                <td>13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:10</td>
+                                                <td>17:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19:20</td>
+                                                <td>19:50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Купити квитки можна безпосередньо у водія або розрахуватися карткою. Вартість проїзду 20
+                            грн. 
+                        </p>
+
+
                     </div>
                 </div>
                 <div id="social-content" class="transport-content">
                     <div class="info-section">
-                        <h3>Жидичинським монастир організовує безкоштовний доїзд вірян на богослужіння у неділю та святкові дні.
+                        <h3>Подорож до Жидичина соціальним транспортом
                         </h3>
-                       <h5>ГРАФІК:</h5>
+                        <p>Жидичинський Свято-Миколаївський монастир організовує безкоштовний доїзд вірян на богослужіння у неділю та святкові дні власним транспортом.</p>
+                        <div class="TextAndIcons">
+                            <ul>
+                                <li><img src="/assets/images/traveller/target.svg" alt=""><span>Соціальний автобус здійснює довезення за визначеним маршрутом та графіком представленим нижче</span>
+                                </li>
+                                <li><img src="/assets/images/traveller/lamp.svg" alt=""><span>У будні дні соціальний автобус НЕ здійснює довезення вірян.
+                                    Для подорожі Ви можете скористатися громадським транспортом. 
+                                    Графік представлено у вкладці Автобусом</span></li>
+                                <li><img src="/assets/images/traveller/notes.svg" alt=""><span>Можливе забезпечення трансферу з міста Луцька для організованих груп.
+                                    За детальною інформацією та замовленням звертайтесь за телефоном: +38067 104 22 88</span>
+                                    </li>
+                            </ul>
+                        </div>
+                        
 
-                            <div class="container mt-4">
-                                <table class="table table-bordered text-center">
-                                    <tbody>
-                                        <tr>
-                                            <td>с. Прилуцьке</td>
-                                            <td>8:40</td>
-                                        </tr>
-                                        <tr>
-                                            <td>40-й А квартал</td>
-                                            <td>9:00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>пр. Соборності (магазин Троянда)</td>
-                                            <td>9:07</td>
-                                        </tr>
-                                        <tr>
-                                            <td>К-тр «Промінь» (магазин Родинна ковбаска)</td>
-                                            <td>9:20</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Вишків</td>
-                                            <td>9:25</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <p>У будні дні автобус <b>НЕ</b> здійснює довезення вірян. </p>
-                            <p>Можливе забезпечення трансферу з міста Луцька для організованих груп.</p>
-                            <p>За детальною інформацією та замовленням звертайтесь за телефоном: +380671042288</p>
+
+
+                        <h3>Графік та маршрут руху соціального автобуса до Жидичина
+                        </h3>
+                        <div class="container mt-4">
+                            <table class="table table-bordered text-center">
+                                <thead>
+                                    <tr>
+                                        <th><svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24L0 64 0 350.5 0 400l0 88c0 13.3 10.7 24 24 24s24-10.7 24-24l0-100 80.3-20.1c41.1-10.3 84.6-5.5 122.5 13.4c44.2 22.1 95.5 24.8 141.7 7.4l34.7-13c12.5-4.7 20.8-16.6 20.8-30l0-279.7c0-23-24.2-38-44.8-27.7l-9.6 4.8c-46.3 23.2-100.8 23.2-147.1 0c-35.1-17.6-75.4-22-113.5-12.5L48 52l0-28zm0 77.5l96.6-24.2c27-6.7 55.5-3.6 80.4 8.8c54.9 27.4 118.7 29.7 175 6.8l0 241.8-24.4 9.1c-33.7 12.6-71.2 10.7-103.4-5.4c-48.2-24.1-103.3-30.1-155.6-17.1L48 338.5l0-237z" />
+                                            </svg>Місце відправки</th>
+                                        <th><svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
+                                            </svg>Час</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>с. Прилуцьке</td>
+                                        <td>8:40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>40-й А квартал</td>
+                                        <td>9:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>пр. Соборності (магазин Троянда)</td>
+                                        <td>9:07</td>
+                                    </tr>
+                                    <tr>
+                                        <td>К-тр «Промінь» (магазин Родинна ковбаска)</td>
+                                        <td>9:20</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вишків</td>
+                                        <td>9:25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src="/assets/images/traveller/bus.jpg" alt="">
+                        </div>
+
+                        <p>У будні дні автобус <b>НЕ</b> здійснює довезення вірян. </p>
+                        <p>Можливе забезпечення трансферу з міста Луцька для організованих груп.</p>
+                        <p>За детальною інформацією та замовленням звертайтесь за телефоном: <b>+380671042288</b></p>
                     </div>
                 </div>
 
@@ -291,25 +718,54 @@
                 <div id="car-content" class="transport-content">
                     <div class="info-section">
                         <h3>Подорож до Жидичина автомобілем</h3>
-                        <p>Жидичинський монастир має дуже зручне розташування для доїзду власним авто
-                            розміщення поблизу траси міжнародного значення М19.
-                            <li>Власна безкоштовна стоянка</li>
-                            <li>Асфальтована дорога</li>
+                        <p>Жидичинський Свято-Миколаївський монастир має дуже зручне розташування для доїзду власним
+                            авто. Серед основних переваг: </p>
+
+                        <li><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                            </svg> <span>Розміщення поблизу траси М19</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                            </svg> <span>Власна безкоштовна стоянка</span></li>
+                        <li><svg xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                            </svg>
+                            <span>Асфальтована дорога</span>
+                        </li>
+
                         </p>
-                        <p>Для формування маршруту введіть у картах Google <span>Жидичинський Свято-Миколаївський
-                                монастир (ПЦУ), вулиця Ковельська, Жидичин, Волинська область, 45240</span> і Ви
-                            отримаєте детальний план поїздки.
+                        <p>Для формування маршруту введіть у картах Google текст нижче і
+                            отримаєте детальний план поїздки
                         </p>
-                        <h5>Як доїхати до Жидичинської обителі від кінотеатру Промінь власним авто дивіться <a
-                                target="_blank"
-                                href="https://www.youtube.com/watch?v=dII9ZpWGQIE&list=PLcbj4fdd0N_lwQjiyYlQwpUGQdLIahf_R&index=1">ТУТ</a>
-                        </h5>
+                        <div class="mapAndInput">
+                            <img src="/assets/images/traveller/map.svg" alt=""> <b>Жидичинський Свято-Миколаївський
+                                монастир (ПЦУ), вулиця Ковельська,
+                                Жидичин, Волинська область, 45240 </b>
+                        </div>
+                        <div class="textVideo ">
+                            <p>Для ще більшої зручності ми віздняли для Вас відео, як доїхати власним авто до
+                                Жидичинської обителі від кінотеатру Промінь міста Луцька</p>
+                        </div>
+                        <a target="_blank"
+                            href="https://www.youtube.com/watch?v=dII9ZpWGQIE&list=PLcbj4fdd0N_lwQjiyYlQwpUGQdLIahf_R&index=1">
+                            <div class="mapAndInput">
+                                <img src="/assets/images/traveller/yotubeButton.svg" alt=""> Дивіться, поширюйте,
+                                користуйтеся
+                            </div>
+                        </a>
+
                     </div>
                 </div>
             </div>
         </section>
         <section class="orderExcursion">
-            <h1>Замовлення екскурсій</h1>
+           
             <section class="section parallax wow animate__fadeIn" data-parallax-background-ratio="0.001"
                 style="background-image: url('/assets/images/churchcomplex/churchucomplex\ \(1\).jpg');">
                 <div class="opacity-extra-medium-2 bg-gradient-light-violet-light-orange"></div>
@@ -317,33 +773,144 @@
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-10 col-sm-9 position-relative text-center last-paragraph-no-margin wow animate__fadeIn"
                             data-wow-delay="0.4s">
-                            <h3 class="alt-font text-white font-weight-600 margin-3-rem-bottom">
-                                Whether you find yourself in a centuries-old kahvehane or a modern specialty coffee
-                                house,
-                                Istanbul's coffee scene invites you to savor each sip in the embrace of cultural warmth
-                            </h3>
+                            <h1 class="alt-font text-white font-weight-600 margin-3-rem-bottom">
+                                 Замовлення екскурсій
+                            </h1>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="variantsToOrder">
-                <h1>Варіанти екскурсій</h1>
-                <div class="threeVariants">
-                    <div class="excursion">
-                      <h3 style="text-align: center;">Оглядова ~ 1.5. год</h3>
-                    </div>
-        
-                    <div class="excursion">
-                      <h3 style="text-align: center;">Повна ~ 2.5 год</h3>
-                    </div>
-        
-                    <div class="excursion">
-                      <h3 style="text-align: center;">Повна + Липлян ~ 3.5 год</h3>
-                    </div>
-                  </div>
-            </section>
-            <div style="height: 1000px;"></div>
         </section>
+        <section class="variantsToOrder">
+            <h1>Варіанти екскурсій</h1>
+            <div class="threeVariants">
+                <div class="excursion">
+                    <div class="image-container"><img src="/assets/images/traveller/photoOrder (1).jpg" alt="">
+                        <small>1.5 год</small>
+                        <div class="Text">Оглядова</div></div>
+                    
+                </div>
+
+                <div class="excursion">
+                    <div class="image-container">                   <img src="/assets/images/traveller/photoOrder (2).jpg" alt=""> 
+                        <small>2.5 год</small>
+                        <div class="Text">Базова</div></div>
+
+                </div>
+               
+
+                <div class="excursion">
+                    <div class="image-container"><img src="/assets/images/traveller/photoOrder (3).jpg" alt="">
+                        <small>3.5 год</small>
+                        <div class="Text">Повна</div></div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="excursion-container">
+            <div class="excursion-content">
+                <div class="excursion-image">
+                    <img src="/assets/images/traveller/monastery.jpg"alt="Kamondo Stairs">
+                    <div class="excursion-caption">Деталі екскурсій</div>
+                </div>
+                <div class="excursion-text">
+                    <h1>Екскурсійний час</h1>
+                    <div class="excursion-info">
+                        <ul>
+                            <li>Будні дні (Пн–Пт): 10:00 → 17:00</li>
+                            <li>Субота: 11:00 → 17:00</li>
+                            <li>Неділя: Відпочиваємо!</li>
+                        </ul>
+                        <ul>
+                            <li>Вартість: 50 грн з людини</li>
+                            <li>Контакти: +380681042288</li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        <section class="nutrition">
+            <div class="nutrition-content">
+                <div class="nutrition-image">
+                    <img src="/assets/images/traveller/food.jpg" alt="Kamondo Stairs">
+                </div>
+                <div class="nutrition-text">
+                    <h1>Харчування</h1>
+                    <div class="nutrition-info">
+                        <p>Після екскурсії ви можете відвідати кафе, яке знаходиться на території монастиря. Тут ви
+                            зможете скуштувати смачні страви на будь-який смак.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+       <section class="nutrition-choose">
+        <div class="transport-options nutrition-options">
+            <div class="transport-option nutrition-option" onclick="showTransport('local','nutrition')" id="local-tab">
+                <div class="transport-icon nutrition-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg></div>
+                <div class="transport-name nutrition-name">МІСЦЕВА КУХНЯ</div>
+            </div>
+
+
+            <div class="transport-option nutrition-option" onclick="showTransport('nearby','nutrition')" id="nearby-tab">
+                <div class="transport-icon nutrition-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M88 0C74.7 0 64 10.7 64 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C120.5 112.3 128 119.9 128 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C119.5 47.7 112 40.1 112 24c0-13.3-10.7-24-24-24zM32 192c-17.7 0-32 14.3-32 32L0 416c0 53 43 96 96 96l192 0c53 0 96-43 96-96l16 0c61.9 0 112-50.1 112-112s-50.1-112-112-112l-48 0L32 192zm352 64l16 0c26.5 0 48 21.5 48 48s-21.5 48-48 48l-16 0 0-96zM224 24c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C232.5 112.3 240 119.9 240 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C231.5 47.7 224 40.1 224 24z"/></svg></div>
+                <div class="transport-name nutrition-name">ЗАКЛАДИ ПОБЛИЗУ</div>
+            </div>
+        </div>
+        <div id="local-content" class="transport-content">
+            <h2>На даний час монастир не має власної трапезної для паломників безпосередньо на території.
+                Для потреб паломників доступні заклади харчування неподалік від монастиря. Рекомендуємо ГРК Острів
+                </h2>
+        </div>
+        <div id="nearby-content" class="transport-content">
+            <h2>
+                Для потреб мандрівників є широка лінійка закладів харчування неподалік села Жидичин, зокрема у місті Луцьк. Усю детальну інформацію Ви можете знайти або скористатися каталогом закладів харчування на сайт 
+                </h2>
+        </div>
+       </section>
+       <section class="orderLiving">
+           
+        <section class="section parallax wow animate__fadeIn" data-parallax-background-ratio="0.001"
+            style="background-image: url('/assets/images/traveller/horse.jpg');">
+            <div class="opacity-extra-medium-2 bg-gradient-light-violet-light-orange"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10 col-sm-9 position-relative text-center last-paragraph-no-margin wow animate__fadeIn"
+                        data-wow-delay="0.4s">
+                        <h1 class="alt-font text-white font-weight-600 margin-3-rem-bottom">
+                             ПРОЖИВАННЯ
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="living-choose">
+        <div class="transport-options nutrition-options living-options">
+            <div class="transport-option nutrition-option living-option" onclick="showTransport('locall','living')" id="locall-tab">
+                <div class="transport-icon nutrition-icon living-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185l0-121c0-17.7-14.3-32-32-32l-32 0c-17.7 0-32 14.3-32 32l0 36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1l32 0 0 69.7c-.1 .9-.1 1.8-.1 2.8l0 112c0 22.1 17.9 40 40 40l16 0c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2l31.9 0 24 0c22.1 0 40-17.9 40-40l0-24 0-64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 64 0 24c0 22.1 17.9 40 40 40l24 0 32.5 0c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1l16 0c22.1 0 40-17.9 40-40l0-16.2c.3-2.6 .5-5.3 .5-8.1l-.7-160.2 32 0z"/></svg></div>
+                <div class="transport-name nutrition-name">МІСЦЕВІ САДИБИ</div>
+            </div>
+
+
+            <div class="transport-option nutrition-option living-option" onclick="showTransport('nearbyl','living')" id="nearbyl-tab">
+                <div class="transport-icon nutrition-icon living-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48L0 464c0 26.5 21.5 48 48 48l96 0 0-80c0-26.5 21.5-48 48-48s48 21.5 48 48l0 80 96 0c26.5 0 48-21.5 48-48l0-416c0-26.5-21.5-48-48-48L48 0zM64 240c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zm112-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM80 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32zM272 96l32 0c8.8 0 16 7.2 16 16l0 32c0 8.8-7.2 16-16 16l-32 0c-8.8 0-16-7.2-16-16l0-32c0-8.8 7.2-16 16-16z"/></svg></div>
+                <div class="transport-name nutrition-name living-name">ЖИТЛО НЕПОДАЛІК</div>
+            </div>
+        </div>
+        <div id="locall-content" class="transport-content">
+            <h2>На даний час монастир не має власних закладів розміщення безпосередньо на території.
+                Зараз ми напрацьовуємо базу садиб зеленого туризму у селі Жидичин. Незабаром уся інформація буде доступна для наших мандрівників.
+                Для потреб паломників доступні готелі та хостели за 5-10 кілометрів від монастиря. Більше інформації тут
+                </h2>
+        </div>
+        <div id="nearbyl-content" class="transport-content">
+            <h2>
+                Для потреб мандрівників є широка лінійка закладів харчування неподалік села Жидичин, зокрема у місті Луцьк. Усю детальну інформацію Ви можете знайти або скористатися каталогом закладів харчування на сайт 
+                </h2>
+        </div>
+       </section>
     </main>
     <div id="footer-container"></div>
 

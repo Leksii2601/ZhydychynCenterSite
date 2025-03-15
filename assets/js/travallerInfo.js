@@ -1,25 +1,61 @@
-function showTransport(transport) {
-    // Hide all transport contents
-    const contents = document.querySelectorAll('.transport-content');
-    contents.forEach(content => {
+// Оновлена функція для роботи з різними секціями вкладок
+function showTransport(transport, sectionType) {
+    // Визначаємо тип секції, якщо не вказаний явно
+    if (!sectionType) {
+        if (transport.startsWith('car') || transport.startsWith('bus') || 
+            transport.startsWith('train') || transport.startsWith('social')) {
+            sectionType = 'transport';
+        } else if (transport.startsWith('local')) {
+            sectionType = 'nutrition';
+        } else if (transport.startsWith('locall') || transport.startsWith('nearbyl')) {
+            sectionType = 'living';
+        }
+    }
+    
+    // Отримуємо всі селектори для вкладок та контенту залежно від секції
+    let tabSelector, contentSelector;
+    
+    if (sectionType === 'transport') {
+        tabSelector = '.howToGetTo .transport-option:not(.nutrition-option):not(.living-option)';
+        contentSelector = '.howToGetTo .transport-content';
+    } else if (sectionType === 'nutrition') {
+        tabSelector = '.nutrition-choose .nutrition-option';
+        contentSelector = '.nutrition-choose .transport-content';
+    } else if (sectionType === 'living') {
+        tabSelector = '.living-choose .living-option';
+        contentSelector = '.living-choose .transport-content';
+    }
+    
+    // Знімаємо активний стан у відповідній секції
+    document.querySelectorAll(tabSelector).forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    document.querySelectorAll(contentSelector).forEach(content => {
         content.classList.remove('active');
     });
     
-    // Remove active class from all transport options
-    const options = document.querySelectorAll('.transport-option');
-    options.forEach(option => {
-        option.classList.remove('active');
-    });
+    // Встановлюємо активний стан для вибраної вкладки та контенту
+    const targetTab = document.getElementById(`${transport}-tab`);
+    const targetContent = document.getElementById(`${transport}-content`);
     
-    // Show the selected transport content and mark the option as active
-    document.getElementById(`${transport}-content`).classList.add('active');
-    document.getElementById(`${transport}-tab`).classList.add('active');
+    if (targetTab) targetTab.classList.add('active');
+    if (targetContent) targetContent.classList.add('active');
 }
 
-// Set default active tab on page load
+// Ініціалізація при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', function() {
-    showTransport('car');
+    // Активуємо першу вкладку транспорту
+    showTransport('car', 'transport');
+    
+    // Активуємо першу вкладку харчування
+    showTransport('local', 'nutrition');
+    
+    // Активуємо першу вкладку проживання
+    showTransport('locall', 'living');
 });
+
+
 new WOW().init();
         
         // Parallax effect
