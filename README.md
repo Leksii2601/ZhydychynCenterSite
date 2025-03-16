@@ -1,1 +1,1 @@
-Site fro Zhydychyn center: https://aesthetic-quokka-ea172f.netlify.app/
+Site for Zhydychyn center: https://aesthetic-quokka-ea172f.netlify.app/
