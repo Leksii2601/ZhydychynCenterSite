@@ -99,7 +99,7 @@ body {
     }
 }
 .howToGetTo .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -199,9 +199,6 @@ body {
 
 .transport-content {
     display: none;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
     margin-top: 20px;
 }
 
@@ -214,22 +211,24 @@ body {
     margin-bottom: 20px;
 }
 .info-section p{
-    font-size: 18px;
+    font-size: 30px;
     text-align: justify;
 }
 .info-section h3 {
     margin-top: 0;
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .info-section li{
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 25px;
     list-style:none;
     display: flex;
+    align-items: center;
 }
 .mapAndInput{
     display: flex;
@@ -237,9 +236,11 @@ body {
     justify-content: center;
     margin-top: 50px;
     gap: 10px;
+    font-size: 25px;
 }
 .mapAndInput b{
     width: 30%;
+    font-size: 25px;
 }
 .mapAndInput img{
     height: 100px;
@@ -263,6 +264,7 @@ body {
     margin-right: 10px;
     color: #333 !important;
     flex-shrink: 0; 
+    
 }
 #bus-content .useful-links{
     display: grid;
@@ -324,7 +326,7 @@ body {
     
 }
 #bus-content .route-info h4{
-    font-size: 18px;
+    font-size: 23px;
 }
 #bus-content .route-info p{
     transition: all 0.3s ease;
@@ -398,7 +400,7 @@ display: block;
     max-width: 300px;
 }
 #train-content .route-info h4{
-    font-size: 18px;
+    font-size: 23px;
 }
 #train-content .route-info p{
     transition: all 0.3s ease;
@@ -424,7 +426,7 @@ display: block;
 }
 #social-content ul span{
     width: 50%;
-    font-size: 17px;
+    font-size: 25px;
 }
 #social-content ul{
     margin-bottom: 40px;
@@ -1369,7 +1371,7 @@ table thead svg{
 
 @media (min-width: 1400px) {
     .howToGetTo .container {
-        max-width: 1350px;
+        max-width: 1500px;
     }
     
     .howToGetTo h1 {
