@@ -1380,3 +1380,144 @@ table thead svg{
     
 }
 
+/* Загальні налаштування шрифтів для мобільних пристроїв */
+@media (max-width: 768px) {
+    /* Зменшення розміру тексту в інформаційних секціях */
+    .info-section p {
+        font-size: 18px;
+    }
+    
+    .info-section li {
+        font-size: 16px;
+    }
+    
+    .info-section h3 {
+        font-size: 28px;
+    }
+    
+    /* Налаштування шрифту в таблицях */
+    table tr {
+        font-size: 16px;
+    }
+    
+    /* Зменшення відступів між елементами списку */
+    .excursion-text ul li {
+        margin-bottom: 8px;
+    }
+    
+    /* Оптимізація шрифтів у секції харчування */
+    .nutrition-text h1 {
+        font-size: 32px;
+    }
+    
+    .nutrition-info p {
+        font-size: 16px;
+    }
+    
+    /* Оптимізація шрифтів у секції замовлень */
+    .orderLiving h1,
+    .orderExcursion h1 {
+        font-size: 36px;
+    }
+    
+    /* Маркери та іконки */
+    .info-section li svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Додаткові налаштування для малих мобільних пристроїв */
+@media (max-width: 576px) {
+    /* Подальше зменшення шрифтів для маленьких екранів */
+    .info-section p {
+        font-size: 16px;
+    }
+    
+    .info-section li {
+        font-size: 15px;
+    }
+    
+    .info-section h3 {
+        font-size: 24px;
+    }
+    
+    /* Підписи під зображеннями */
+    .excursion-caption {
+        font-size: 14px;
+    }
+    
+    /* Текст у блоках */
+    .excursion-text ul {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .nutrition-text h1 {
+        font-size: 26px;
+    }
+    
+    .nutrition-info p {
+        font-size: 15px;
+    }
+    
+    /* Заголовки секцій */
+    .orderLiving h1,
+    .orderExcursion h1 {
+        font-size: 28px;
+    }
+    
+    /* Текст у варіантах екскурсій */
+    .excursion .Text {
+        font-size: 18px;
+    }
+    
+    /* Тексти в соціальних мережах */
+    #social-content ul span {
+        font-size: 14px;
+    }
+    .mapAndInput {
+        font-size: 16px;
+    }
+    .mapAndInput b{
+        font-size: 16px;
+    }
+}
+
+/* Екстремально малі екрани */
+@media (max-width: 375px) {
+    .info-section p {
+        font-size: 14px;
+    }
+    
+    .info-section li {
+        font-size: 14px;
+    }
+    
+    .excursion-text h1 {
+        font-size: 20px;
+    }
+    
+    .excursion-text ul {
+        font-size: 13px;
+    }
+    
+    .nutrition-text h1 {
+        font-size: 22px;
+    }
+    
+    /* Оптимізація таблиць для дуже малих екранів */
+    table tr {
+        font-size: 13px;
+    }
+    
+    thead th {
+        font-size: 13px;
+    }
+    
+    /* Зменшення відступів для компактності */
+    .excursion-text {
+        padding: 15px 12px;
+    }
+}
+
