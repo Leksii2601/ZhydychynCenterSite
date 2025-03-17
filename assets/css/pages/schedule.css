@@ -377,16 +377,22 @@ hr{
     
     .excursion-text ul {
         font-size: 14px;
-        text-align: left; /* Add this */
+        text-align: left;
+        padding-left: 0;
+        width: 100%;
     }
     
     .excursion-info {
         gap: 10px;
-        text-align: left; /* Change to left */
+        text-align: left;
+        align-items: flex-start;
+        width: 100%;
     }
 
     .excursion-text li {
-        text-align: left; /* Add this */
+        text-align: left;
+        width: 100%;
+        display: block;
     }
     
     .excursion-container {
