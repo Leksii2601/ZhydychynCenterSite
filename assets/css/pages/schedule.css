@@ -1,0 +1,371 @@
+body {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}/* Main excursion container styles */
+.excursion-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h2 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+hr{
+    width: 80%;
+    height: 3px;
+    background-color: #4cbaba;
+    border: none;
+    margin: 20px auto;
+}
+
+/* Селектор для кожної парної секції excursion-container */
+.excursion-container:nth-of-type(even) .excursion-content {
+    flex-direction: row-reverse;
+}
+
+.excursion-container:nth-of-type(even) .excursion-text {
+    margin-right: 70px;
+    margin-left: 0;
+}
+
+.excursion-container:nth-of-type(even) .excursion-image::after {
+    left: -35px;
+    right: auto;
+}
+.excursion-container:nth-of-type(even) .excursion-caption {
+    left: auto;
+    right: -30px;
+}
+
+/* Excursion content layout */
+.excursion-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    padding: 80px;
+}
+
+/* Image and text sections */
+.excursion-image, .excursion-text {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Image positioning and styling */
+.excursion-image {
+    position: relative;
+    align-self: center;
+    object-fit: contain;
+}
+
+.excursion-image img {
+    width: 600px;
+    height: auto;
+}
+
+/* Caption styling */
+.excursion-caption {
+    position: absolute;
+    height: auto;
+    min-height: 100px;
+    width: 340px;
+    bottom: -10px;
+    left: -30px;
+    background: #4cbaba;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Text section styling */
+.excursion-text {
+    margin-left: 70px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+.excursion-image::after {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: -35px;
+    height: 80%;
+    width: 5px;
+    background-color: #4cbaba;
+    z-index: 1;
+}
+.excursion-text ul {
+    list-style: none;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.excursion-info {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.heading img{
+    width: 100%;
+    height: 600px; /* Fixed height value - adjust as needed */
+    object-fit: cover;
+}
+.heading h1{
+    position: absolute;
+    top: 33%;
+    font-size: 90px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #f4f4f4;
+    opacity: 0.9;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.scheduleLuplyanu .excursion-image::after{
+    background-color: #8b5e3b;
+}
+.scheduleLuplyanu .excursion-caption{
+    background-color: #8b5e3b;
+}
+.scheduleLuplyanu hr{
+    background-color: #8b5e3b;
+}
+
+
+
+
+/* Responsive styling for different screen sizes */
+@media (max-width: 1400px) {
+    .heading h1 {
+        font-size: 70px;
+    }
+}
+@media (max-width: 1200px) {
+    .excursion-content {
+        padding: 20px;
+    }
+    .excursion-text {
+        margin-left: 20px;
+    }
+    
+    .excursion-container:nth-of-type(even) .excursion-caption {
+        left: auto;
+        right: -10px;
+    }
+    .heading h1 {
+        font-size: 60px;
+    }
+    h2{
+        font-size: 30px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .excursion-caption {
+        width: 300px;
+        min-height: 100px;
+        font-size: 18px;
+        bottom: -15px;
+        left: -20px;
+    }
+    
+    .excursion-image {
+        margin-bottom: 50px;
+    }
+    .excursion-content {
+        flex-direction: column !important;
+    }
+    
+    .excursion-image::after {
+        display: none;
+    }
+    
+    /* Додаємо нову лінію перед текстом */
+    .excursion-text {
+        position: relative;
+        padding-left: 30px; /* Збільшуємо відступ зліва для лінії */
+    }
+    
+    .excursion-text::before {
+        content: '';
+        position: absolute;
+        left: 3px !important;
+        top: 10px;
+        height: calc(100% - 40px);
+        width: 5px;
+        background-color: #8b5e3b;
+    }
+    
+    
+    /* Для парних секцій також змінюємо розташування лінії */
+    .excursion-container:nth-of-type(even) .excursion-text::before {
+        left: 0; /* Лінія завжди зліва від тексту */
+    }
+    .heading h1 {
+        font-size: 50px;
+    }
+    h2{
+       font-size: 25px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .excursion-content {
+        flex-direction: column;
+    }
+    
+    .excursion-text {
+        width: 450px;
+        height: 400px;
+        padding: 30px;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+    
+    .excursion-caption {
+        width: 280px;
+        min-height: 90px;
+        font-size: 16px;
+        padding: 12px;
+        bottom: -15px;
+        left: 0;
+    }
+    
+    .excursion-image img {
+        width: 450px;
+    }
+    
+    
+    
+    .excursion-text ul {
+        font-size: 16px;
+    }
+    
+    .excursion-info {
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .excursion-text li {
+        text-align: center;
+    }
+    .heading h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .excursion-caption {
+        width: 180px;
+        min-height: 90px;
+        font-size: 13px;
+        padding: 12px;
+        bottom: -15px;
+        left: auto;
+        
+    }
+    .excursion-container:nth-of-type(even) .excursion-caption {
+        right: auto;
+    }
+    .excursion-container:nth-of-type(even) .excursion-text {
+        margin-right: 0;
+    }
+    
+    .excursion-image {
+        margin-bottom: 40px;
+    }
+    
+    .excursion-content {
+        padding: 0;
+    }
+    
+    .excursion-text {
+        width: 100%;
+        padding: 25px 20px;
+        margin-left: 0;
+        margin-top: 40px;
+        
+    }
+    
+    .excursion-image img {
+        width: 100%;
+        padding-left: 20px;
+    }
+    
+   
+    
+    .excursion-text ul {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .excursion-info {
+        gap: 15px;
+    }
+    
+    .excursion-text li {
+        margin-bottom: 10px;
+    }
+    .heading img {
+        height: 400px;
+    }
+    .heading h1 {
+        font-size: 30px;
+    }
+    .excursion-container {
+        height: 85vh;
+    }
+    h2{
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .excursion-text {
+        padding: 20px 15px;
+    }
+    
+    .excursion-text ul {
+        font-size: 14px;
+        text-align: left; /* Add this */
+    }
+    
+    .excursion-info {
+        gap: 10px;
+        text-align: left; /* Change to left */
+    }
+
+    .excursion-text li {
+        text-align: left; /* Add this */
+    }
+    
+    .excursion-container {
+        margin-bottom: -50px;
+    }
+    .heading h1 {
+        font-size: 24px;
+    }
+}
