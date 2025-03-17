@@ -1371,7 +1371,7 @@ table thead svg{
 
 @media (min-width: 1400px) {
     .howToGetTo .container {
-        max-width: 1500px;
+        max-width: 100%;
     }
     
     .howToGetTo h1 {
