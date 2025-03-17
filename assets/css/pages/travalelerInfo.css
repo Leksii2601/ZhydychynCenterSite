@@ -39,13 +39,13 @@ body {
 /* Media queries for responsive design */
 @media screen and (max-width: 2400px) {
     .heading h1 {
-        top: 50%;
+        top: 45%;
     }
 }
 
 @media (max-width: 2000px) {
     .heading h1 {
-        top: 50%;
+        top: 45%;
     }
 }
 
@@ -58,7 +58,7 @@ body {
 @media (max-width: 1400px) {
     .heading h1 {
         font-size: 70px;
-        top: 50%;
+        top: 35%;
     }
 }
 
@@ -71,14 +71,14 @@ body {
 @media (max-width: 992px) {
     .heading h1 {
         font-size: 50px;
-      
+        top: 30%;
     }
 }
 
 @media (max-width: 768px) {
     .heading h1 {
         font-size: 40px;
-        top: 35%;
+        top: 25%;
     }
 }
 
@@ -88,18 +88,17 @@ body {
     }
     .heading h1 {
         font-size: 30px;
-        
+        top: 20%;
     }
 }
 
 @media (max-width: 375px) {
     .heading h1 {
         font-size: 24px;
-        
     }
 }
 .howToGetTo .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -199,6 +198,8 @@ body {
 
 .transport-content {
     display: none;
+    padding: 20px;
+    border-radius: 8px;
     margin-top: 20px;
 }
 
@@ -211,24 +212,22 @@ body {
     margin-bottom: 20px;
 }
 .info-section p{
-    font-size: 30px;
+    font-size: 18px;
     text-align: justify;
 }
 .info-section h3 {
     margin-top: 0;
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .info-section li{
     margin-bottom: 10px;
-    font-size: 25px;
+    font-size: 16px;
     list-style:none;
     display: flex;
-    align-items: center;
 }
 .mapAndInput{
     display: flex;
@@ -236,11 +235,9 @@ body {
     justify-content: center;
     margin-top: 50px;
     gap: 10px;
-    font-size: 25px;
 }
 .mapAndInput b{
     width: 30%;
-    font-size: 25px;
 }
 .mapAndInput img{
     height: 100px;
@@ -264,7 +261,6 @@ body {
     margin-right: 10px;
     color: #333 !important;
     flex-shrink: 0; 
-    
 }
 #bus-content .useful-links{
     display: grid;
@@ -326,7 +322,7 @@ body {
     
 }
 #bus-content .route-info h4{
-    font-size: 23px;
+    font-size: 18px;
 }
 #bus-content .route-info p{
     transition: all 0.3s ease;
@@ -400,7 +396,7 @@ display: block;
     max-width: 300px;
 }
 #train-content .route-info h4{
-    font-size: 23px;
+    font-size: 18px;
 }
 #train-content .route-info p{
     transition: all 0.3s ease;
@@ -426,7 +422,7 @@ display: block;
 }
 #social-content ul span{
     width: 50%;
-    font-size: 25px;
+    font-size: 17px;
 }
 #social-content ul{
     margin-bottom: 40px;
@@ -1371,153 +1367,12 @@ table thead svg{
 
 @media (min-width: 1400px) {
     .howToGetTo .container {
-        max-width: 100%;
+        max-width: 1350px;
     }
     
     .howToGetTo h1 {
         font-size: 54px;
     }
     
-}
-
-/* Загальні налаштування шрифтів для мобільних пристроїв */
-@media (max-width: 768px) {
-    /* Зменшення розміру тексту в інформаційних секціях */
-    .info-section p {
-        font-size: 18px;
-    }
-    
-    .info-section li {
-        font-size: 16px;
-    }
-    
-    .info-section h3 {
-        font-size: 28px;
-    }
-    
-    /* Налаштування шрифту в таблицях */
-    table tr {
-        font-size: 16px;
-    }
-    
-    /* Зменшення відступів між елементами списку */
-    .excursion-text ul li {
-        margin-bottom: 8px;
-    }
-    
-    /* Оптимізація шрифтів у секції харчування */
-    .nutrition-text h1 {
-        font-size: 32px;
-    }
-    
-    .nutrition-info p {
-        font-size: 16px;
-    }
-    
-    /* Оптимізація шрифтів у секції замовлень */
-    .orderLiving h1,
-    .orderExcursion h1 {
-        font-size: 36px;
-    }
-    
-    /* Маркери та іконки */
-    .info-section li svg {
-        width: 20px;
-        height: 20px;
-    }
-}
-
-/* Додаткові налаштування для малих мобільних пристроїв */
-@media (max-width: 576px) {
-    /* Подальше зменшення шрифтів для маленьких екранів */
-    .info-section p {
-        font-size: 16px;
-    }
-    
-    .info-section li {
-        font-size: 15px;
-    }
-    
-    .info-section h3 {
-        font-size: 24px;
-    }
-    
-    /* Підписи під зображеннями */
-    .excursion-caption {
-        font-size: 14px;
-    }
-    
-    /* Текст у блоках */
-    .excursion-text ul {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    
-    .nutrition-text h1 {
-        font-size: 26px;
-    }
-    
-    .nutrition-info p {
-        font-size: 15px;
-    }
-    
-    /* Заголовки секцій */
-    .orderLiving h1,
-    .orderExcursion h1 {
-        font-size: 28px;
-    }
-    
-    /* Текст у варіантах екскурсій */
-    .excursion .Text {
-        font-size: 18px;
-    }
-    
-    /* Тексти в соціальних мережах */
-    #social-content ul span {
-        font-size: 14px;
-    }
-    .mapAndInput {
-        font-size: 16px;
-    }
-    .mapAndInput b{
-        font-size: 16px;
-    }
-}
-
-/* Екстремально малі екрани */
-@media (max-width: 375px) {
-    .info-section p {
-        font-size: 14px;
-    }
-    
-    .info-section li {
-        font-size: 14px;
-    }
-    
-    .excursion-text h1 {
-        font-size: 20px;
-    }
-    
-    .excursion-text ul {
-        font-size: 13px;
-    }
-    
-    .nutrition-text h1 {
-        font-size: 22px;
-    }
-    
-    /* Оптимізація таблиць для дуже малих екранів */
-    table tr {
-        font-size: 13px;
-    }
-    
-    thead th {
-        font-size: 13px;
-    }
-    
-    /* Зменшення відступів для компактності */
-    .excursion-text {
-        padding: 15px 12px;
-    }
 }
 
