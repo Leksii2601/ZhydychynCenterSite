@@ -154,6 +154,36 @@ swiper-container::part(pagination) {
     display: flex;
     justify-content: center;
    }
+
+  .aboutus, 
+  .missionandwave, 
+  .headingandtext, 
+  .first,
+  .second, 
+  .description, 
+  .lineone, 
+  .linetwo, 
+  .linethree, 
+  .buttonMore {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+  }
+
+  .buttonMore {
+    animation: ripple 3.5s infinite;
+  }
+
+  @keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 74, 93, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(74, 74, 93, 0);
+    }
+  }
+
+
   .aboutus{
     height: 700px;
     margin: 30px 10px 10px 0;
@@ -161,7 +191,7 @@ swiper-container::part(pagination) {
     display: flex;
     opacity: 0;
     transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    transition: all 0.8s ease-out;
     max-width: 1620px;
   }
   .visible {
@@ -176,7 +206,7 @@ swiper-container::part(pagination) {
     display:block;
     position: absolute;
     transform: translateY(10%) scale(0.5);
-    left: 35%;
+    left: 135%;
   }
   .missionandwave img{
     height:100%;
@@ -262,17 +292,49 @@ swiper-container::part(pagination) {
     color:#383849;
     text-transform: uppercase;
   }
+
+  .heading-section {
+    overflow: hidden;
+  }
+
+  .heading-section h2,
+  .heading-section h5 {
+      transform: translateX(100%); /* Початкове положення за правим краєм */
+      opacity: 0;
+      transition: transform 1.2s ease-out, opacity 1.2s ease-out;
+  }
+
+  /* Коли додається клас .show, активується анімація */
+  .heading-section.show h2,
+  .heading-section.show h5 {
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  /* Додамо затримку для h5, щоб виглядало плавніше */
+  .heading-section.show h5 {
+      transition-delay: 1s;
+  }
   
   .big-box { 
     height: 425px; 
     width: 100%; 
-    
-}
-.small-box { 
-    height: 200px; 
-     
-    
-}
+  }
+
+  /* Анімація проявлення боксу при прокручуванні */
+  .big-box, .small-box {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .big-box.show, .small-box.show {
+    opacity: 1;
+  }
+
+  .small-box { 
+    height: 200px;     
+  }
+
   .big-box img, .small-box img {
     width: 100% !important  ;
     height: 100% !important;

@@ -21,24 +21,52 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Visibility Observer for .aboutus elements
-const elements = document.querySelectorAll('.aboutus');
-const options = {
-  threshold: 0.5
-};
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(
+      ".aboutus, .missionandwave, .headingandtext, .first, .second, .description, .lineone, .linetwo, .linethree, .buttonMore"
+  );
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, options);
+  const observerForelements = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+              setTimeout(() => {
+                  entry.target.classList.add("visible");
+              }, index * 500);
+              observerForelements.unobserve(entry.target);
+          }
+      });
+  }, { threshold: 0.2 });
 
-// Observe all .aboutus elements
-elements.forEach(element => {
-  observer.observe(element);
+  elements.forEach((el) => observerForelements.observe(el));
+
+  const boxes = document.querySelectorAll('.big-box, .small-box');
+
+  const observerForBoxes = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('show');
+        }, index * 300);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  boxes.forEach(box => observerForBoxes.observe(box));
+
+  const sections = document.querySelectorAll(".heading-section");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => observer.observe(section));
 });
+
 
 // Highlight boxes on scroll
 window.addEventListener("scroll", function () {
