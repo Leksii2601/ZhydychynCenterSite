@@ -31,14 +31,16 @@ main {
     align-items: center;
     background-color: #f4f4f4;
     padding: 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.348);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.182);
     width: 100%;
     max-width: 1200px;
+    padding-left: 30px;
 }
 
 .event {
     padding: 40px;
     flex: 1;
+    text-align: justify;
 }
 
 .events img {
@@ -53,7 +55,7 @@ main {
 @media screen and (max-width: 1400px) {
     .events .container {
         max-width: 1140px;
-        margin: 0 20px 100px;
+        margin: 0 20px 80px;
     }
 }
 
@@ -73,6 +75,7 @@ main {
     .events .container {
         flex-direction: column !important;
         margin: 0 20px 80px;
+        padding-left: 0px;
     }
 
     .events img {
@@ -82,7 +85,7 @@ main {
 
     .event {
         padding: 25px;
-        text-align: center;
+        text-align: justify;
     }
 }
 
