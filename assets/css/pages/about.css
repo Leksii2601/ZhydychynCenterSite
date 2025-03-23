@@ -86,13 +86,24 @@ body {
   background-color: #98634a;
   z-index: 1;
 }
+.opacity-extra-medium-2{
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.orderExcursion .info-content {
+  align-items: center;
+  
+}
+.about-pictograms{
+  margin-bottom: 100px;
+}
 
 /* Right Side - Quote */
 .text-overlay {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -121,7 +132,7 @@ body {
 .text h4 {
   font-weight: 300;
   padding-top: 25px;
-  width: calc(100% - 90px);
+  width: calc(100% - 70px);
 }
 
 .text h5 {
@@ -155,10 +166,15 @@ body {
   font-weight: 600;
   margin-bottom: 10px;
   color: #ca923a;
+  text-align: center;
 }
 
 .about-pictograms h3.vision-subtitle b {
   font-weight: 600;
+}
+.about-pictograms h3.vision-subtitle {
+  font-size:20px;
+  line-height: var(--bs-body-line-height);
 }
 
 .about-pictograms .description-text {
@@ -168,12 +184,15 @@ body {
   display: block;
   width: 90%;
   margin-bottom: 20px;
+
 }
 
 .about-pictograms .quote-text {
   color: white;
   margin-bottom: 0;
   opacity: 0.7;
+  font-size: 20px;
+  
 }
 
 .about-pictograms .margin-bottom-large {
@@ -182,6 +201,13 @@ body {
 
 .about-pictograms .margin-bottom-medium {
   margin-bottom: 20px;
+}
+.bg-gradient-light-violet-light-orange {
+ position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .about-pictograms .padding-sides {
@@ -234,6 +260,7 @@ body {
   font-size: 30px;
   font-weight: 600;
   color: #f4f4f4;
+  text-align: center;
 }
 
 .textInside {
@@ -271,8 +298,7 @@ body {
 }
 
 .bg-gradient-light-violet-light-orange {
-  background: linear-gradient(to top, rgba(255, 215, 0, 0.5), rgba(34, 139, 34, 0.314));
-  position: absolute;
+ position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -313,12 +339,13 @@ body {
   margin-right: auto;
   max-width: 1600px;
   max-height: 850px;
+  margin-bottom: 50px;
 }
 
 .reports .buttons {
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  width: 100%;
 }
 
 .buttons .button {
@@ -340,44 +367,135 @@ body {
   border: 3px solid #0097b2;
   color: #0097b2;
 }
-
-.report-container {
-  background-color: #0097b2;
-  height: 450px;
-  width: 450px;
-  padding: 50px;
-  position: relative;
-  left: 60%;
-  transform: translateY(-115%);
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.307);
+/* Стилі для heading-section */
+/* Основні стилі для heading-section */
+.heading-section {
+  margin-bottom: clamp(40px, 8vw, 120px); /* Адаптивний нижній margin */
+  padding: 0 clamp(10px, 2vw, 30px); /* Адаптивні бічні відступи */
+  overflow-wrap: break-word; /* Запобігає виходу тексту за межі на малих екранах */
 }
 
-.report-container img {
-  height: 60px;
-  width: 60px;
-  filter: brightness(0);
-}
-
-.report-element {
-  background-color: #f4f4f4;
-  height: 400px;
-  color: #232323;
-  font-size: 35px;
-  font-weight: 700;
+.heading-section h4 {
   text-align: center;
-  padding-top: 40px;
-  transform: translateY(0%);
-  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.307);
+  margin-bottom: 0 !important;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #939393;
+  font-weight: 300;
+  letter-spacing: clamp(3px, 0.7vw, 7px); /* Адаптивний міжлітерний інтервал */
+  font-size: clamp(12px, 2vw, 18px); /* Адаптивний розмір шрифту */
 }
 
-.report-img img {
-  width: 70%;
-  height: auto;
-  margin-bottom: 50px;
-  margin-left: 150px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.177);
+.heading-section h1 {
+  font-size: clamp(32px, 9vw, 120px); /* Адаптивний розмір шрифту від 32px до 120px */
+  text-align: center;
+  background-image: url(/assets/images/about/photoAbout\(2\).jpg);
+   /* Центруємо фонове зображення */
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: clamp(5px, 1.5vw, 20px); /* Адаптивний міжлітерний інтервал */
+  font-weight: 900; /* 1000 - не стандартне значення, 900 - максимальне стандартне */
+  text-transform: uppercase;
+  line-height: 1.1; /* Зменшений line-height для кращого вигляду на малих екранах */
+  margin: 0.1em 0; /* Використовуємо em для відступів, залежних від розміру тексту */
 }
 
+.heading-section h2 {
+  font-size: clamp(25px, 4vw, 45px); /* Адаптивний розмір шрифту */
+  font-weight: bold;
+  width: 100%;
+  color: #383849;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Більш детальні медіа-запити для плавних переходів */
+@media (min-width: 1400px) {
+  .heading-section {
+    max-width: 90%; /* Запобігає надмірній ширині на великих екранах */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .heading-section h1 {
+    max-width: 1600px; /* Обмежує максимальну ширину тексту */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heading-section {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heading-section {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-section {
+    margin-bottom: 50px;
+  }
+  
+  .heading-section h1 {
+    /* Оптимізуємо пропорції для середніх екранів */
+    padding: 0 5px;
+    word-spacing: -0.1em; /* Трохи зменшуємо проміжки між словами */
+  }
+}
+
+@media (max-width: 576px) {
+  .heading-section {
+    margin-bottom: 40px;
+  }
+  
+  .heading-section h1 {
+    /* Для маленьких екранів - менший розмір тексту */
+    word-spacing: -0.3em; /* Зменшення проміжків між словами на малих екранах */
+    padding: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .heading-section h1 {
+    /* Додаткові правила для дуже маленьких екранів */
+    letter-spacing: 4px; /* Фіксований міжлітерний інтервал для найменших екранів */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .heading-section h4 {
+    letter-spacing: 2px; /* Менший міжлітерний інтервал для найменших екранів */
+  }
+}
+
+/* Підтримка темного режиму (опціонально) */
+@media (prefers-color-scheme: dark) {
+  .heading-section h4 {
+    color: #b0b0b0; /* Трохи світліший колір для темного режиму */
+  }
+  
+  .heading-section h2 {
+    color: #b0b0b0; /* Світліший колір для темного режиму */
+  }
+}
+
+
+
+
+
+.orderExcursion .infoContainer{
+  margin-bottom: 0;
+  color:#f4f4f4;
+  
+}
 /* CONSOLIDATED MEDIA QUERIES */
 @media (max-width: 1400px) {
   /* Heading section */
@@ -439,9 +557,7 @@ body {
   }
   
   /* Reports */
-  .reports .buttons {
-    width: 70%;
-  }
+  
   
   .report-container {
     left: 65%;
@@ -717,7 +833,7 @@ body {
   }
   
   .about-pictograms .md-padding-sides {
-    text-align: justify;
+    
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
@@ -725,7 +841,7 @@ body {
   /* Info section */
   .info-content {
     padding: 15px;
-    gap: 20px;
+    gap: 0px;
   }
   
   .main-info h2 {
@@ -835,6 +951,9 @@ body {
     width: 100%;
     margin-bottom: 60px;
   }
+  .about-pictograms .quote-text {
+    text-align: start;
+  }
 }
 
 @media (max-width: 480px) {
@@ -926,5 +1045,86 @@ body {
   
   .report-img img {
     margin-bottom: 40px;
+  }
+}
+
+/* Основні стилі для кнопок */
+.reports .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(12px, 3vw, 30px);
+  width: min(100%, 800px);
+  margin: clamp(20px, 5vw, 40px) auto;
+}
+
+.buttons a {
+  text-decoration: none;
+  display: block;
+}
+
+.buttons .button {
+  height: clamp(40px, 7vh, 55px);
+  width: clamp(160px, 30vw, 300px);
+  color: #f4f4f4;
+  background-color: #0097b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: clamp(15px, 2vw, 20px);
+  border: 3px solid #0097b2;
+ 
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 0 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons .button:hover {
+  background-color: white;
+  border-color: #0097b2;
+  color: #0097b2;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Адаптивні стилі для різних екранів */
+@media (max-width: 992px) {
+  .reports .buttons {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons .button {
+    width: clamp(140px, 40vw, 250px);
+  }
+}
+
+@media (max-width: 576px) {
+  .reports .buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .buttons .button {
+    width: min(90%, 300px);
+  }
+  
+  /* Зменшуємо ефект при наведенні на мобільних пристроях */
+  .buttons .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 375px) {
+  .buttons .button {
+    width: 95%;
+    height: clamp(36px, 6vh, 45px);
+    font-size: 15px;
+    border-width: 2px;
   }
 }

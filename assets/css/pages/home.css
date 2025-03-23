@@ -144,11 +144,9 @@ swiper-container::part(pagination) {
     pointer-events: auto;
 }
 
-@media (max-width: 576px) {
-    swiper-container::part(button-prev),
-    swiper-container::part(button-next) {
-        display: none !important;
-    }
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+    display: none !important;
 }
    .aboutUsContainer{
     display: flex;
@@ -595,7 +593,352 @@ a{
   color: #f4f4f4;
   text-transform: uppercase;
 }
+/* About Pictograms Section */
+.about-pictograms {
+  margin-bottom: 100px;
+  margin-top: 50px;
+}
+.about-pictograms .heading-section{
+  margin-bottom: 1.5rem;
+}
 
+.about-pictograms .light-cream-bg {
+  background-color: #f8f5f0;
+}
+
+.about-pictograms h1, 
+.about-pictograms h2, 
+.about-pictograms h3, 
+.about-pictograms h4, 
+.about-pictograms h5, 
+.about-pictograms h6 {
+  margin-bottom: 20px;
+}
+
+.about-pictograms h4.section-title {
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.about-pictograms h3.vision-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ca923a;
+  text-align: center;
+}
+
+.about-pictograms h3.vision-subtitle b {
+  font-weight: 600;
+}
+
+.about-pictograms h3.vision-subtitle {
+  font-size: 20px;
+  line-height: var(--bs-body-line-height);
+}
+
+.about-pictograms .description-text {
+  font-size: 18px;
+  color: #232323;
+  line-height: 30px;
+  display: block;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.about-pictograms .quote-text {
+  color: white;
+  margin-bottom: 0;
+  opacity: 0.7;
+  font-size: 20px;
+}
+
+.about-pictograms .margin-bottom-large {
+  margin-bottom: 3rem;
+}
+
+.about-pictograms .margin-bottom-medium {
+  margin-bottom: 20px;
+}
+
+.about-pictograms .padding-sides {
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.about-pictograms .background-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+}
+
+.about-pictograms .main-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.about-pictograms .quote-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+}
+
+.about-pictograms .quote-icon {
+  width: 50px;
+  height: 50px;
+  align-self: start;
+}
+
+.about-pictograms .text-panel {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-pictograms .text-panel-inner {
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Quote title - використовується в about-pictograms */
+.quote-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #f4f4f4;
+  text-align: center;
+}
+.partners-section {
+ background-color: white;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Контейнер для бігової стрічки */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: relative;
+  /* Важливо для плавності */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+/* Стилізація логотипів */
+.partner-logo {
+  height: 80px;
+  min-width: 150px; /* Фіксована ширина для рівномірності */
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: 0 -20px; /* Зменшений негативний margin для кращих переходів */
+  text-decoration: none; /* Прибираємо підкреслення посилань */
+}
+
+.partner-logo img {
+  max-width: 90%;
+  max-height: 90px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.partner-logo:hover img {
+  filter: grayscale(0%);
+}
+
+/* Важливі стилі для елементів бібліотеки */
+.js-marquee {
+  display: flex !important;
+  align-items: center;
+}
+
+.js-marquee-wrapper {
+  transition: none !important;
+  animation-timing-function: linear !important;
+}
+
+/* При наведенні на контейнер */
+.marquee-container:hover .partner-logo img {
+  transition: filter 0.3s ease;
+}
+.partners-section .heading-section{
+  margin-bottom: 50px;
+}
+
+
+.news-section{
+  margin-bottom: 50px;
+}
+/* Стилі для карток новин */
+section.news-section .shadow-sm {
+  box-shadow: none !important;
+}
+section.news-section .card {
+  border-color: #f4f4f4 !important;
+}
+section.news-section .bg-body-tertiary {
+  background-color: #f4f4f4 !important;
+}
+section.news-section .text-body-secondary {
+  color: #383849 !important;
+}
+section.news-section .card-text {
+  margin: 0;
+}
+section.news-section .card-body {
+  padding-right: 0;
+  padding-left: 0;
+  background-color: #f4f4f4 !important;
+}
+section.news-section .bg-body-tertiary {
+  padding-bottom: 0 !important;
+}
+section.news-section .support {
+  display: flex !important;
+}
+
+/* Білий фон для секції */
+
+
+
+
+/* Адаптивність */
+@media (max-width: 770px) {
+  section.news-section .support {
+    display: flex !important;
+  }
+}
+
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .partner-logo {
+      min-width: 150px;
+      height: 70px;
+      padding: 5px 15px;
+  }
+  
+  .partner-logo img {
+      max-height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-logo {
+      min-width: 120px;
+      height: 60px;
+      padding: 5px 10px;
+  }
+  
+  .partner-logo img {
+      max-height: 40px;
+  }
+}
+/* Медіа-запити для адаптивності */
+@media (max-width: 1200px) {
+  .about-pictograms .xl-padding-vertical {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .about-pictograms .xl-padding-sides {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .about-pictograms .description-text {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-pictograms .lg-padding-all {
+    padding: 5rem;
+  }
+  
+  .about-pictograms .lg-padding-sides {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-pictograms .md-padding-sides {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-pictograms .text-panel-inner {
+    text-align: justify;
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  
+  .about-pictograms .md-padding-sides {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  
+  .about-pictograms .sm-height-700 {
+    height: 700px;
+  }
+  
+  .about-pictograms .sm-padding-sides {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .about-pictograms .xs-height-300 {
+    height: 300px;
+  }
+  
+  .about-pictograms h4.section-title,
+  .about-pictograms .description-text {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .about-pictograms .description-text {
+    margin-bottom: 30px;
+  }
+  
+  .about-pictograms .background-cover {
+    width: 100%;
+  }
+  
+  .about-pictograms .quote-text {
+    text-align: start;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-pictograms .background-cover {
+    width: 100%;
+    height: 250px !important;
+  }
+  
+  .about-pictograms .main-image {
+    height: 450px !important;
+  }
+}
 @media (min-width:1600px) {
   .container{
     max-width: 1500px !important;
@@ -869,6 +1212,20 @@ a{
     .event .more {
       height: 45px;
     }
+    .carousel {
+      height: 70vh; /* збільшуємо висоту на планшетах */
+      min-height: 450px;
+      max-height: none; /* прибираємо обмеження максимальної висоти */
+    }
+    
+    /* Покращення для тексту на каруселі для кращої видимості */
+    .carousel-caption h1 {
+      font-size: 32px;
+    }
+    
+    .carousel-caption p {
+      font-size: 16px;
+    }
   }
   @media (max-width:576px) {
     swiper-container::part(button-prev),
@@ -963,4 +1320,37 @@ a{
       height: 50px;
       width: 80%;
   }
+  .carousel {
+    height: 80vh; /* ще більше збільшуємо на мобільних */
+    min-height: 500px;
+  }
+  
+  /* Зменшуємо відступи, щоб збільшити видиму площу */
+  .carousel-inner {
+    height: 100%;
+  }
+  
+  .carousel-item {
+    height: 100%;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  }
+  @media (max-width: 375px) {
+    .about-pictograms .background-cover {
+      width: 100%;
+      height: 250px !important;
+    }
+    
+    .about-pictograms .main-image {
+      height: 450px !important;
+    }
+    .carousel {
+      height: 85vh; /* максимальна висота для малих екранів */
+      min-height: 450px;
+    }
   }

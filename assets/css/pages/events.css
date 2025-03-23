@@ -19,6 +19,7 @@ main {
     text-transform: uppercase;
 }
 
+
 .events {
     display: flex;
     flex-direction: column;
@@ -27,20 +28,20 @@ main {
 
 .events .container {
     display: flex;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     align-items: center;
-    background-color: #f4f4f4;
     padding: 0;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.182);
     width: 100%;
-    max-width: 1200px;
+    max-width: 1350px;
     padding-left: 30px;
 }
 
 .event {
-    padding: 40px;
+    padding: 35px;
     flex: 1;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
 }
 
 .events img {
@@ -49,7 +50,52 @@ main {
     height: auto;
     object-fit: cover;
     aspect-ratio: 1.5/1;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.367);
 }
+
+/* Стилізація секції eventElement */
+.eventElement {
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    padding-left: 30px;
+    margin: 25px 0;
+    color: #333;
+   
+}
+
+/* Вертикальна риска */
+.eventElement::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #8b5e3b; /* Колір як на інших сторінках */
+    border-radius: 2px;
+}
+
+/* Стилізація основного тексту опису */
+.eventDescription {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Заголовок події */
+.event h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: -5px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Підкреслення заголовка */
+
 
 /* Responsive Design */
 @media screen and (max-width: 1400px) {
@@ -87,6 +133,22 @@ main {
         padding: 25px;
         text-align: justify;
     }
+
+    .eventElement {
+        font-size: 15px;
+        padding-left: 25px;
+        margin: 20px 0;
+    }
+    
+    .eventDescription {
+        font-size: 16px;
+    }
+    
+    .event h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -105,6 +167,27 @@ main {
 
     .event {
         padding: 15px;
+    }
+
+    .eventElement {
+        font-size: 14px;
+        padding-left: 20px;
+        margin: 15px 0;
+    }
+    
+    .eventElement::before {
+        width: 3px;
+    }
+    
+    .eventDescription {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+    
+    .event h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
     }
 }
 
@@ -132,6 +215,28 @@ main {
 
     .event p {
         font-size: 0.9rem;
+    }
+
+    .eventElement {
+        font-size: 13px;
+        padding-left: 15px;
+        margin: 12px 0;
+    }
+    
+    .eventDescription {
+        font-size: 14px;
+        margin-top: 12px;
+    }
+    
+    .event h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+    
+    .event h3::after {
+        width: 40px;
+        height: 2px;
     }
 }
 
