@@ -1,5 +1,8 @@
-main {
-    font-family: 'Montserrat', sans-serif;
+body{
+    font-family: 'moontserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .heading {
@@ -189,6 +192,22 @@ main {
         margin-bottom: 15px;
         padding-bottom: 10px;
     }
+    
+    /* Збільшення розміру каруселі на мобільних пристроях */
+    .carousel {
+        height: 70vh; /* збільшуємо висоту на планшетах */
+        min-height: 450px;
+        max-height: none; /* прибираємо обмеження максимальної висоти */
+    }
+    
+    /* Покращення для тексту на каруселі для кращої видимості */
+    .carousel-caption h1 {
+        font-size: 32px;
+    }
+    
+    .carousel-caption p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -238,6 +257,26 @@ main {
         width: 40px;
         height: 2px;
     }
+    
+    .carousel {
+        height: 80vh; /* ще більше збільшуємо на мобільних */
+        min-height: 500px;
+    }
+    
+    /* Зменшуємо відступи, щоб збільшити видиму площу */
+    .carousel-inner {
+        height: 100%;
+    }
+    
+    .carousel-item {
+        height: 100%;
+    }
+    
+    .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -250,9 +289,15 @@ main {
         margin: 0 5px 30px;
     }
     .events img {
-      padding: 10px;
+      padding: 0;
+      box-shadow: none;
     }
     .event {
         padding: 5px;
+    }
+    
+    .carousel {
+        height: 85vh; /* максимальна висота для малих екранів */
+        min-height: 450px;
     }
 }

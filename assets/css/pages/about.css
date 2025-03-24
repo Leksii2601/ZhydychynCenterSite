@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* Heading Section */
@@ -21,11 +22,12 @@ body {
   object-fit: cover;
 }
 
+
 .heading h1 {
   position: absolute;
   left: 50%;
   top: 40%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
   font-size: 90px;
   text-transform: uppercase;
   font-weight: 500;
@@ -359,7 +361,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   border: 3px solid #0097b2;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease !important;
 }
 
 .buttons .button:hover {
@@ -476,16 +478,7 @@ body {
   }
 }
 
-/* Підтримка темного режиму (опціонально) */
-@media (prefers-color-scheme: dark) {
-  .heading-section h4 {
-    color: #b0b0b0; /* Трохи світліший колір для темного режиму */
-  }
-  
-  .heading-section h2 {
-    color: #b0b0b0; /* Світліший колір для темного режиму */
-  }
-}
+
 
 
 
@@ -1115,7 +1108,7 @@ body {
   
   /* Зменшуємо ефект при наведенні на мобільних пристроях */
   .buttons .button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 }

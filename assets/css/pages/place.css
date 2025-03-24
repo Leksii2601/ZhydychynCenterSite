@@ -1,6 +1,9 @@
 body {
   font-family: 'Montserrat';
   background-color: #faf8f8;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .backgroundHeading {
@@ -26,7 +29,7 @@ body {
   text-align: center;
   width: 80%;
   max-width: 900px;
-  transform: translateY(50%);
+  transform: translateY(50%) !important;
 }
 
 .content-overlay h3 {
@@ -39,7 +42,7 @@ body {
 .textInside {
   display: flex;
   justify-content: center;
-  transform: translateY(50%);
+  transform: translateY(50%) !important;
   background-color: rgb(238, 236, 236);
   padding: 50px 0 50px 0;
   height: 300px;
@@ -86,7 +89,7 @@ body {
 .bixText h3 {
   font-size: 160px;
   font-weight: 700;
-  opacity: 0.5;
+  opacity: 0.5 !important;
   letter-spacing: 5px;
   margin: 0;
   text-align: center;
@@ -108,7 +111,7 @@ body {
 }
 
 .church-card {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease !important;
   overflow: hidden;
   margin-bottom: 1rem;
   position: relative;
@@ -143,7 +146,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.9s ease;
+  transition: transform 0.9s ease !important;
 }
 
 .blog-overlay {
@@ -244,7 +247,7 @@ body {
 
 
   .highlight .blog-post-image img {
-    transform: scale(1.09);
+    transform: scale(1.09) !important;
     /* Збільшення при активності */
   }
 
@@ -308,7 +311,7 @@ body {
     width: 100%;
     margin-bottom: -110px;
     height: 200px;
-    padding: 64px;
+    padding: 50px 20px;
   }
 
   .content-overlay h3 {
@@ -378,7 +381,7 @@ body {
 
 @media (hover: hover) {
   .church-card:hover .blog-post-image img {
-    transform: scale(1.09);
+    transform: scale(1.09) !important;
   }
 
   .church-card:hover .overlay {
@@ -502,4 +505,15 @@ body {
   .mainHeading {
     margin-bottom: 50px;
   }
+}
+
+/* Додаємо !important до всіх transform властивостей */
+
+/* Додаємо для всіх transform властивостей, що можуть бути додані пізніше */
+.church-card:hover {
+  transform: translateY(-5px) !important;
+}
+
+.church-card:active {
+  transform: translateY(0) !important;
 }

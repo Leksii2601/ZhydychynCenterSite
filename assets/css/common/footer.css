@@ -1,110 +1,134 @@
-.social-media {
+#footer-container {
+    background-color: black;
+    padding: 40px 20px;
+    font-family: 'montserrat';
+    color: #f4f4f4 !important;
+    text-decoration: none;
+}
+
+/* First part styles */
+#footer-container .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#footer-container .footer-top h5 {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+#footer-container .logo img {
+    transform: scale(1.1);
+}
+#footer-container .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#footer-container .logo {
+    border: none;
+    background-color: transparent;
+    align-self: center;
+}
+
+#footer-container .nav-item {
+    color: #f4f4f4;
+    white-space: nowrap;
+}
+
+#footer-container .text-body-secondary {
+    color: #f4f4f4 !important;
+}
+
+/* Second part styles */
+#footer-container .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#footer-container .copyright-info {
+    margin-bottom: 20px;
+}
+
+#footer-container .social-media-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer-container .nav-link:hover {
+    color: #f4f4f49d !important;
+    text-decoration: none;
+    background-color: transparent !important;
+}
+
+#footer-container .social-media {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px; /* Додаємо відступи між іконками */
+    gap: 45px;
 }
 
-.social-media svg{
-    fill: var(--bs-heading-color);
+#footer-container .social-media svg {
+    fill: #f4f4f4;
     transform: scale(2.3);
     transition: 0.3s ease;
 }
 
-#footer-container .nav-item{
-    width: 140% !important;
-}
-
-#footer-container{
-    background-color: #393e42;
-    padding-top:20px;
-    font-family:'Montserrat';
-    color:#f4f4f4 !important;
-    text-decoration: none;
-}
-
-.col-6 .text-body-secondary{
-    margin-top:40px;
-    color: #f4f4f4 !important;
-}
-
-.text-body-secondary{
-    color:#f4f4f4 !important;
-}
-
-footer .row{
-    flex-wrap:nowrap;
-}
-
-.col{
-    font-weight:normal;
-}
-
-.mb-5{  
-    display: flex;
-    align-items: flex-end;
-    justify-content:center;
-}
-
-.social-media .bi.bi-youtube{
-    fill:#f4f4f4;
-}
-
-.social-media .bi.bi-facebook{
-    fill:#f4f4f4;
-}
-
-.social-media .bi.bi-facebook:hover, .bi.bi-youtube:hover{
+#footer-container .social-media .bi.bi-facebook:hover, 
+#footer-container .social-media .bi.bi-youtube:hover {
     transform: scale(2.5);
 }
 
-.logo img{
-    transform: scale(0.9);
-}
-
-.logo{
-    border: none;
-    background-color: transparent;
-}
-
-#footer-container .mb-4{
-    filter:brightness(0) invert(1);
-}
-
-@media screen and (max-width: 990px){
-    .mb-3{
-        display: none;
-    }
-    #footer-container .nav-item{
-        width: 70% !important;
+/* Responsive adjustments */
+@media screen and (max-width: 990px) {
+    #footer-container .social-media-container {
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 770px) {
-    .container{
-        margin: 0;
-    }
-    .row{
+    #footer-container .footer-top, 
+    #footer-container .footer-bottom {
         flex-direction: column;
     }
-    .social-media {
-        flex-direction: column; /* Додаємо для вертикального розташування іконок */
+    
+    #footer-container .footer-bottom {
+        text-align: center;
     }
     
+    #footer-container .social-media-container {
+        justify-content: center;
+    }
+    
+    #footer-container .copyright-info {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 576px) {
-    .container{
-        margin: 0;
-    }
-    .row{
-        flex-direction: column;
-    }
-    .col-6{
+    #footer-container .footer-top > div,
+    #footer-container .footer-bottom > div {
         width: 100%;
     }
-    .social-media {
-        flex-direction: row;
+    
+    #footer-container .d-flex {
+        flex-direction: column;
     }
-   
+    
+    #footer-container .logo img {
+        transform: scale(1);
+    }
+    
+    #footer-container .nav-item {
+        white-space: normal;
+    }
+    
+    #footer-container {
+        padding: 40px 10px;
+    }
 }
