@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
     <title>Жидичин центр</title>
     <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
@@ -27,18 +27,16 @@
 <body style="background-color: white;">
     <div id="header-container"></div>
     <main>
-        <section class="heading">
-            <img fetchpriority="high" src="/assets/images/traveller/headingCover.jpg" alt="">
-            <h1>Як дістатися до Жидичина</h1>
+        <section class="heading" data-aos="fade-up">
+            <img fetchpriority="high" src="/assets/images/traveller/headingCover.jpg" alt="" data-aos="zoom-in"
+                data-aos-delay="300">
+            <h1 data-aos="fade-up" data-aos-delay="500">Як дістатися до Жидичина</h1>
         </section>
         <section class="howToGetTo">
             <div class="container">
-
-
-
-
-                <div class="transport-options">
-                    <div class="transport-option" onclick="showTransport('car', 'transport')" id="car-tab">
+                <div class="transport-options" data-aos="fade-up" data-aos-duration="800">
+                    <div class="transport-option" onclick="showTransport('car', 'transport')" id="car-tab"
+                        data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -47,8 +45,8 @@
                         <div class="transport-name">АВТОМОБІЛЕМ</div>
                     </div>
 
-
-                    <div class="transport-option" onclick="showTransport('bus', 'transport')" id="bus-tab">
+                    <div class="transport-option" onclick="showTransport('bus', 'transport')" id="bus-tab"
+                        data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -56,7 +54,9 @@
                             </svg></div>
                         <div class="transport-name">АВТОБУСОМ</div>
                     </div>
-                    <div class="transport-option" onclick="showTransport('train', 'transport')" id="train-tab">
+
+                    <div class="transport-option" onclick="showTransport('train', 'transport')" id="train-tab"
+                        data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -64,7 +64,9 @@
                             </svg></div>
                         <div class="transport-name">ПОТЯГОМ</div>
                     </div>
-                    <div class="transport-option" onclick="showTransport('social','transport')" id="social-tab">
+
+                    <div class="transport-option" onclick="showTransport('social','transport')" id="social-tab"
+                        data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
                         <div class="transport-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -722,64 +724,353 @@
                 </div>
 
                 <!-- Car Content -->
-                <div id="car-content" class="transport-content">
+                <div id="bus-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="info-section">
-                        <h3>Подорож до Жидичина автомобілем</h3>
-                        <p>Жидичинський Свято-Миколаївський монастир має дуже зручне розташування для доїзду власним
+                        <h3 data-aos="fade-up" data-aos-delay="100">Подорож до Жидичина автобусом</h3>
+                        <p data-aos="fade-up" data-aos-delay="200">До Жидичинського Свято-Миколаївського монастиря можна
+                            дуже легко дістатися як автобусом, так
+                            і громадським транспортом. Автовокзал безпосередньо в селі Жидичин відсутній, проте Ви
+                            можете скористатися автостанцією, яка розташована у місті Луцьку за 7 км від Жидичина.
+                        </p>
+                        <p data-aos="fade-up" data-aos-delay="250">
+                            Найбільш вигідним місцем для початку подорожі до села Жидичин є <b>кінотеатр Промінь</b>,
+                            зупинка Центральна бібліотека для дітей (вул. Стрілецька, магазин "Родинна ковбаска")
+                            Корисні посилання, які допоможуть спланувати маршрут автобусом або громадським транспортом
+                            представлено нижче.</p>
+                        <p data-aos="fade-up" data-aos-delay="300">
+                            Корисні посилання, які допоможуть спланувати маршрут автобусом до станції Луцьк представлено
+                            нижче.
+                        </p>
+                        <ul class="useful-links" data-aos="fade-up" data-aos-delay="350">
+                            <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk" data-aos="fade-right"
+                                data-aos-delay="400">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Громадський транспорт
+                                    міста Луцька</li>
+                            </a>
+                            <a target="_blank" href="https://vopas.com.ua/online/lutsk/" data-aos="fade-right"
+                                data-aos-delay="450">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Луцька Автостанція №1</li>
+                            </a>
+                            <a target="_blank" href="https://busfor.ua/uk" data-aos="fade-right" data-aos-delay="500">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Busfor</li>
+                            </a>
+                            <a target="_blank" href="https://infobus.eu/" data-aos="fade-right" data-aos-delay="550">
+                                <li><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                        <path
+                                            d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                    </svg>Infobus</li>
+                            </a>
+                        </ul>
+                        <ul class="route-list" data-aos="fade-up" data-aos-delay="600">
+                            <h3 data-aos="fade-up" data-aos-delay="650">Як доїхати до Жидичина з автостанції № 1 <br>
+                                Покроковий маршрут</h3>
+                            <li data-aos="fade-up" data-aos-delay="700">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від Автовокзалу пройти пішки 350 метрів до <b>ТЦ Караван</b>, піднятися на 3
+                                    поверх ТЦ та по переходу пройти до зупинки Залізничний вокзал</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="750">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Залізничний вокзал</b> проїхати до зупинки <b>Проспект Президента
+                                        Грушевського</b>. Усі види громадського транспорту прямують до цієї зупинки,
+                                    оберіть найбільш зручний для вас. Якщо фізичні сили дозволяють, до зупинки Проспект
+                                    Президента Грушевського можна пройти пішки, орієнтовно 1,5 кілометра.</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="800">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Проспект Президента Грушевського</b> пройти пішки 50 метрів до
+                                    зупинки <b>Центральна бібліотека для дітей</b> (вул. Стрілецька, магазин Родинна
+                                    ковбаска).</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="850">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Центральна бібліотека для дітей</b> проїхати близько 7 км. до
+                                    зупинки <b>Жидичинський ліцей №31</b>(с. Жидичин, вул. Богдана Хмельницького).
+                                    Маршрутні таксі № 51, № 117, № 149</span>
+                            </li>
+                            <li data-aos="fade-up" data-aos-delay="900">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Від зупинки <b>Жидичинський ліцей №31</b> (с. Жидичин, вул. Богдана Хмельницького)
+                                    пройти 300 метрі до території <b>Жидичинського Свято-Миколаївського
+                                        монастиря</b></span>
+                            </li>
+                        </ul>
+                        <a target="_blank" href="https://maps.app.goo.gl/RB15LLH7J6qjWXqPA" data-aos="zoom-in"
+                            data-aos-delay="950">
+                            <div class="mapAndInput">
+                                <img src="/assets/images/traveller/map.svg" alt="">
+                                <p>Маршрут автовокзал м. Луцьк - Жидичинський Свято-Миколаївський монастир на картах
+                                    Google</p>
+                            </div>
+                        </a>
+                        <h3 data-aos="fade-up" data-aos-delay="1000">Графік руху маршрутних таксі до Жидичина</h3>
+                        <div class="allTables" data-aos="fade-up" data-aos-delay="1050">
+                            <div class="table-container" data-aos="fade-up" data-aos-delay="1100">
+                                <div class="route-info">
+                                    <h4>№ 51 (Луцьк-Кульчин)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1092">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Кульчин</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>6:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6:50</td>
+                                                <td>7:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8:10</td>
+                                                <td>8:35</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:00</td>
+                                                <td>9:20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:05</td>
+                                                <td>10:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:30</td>
+                                                <td>12:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:05</td>
+                                                <td>15:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16:35</td>
+                                                <td>17:00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:40</td>
+                                                <td>18:25</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container" data-aos="fade-up" data-aos-delay="1150">
+                                <div class="route-info">
+                                    <h4> № 117 (Луцьк-Клепачів)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1094">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Клепачів</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>6:10</td>
+                                                <td>6:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7:25</td>
+                                                <td>8:05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:30</td>
+                                                <td>11:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td>12:40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14:15</td>
+                                                <td>14:55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>15:40</td>
+                                                <td>16:25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>18:15</td>
+                                                <td>18:50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20:40</td>
+                                                <td>21:00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="table-container" data-aos="fade-up" data-aos-delay="1200">
+                                <div class="route-info">
+                                    <h4> № 149 (Луцьк-Озерце)</h4>
+                                    <a target="_blank" href="https://www.eway.in.ua/ua/cities/lutsk/routes/1097">
+                                        <p>Стежити онлайн<svg xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                <path
+                                                    d="M384 32c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96C0 60.7 28.7 32 64 32l320 0zM160 144c-13.3 0-24 10.7-24 24s10.7 24 24 24l94.1 0L119 327c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l135-135L288 328c0 13.3 10.7 24 24 24s24-10.7 24-24l0-160c0-13.3-10.7-24-24-24l-152 0z" />
+                                            </svg></p>
+                                    </a>
+                                </div>
+                                <div class="table-wrapper">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td><b>Промінь</b></td>
+                                                <td><b>Озерце</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>7:00</td>
+                                                <td>7:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9:40</td>
+                                                <td>10:10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>13:00</td>
+                                                <td>13:30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>17:10</td>
+                                                <td>17:45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>19:20</td>
+                                                <td>19:50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <p data-aos="fade-up" data-aos-delay="1250">Купити квитки можна безпосередньо у водія або
+                            розрахуватися карткою. Вартість проїзду 20
+                            грн.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="car-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="info-section">
+                        <h3 data-aos="fade-up" data-aos-delay="100">Подорож до Жидичина автомобілем</h3>
+                        <p data-aos="fade-up" data-aos-delay="200">Жидичинський Свято-Миколаївський монастир має дуже
+                            зручне розташування для доїзду власним
                             авто. Серед основних переваг: </p>
 
-                        <li><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                            </svg> <span>Розміщення поблизу траси М19</span></li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                            </svg> <span>Власна безкоштовна стоянка</span></li>
-                        <li><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
-                            </svg>
-                            <span>Асфальтована дорога</span>
-                        </li>
+                        <ul data-aos="fade-up" data-aos-delay="300">
+                            <li data-aos="fade-right" data-aos-delay="350">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg> <span>Розміщення поблизу траси М19</span>
+                            </li>
+                            <li data-aos="fade-right" data-aos-delay="400">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg> <span>Власна безкоштовна стоянка</span>
+                            </li>
+                            <li data-aos="fade-right" data-aos-delay="450">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                    <path
+                                        d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l320 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
+                                <span>Асфальтована дорога</span>
+                            </li>
+                        </ul>
 
-                        </p>
-                        <p>Для формування маршруту введіть у картах Google текст нижче і
+                        <p data-aos="fade-up" data-aos-delay="500">Для формування маршруту введіть у картах Google текст
+                            нижче і
                             отримаєте детальний план поїздки
                         </p>
-                        <div class="mapAndInput">
+                        <div class="mapAndInput" data-aos="zoom-in" data-aos-delay="550">
                             <img src="/assets/images/traveller/map.svg" alt=""> <b>Жидичинський Свято-Миколаївський
                                 монастир (ПЦУ), вулиця Ковельська,
                                 Жидичин, Волинська область, 45240 </b>
                         </div>
-                        <div class="textVideo ">
+                        <div class="textVideo" data-aos="fade-up" data-aos-delay="600">
                             <p>Для ще більшої зручності ми віздняли для Вас відео, як доїхати власним авто до
                                 Жидичинської обителі від кінотеатру Промінь міста Луцька</p>
                         </div>
                         <a target="_blank"
-                            href="https://www.youtube.com/watch?v=dII9ZpWGQIE&list=PLcbj4fdd0N_lwQjiyYlQwpUGQdLIahf_R&index=1">
+                            href="https://www.youtube.com/watch?v=dII9ZpWGQIE&list=PLcbj4fdd0N_lwQjiyYlQwpUGQdLIahf_R&index=1"
+                            data-aos="zoom-in" data-aos-delay="650">
                             <div class="mapAndInput">
                                 <img src="/assets/images/traveller/yotubeButton.svg" alt=""> Дивіться, поширюйте,
                                 користуйтеся
                             </div>
                         </a>
-
                     </div>
                 </div>
             </div>
         </section>
         <section class="orderExcursion" id="excursionLink">
-
             <section class="section parallax wow animate__fadeIn" data-parallax-background-ratio="0.001"
                 style="background-image: url('/assets/images/churchcomplex/churchucomplex\ \(1\).jpg');">
                 <div class="opacity-extra-medium-2 bg-gradient-light-violet-light-orange"></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-10 col-sm-9 position-relative text-center last-paragraph-no-margin wow animate__fadeIn"
-                            data-wow-delay="0.4s">
+                            data-wow-delay="0.4s" data-aos="zoom-in" data-aos-delay="300">
                             <h1 class="alt-font text-white font-weight-600 margin-3-rem-bottom">
                                 Замовлення екскурсій
                             </h1>
@@ -788,77 +1079,73 @@
                 </div>
             </section>
         </section>
-        <section class="variantsToOrder">
-            <h1>Варіанти екскурсій</h1>
+        <section class="variantsToOrder" data-aos="fade-up" data-aos-delay="200">
+            <h1 data-aos="fade-up" data-aos-delay="300">Варіанти екскурсій</h1>
             <div class="threeVariants">
-                <div class="excursion">
+                <div class="excursion" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
                     <div class="image-container"><img src="/assets/images/traveller/photoOrder (1).jpg" alt="">
                         <small>1.5 год</small>
                         <div class="Text">Оглядова</div>
                     </div>
-
                 </div>
 
-                <div class="excursion">
+                <div class="excursion" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
                     <div class="image-container"> <img src="/assets/images/traveller/photoOrder (2).jpg" alt="">
                         <small>2.5 год</small>
                         <div class="Text">Базова</div>
                     </div>
-
                 </div>
 
-
-                <div class="excursion">
+                <div class="excursion" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
                     <div class="image-container"><img src="/assets/images/traveller/photoOrder (3).jpg" alt="">
                         <small>3.5 год</small>
                         <div class="Text">Повна</div>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section class="excursion-container">
+        <section class="excursion-container" data-aos="fade-up">
             <div class="excursion-content">
-                <div class="excursion-image">
+                <div class="excursion-image" data-aos="fade-right" data-aos-delay="300">
                     <img src="/assets/images/traveller/monastery.jpg" alt="Kamondo Stairs">
                     <div class="excursion-caption">Деталі екскурсій</div>
                 </div>
-                <div class="excursion-text">
-                    <h1>Екскурсійний час</h1>
+                <div class="excursion-text" data-aos="fade-left" data-aos-delay="400">
+                    <h1 data-aos="fade-up" data-aos-delay="450">Екскурсійний час</h1>
                     <div class="excursion-info">
-                        <ul>
-                            <li>Будні дні (Пн–Пт): 10:00 → 17:00</li>
+                        <ul data-aos="fade-up" data-aos-delay="500">
+                            <li>Будні дні: 10:00 → 17:00</li>
                             <li>Субота: 11:00 → 17:00</li>
-                            <li>Неділя: Відпочиваємо!</li>
+                            <li>Неділя: за запитом</li>
                         </ul>
-                        <ul>
-                            <li>Вартість: 50 грн з людини</li>
-                            <li>Контакти: +380681042288</li>
+                        <ul data-aos="fade-up" data-aos-delay="550">
+                            <li>Вартість:</li>
+                            <li>Для груп більше 10 осіб: 50 грн/люд</li>
+                            <li>Для груп до 10 осіб: 500 грн/групи</li>
+                            <li>Контакти: +38067 104 22 88</li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section class="nutrition" id="nutritionLink">
-            <div class="nutrition-content">
-                <div class="nutrition-image">
+        <section class="nutrition" id="nutritionLink" data-aos="fade-up">
+            <div class="nutrition-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="nutrition-image" data-aos="zoom-in" data-aos-delay="200">
                     <img src="/assets/images/traveller/food.jpg" alt="Kamondo Stairs">
                 </div>
-                <div class="nutrition-text">
-                    <h1>Харчування</h1>
-                    <div class="nutrition-info">
+                <div class="nutrition-text" data-aos="fade-left" data-aos-delay="300">
+                    <h1 data-aos="fade-up" data-aos-delay="400">Харчування</h1>
+                    <div class="nutrition-info" data-aos="fade-up" data-aos-delay="500">
                         <p>Розиваємо локальну кухню Древнього Жидичина</p>
                     </div>
                 </div>
-
             </div>
         </section>
-        <section class="nutrition-choose">
+        
+        <section class="nutrition-choose" data-aos="fade-up" data-aos-duration="800">
             <div class="container">
-                <div class="transport-options nutrition-options">
-                    <div class="transport-option nutrition-option" onclick="showTransport('local','nutrition')"
-                        id="local-tab">
+                <div class="transport-options nutrition-options" data-aos="fade-up" data-aos-delay="200">
+                    <div class="transport-option nutrition-option" onclick="showTransport('local','nutrition')" id="local-tab" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                         <div class="transport-icon nutrition-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -866,10 +1153,8 @@
                             </svg></div>
                         <div class="transport-name nutrition-name">МІСЦЕВА КУХНЯ</div>
                     </div>
-
-
-                    <div class="transport-option nutrition-option" onclick="showTransport('nearby','nutrition')"
-                        id="nearby-tab">
+        
+                    <div class="transport-option nutrition-option" onclick="showTransport('nearby','nutrition')" id="nearby-tab" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
                         <div class="transport-icon nutrition-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -878,19 +1163,20 @@
                         <div class="transport-name nutrition-name">ЗАКЛАДИ ПОБЛИЗУ</div>
                     </div>
                 </div>
-                <div id="local-content" class="transport-content">
+        
+                <div id="local-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="info-section">
                         <section class="reports">
-                            <div class="report-img">
+                            <div class="report-img" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="/assets/images/traveller/photoToBook (1).jpg" alt="">
                             </div>
-
-                            <div class="report-content-area">
-                                <div class="report-container">
-                                    <img src="/assets/images/about/quotes.svg" alt="">
+        
+                            <div class="report-content-area" data-aos="fade-left" data-aos-delay="300">
+                                <div class="report-container" data-aos="fade-up" data-aos-delay="400">
+                                    <img src="/assets/images/about/quotes.svg" alt="" data-aos="zoom-in" data-aos-delay="500">
                                     <div class="report-element">
-                                        <h3>Місцева кухня</h3>
-                                        <p>Ми активно підтримуємо розвиток локальної кухні.
+                                        <h3 data-aos="fade-up" data-aos-delay="500">Місцева кухня</h3>
+                                        <p data-aos="fade-up" data-aos-delay="600">Ми активно підтримуємо розвиток локальної кухні.
                                             <br>
                                             <br>
                                             Кожен може відкрити для себе кухню Древнього Жидичина.
@@ -898,18 +1184,18 @@
                                         </p>
                                     </div>
                                 </div>
-
-                                <div class="report-text">
-                                    <div class="report-item">
-                                        <img src="/assets/images/traveller/lamp.svg" alt="">
+        
+                                <div class="report-text" data-aos="fade-up" data-aos-delay="700">
+                                    <div class="report-item" data-aos="fade-right" data-aos-delay="800">
+                                        <img src="/assets/images/traveller/lamp.svg" alt="" data-aos="zoom-in" data-aos-delay="850">
                                         <span>На даний момент монастир не має власної трапезної для паломників
                                             безпосередньо на території. Ми активно працюємо над вирішенням цього
                                             питання. Рекомендуємо, розташований неподалік, заклад харчування <a
                                                 target="_blank" href="https://www.facebook.com/grkOstriv">ГРК
                                                 «Острів»</a> </span>
                                     </div>
-                                    <div class="report-item">
-                                        <img src="/assets/images/traveller/rupor.svg" alt="">
+                                    <div class="report-item" data-aos="fade-right" data-aos-delay="900">
+                                        <img src="/assets/images/traveller/rupor.svg" alt="" data-aos="zoom-in" data-aos-delay="950">
                                         <span>
                                             Команда Древнього Жидичина відкрита до співпраці з фахівцями у сфері
                                             ресторанного бізнесу, гастрономічного туризму для розвитку закладів
@@ -927,46 +1213,43 @@
                             </div>
                         </section>
                     </div>
-
                 </div>
-                <div id="nearby-content" class="transport-content">
+        
+                <div id="nearby-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="info-section">
                         <section class="reports">
-                            <div class="report-img">
+                            <div class="report-img" data-aos="zoom-in" data-aos-delay="200">
                                 <img src="/assets/images/traveller/visitLutsk.png" alt="">
                             </div>
-
-                            <div class="report-content-area">
-                                <div class="report-container">
-                                    <img src="/assets/images/about/quotes.svg" alt="">
+        
+                            <div class="report-content-area" data-aos="fade-left" data-aos-delay="300">
+                                <div class="report-container" data-aos="fade-up" data-aos-delay="400">
+                                    <img src="/assets/images/about/quotes.svg" alt="" data-aos="zoom-in" data-aos-delay="500">
                                     <div class="report-element">
-                                        <h3>Заклади поблизу</h3>
-                                        <p>Для потреб мандрівників є широка лінійка закладів харчування неподалік села
+                                        <h3 data-aos="fade-up" data-aos-delay="500">Заклади поблизу</h3>
+                                        <p data-aos="fade-up" data-aos-delay="600">Для потреб мандрівників є широка лінійка закладів харчування неподалік села
                                             Жидичин, зокрема у місті Луцьк.
                                             Усю детальну інформацію Ви можете знайти на сайт <a target="_blank"
                                                 href="https://www.visitlutsk.com/category/eat/">visitlutsk</a></p>
                                     </div>
                                 </div>
-
-
                             </div>
                         </section>
                     </div>
-
                 </div>
             </div>
         </section>
+        
         <div id="livingLink"></div>
         <section class="orderLiving">
-
             <section class="section parallax wow animate__fadeIn" data-parallax-background-ratio="0.001"
                 style="background-image: url('/assets/images/traveller/horse.jpg');">
                 <div class="opacity-extra-medium-2 bg-gradient-light-violet-light-orange"></div>
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-12 col-lg-10 col-sm-9 position-relative text-center last-paragraph-no-margin wow animate__fadeIn"
-                            data-wow-delay="0.4s">
-                            <h1 class="alt-font text-white font-weight-600 margin-3-rem-bottom">
+                            data-wow-delay="0.4s" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                            <h1 class="alt-font text-white font-weight-600 margin-3-rem-bottom" data-aos="fade-up" data-aos-delay="500">
                                 ПРОЖИВАННЯ
                             </h1>
                         </div>
@@ -975,11 +1258,10 @@
             </section>
         </section>
 
-        <section class="living-choose">
+        <section class="living-choose" data-aos="fade-up" data-aos-duration="800">
             <div class="container">
-                <div class="transport-options nutrition-options living-options">
-                    <div class="transport-option nutrition-option living-option"
-                        onclick="showTransport('locall','living')" id="locall-tab">
+                <div class="transport-options nutrition-options living-options" data-aos="fade-up" data-aos-delay="200">
+                    <div class="transport-option nutrition-option living-option" onclick="showTransport('locall','living')" id="locall-tab" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                         <div class="transport-icon nutrition-icon living-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -987,10 +1269,8 @@
                             </svg></div>
                         <div class="transport-name nutrition-name">МІСЦЕВІ САДИБИ</div>
                     </div>
-
-
-                    <div class="transport-option nutrition-option living-option"
-                        onclick="showTransport('nearbyl','living')" id="nearbyl-tab">
+        
+                    <div class="transport-option nutrition-option living-option" onclick="showTransport('nearbyl','living')" id="nearbyl-tab" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
                         <div class="transport-icon nutrition-icon living-icon"><svg xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                 <path
@@ -999,19 +1279,20 @@
                         <div class="transport-name nutrition-name living-name">ЖИТЛО НЕПОДАЛІК</div>
                     </div>
                 </div>
-                <div id="locall-content" class="transport-content">
+                
+                <div id="locall-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="info-section">
                         <section class="reports">
-                            <div class="report-img">
+                            <div class="report-img" data-aos="zoom-in" data-aos-delay="300">
                                 <img src="/assets/images/traveller/photoToBook (2).jpg" alt="">
                             </div>
-
-                            <div class="report-content-area">
-                                <div class="report-container">
-                                    <img src="/assets/images/about/quotes.svg" alt="">
+        
+                            <div class="report-content-area" data-aos="fade-left" data-aos-delay="400">
+                                <div class="report-container" data-aos="fade-up" data-aos-delay="500">
+                                    <img src="/assets/images/about/quotes.svg" alt="" data-aos="zoom-in" data-aos-delay="550">
                                     <div class="report-element">
-                                        <h3>Місцеві садиби</h3>
-                                        <p>Ми активно підтримуємо розвиток локальних садиб.
+                                        <h3 data-aos="fade-up" data-aos-delay="600">Місцеві садиби</h3>
+                                        <p data-aos="fade-up" data-aos-delay="650">Ми активно підтримуємо розвиток локальних садиб.
                                             <br>
                                             <br>
                                             Відкриваємо можливість зануритися в атмосферу автентичного сільського
@@ -1019,10 +1300,10 @@
                                         </p>
                                     </div>
                                 </div>
-
-                                <div class="report-text">
-                                    <div class="report-item">
-                                        <img src="/assets/images/traveller/lamp.svg" alt="">
+        
+                                <div class="report-text" data-aos="fade-up" data-aos-delay="700">
+                                    <div class="report-item" data-aos="fade-right" data-aos-delay="750">
+                                        <img src="/assets/images/traveller/lamp.svg" alt="" data-aos="zoom-in" data-aos-delay="780">
                                         <span>
                                             На сьогодні на території обителі немає закладів розміщення, проте ми активно
                                             працюємо над вирішенням цього питання. Наразі ми напрацьовуємо базу садиб
@@ -1032,19 +1313,19 @@
                                             5-10 км від монастиря. Більше інформації у вкладці Житло неподалік.
                                             </a> </span>
                                     </div>
-                                    <div class="report-item">
-                                        <img src="/assets/images/traveller/rupor.svg" alt="">
+                                    <div class="report-item" data-aos="fade-right" data-aos-delay="850">
+                                        <img src="/assets/images/traveller/rupor.svg" alt="" data-aos="zoom-in" data-aos-delay="880">
                                         <span>
                                             Команда Древнього Жидичина відкрита до співпраці з фахівцями у сфері
                                             зеленого туризму, гостинності та малого бізнесу для створення якісної бази
                                             садиб у селі Жидичин.
-
-
+        
+        
                                             <br><br>
                                             Прагнемо зробити Жидичин ще більш привабливим для туристів, при цьому
                                             підтримати власників садиб, надаючи їм корисні знання про стандарти
                                             гостинності та ефективні методи залучення гостей.
-
+        
                                             <br><br>
                                             Ми готові розвиватися, змінюватися та сприяти зростанню сектора закладів
                                             проживання у Жидичині та його околицях.
@@ -1054,24 +1335,21 @@
                             </div>
                         </section>
                     </div>
-
-
-
-
                 </div>
-                <div id="nearbyl-content" class="transport-content">
+                
+                <div id="nearbyl-content" class="transport-content" data-aos="fade-up" data-aos-duration="1000">
                     <div class="info-section">
                         <section class="reports">
-                            <div class="report-img">
+                            <div class="report-img" data-aos="zoom-in" data-aos-delay="300">
                                 <img src="/assets/images/traveller/booking.png" alt="">
                             </div>
-
-                            <div class="report-content-area">
-                                <div class="report-container">
-                                    <img src="/assets/images/about/quotes.svg" alt="">
+        
+                            <div class="report-content-area" data-aos="fade-left" data-aos-delay="400">
+                                <div class="report-container" data-aos="fade-up" data-aos-delay="500">
+                                    <img src="/assets/images/about/quotes.svg" alt="" data-aos="zoom-in" data-aos-delay="550">
                                     <div class="report-element">
-                                        <h3>Житло неподалік</h3>
-                                        <p>Для потреб мандрівників є широка лінійка закладів проживання неподалік села
+                                        <h3 data-aos="fade-up" data-aos-delay="600">Житло неподалік</h3>
+                                        <p data-aos="fade-up" data-aos-delay="650">Для потреб мандрівників є широка лінійка закладів проживання неподалік села
                                             Жидичин, зокрема у місті Луцьк.
                                             <br> Скористайтеся сайтом <a target="_blank"
                                                 href="https://www.booking.com/searchresults.uk.html?ss=%D0%9B%D1%83%D1%86%D1%8C%D0%BA&ssne=%D0%9B%D1%83%D1%86%D1%8C%D0%BA&ssne_untouched=%D0%9B%D1%83%D1%86%D1%8C%D0%BA&label=lviv-38eS1kvFBN2Ag_KtZ67t3gS21841216936%3Apl%3Ata%3Ap1880%3Ap2%3Aac%3Aap1t1%3Aneg%3Afi%3Atiaud-462398065882%3Akwd-23209468657%3Alp9061013%3Ali%3Adec%3Adm&sid=fe54d761291cc70c284d031199ac80f9&aid=319915&lang=uk&sb=1&src_elem=sb&src=index&dest_id=-1045249&dest_type=city&group_adults=2&no_rooms=1&group_children=0">Booking.com</a>
@@ -1079,71 +1357,76 @@
                                         </p>
                                     </div>
                                 </div>
-
-
                             </div>
                         </section>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section class="textInside" id="accessibility">
-            <div class="text-overlay">
+        <div id="accessibility"></div>
+        <section class="textInside"  data-aos="fade-up" data-aos-duration="1200">
+            <div class="text-overlay" data-aos="fade-up" data-aos-delay="300">
                 <div class="text">
-                    <h1>С</h1>
-                    <h4>вітло знань має бути доступним кожному, незалежно від його можливостей.
+                    <h1 data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1200">С</h1>
+                    <h4 data-aos="fade-up" data-aos-delay="700">вітло знань має бути доступним кожному, незалежно від його можливостей.
                         <br>
-                        <h5>Григорій Сковорода</h5>
+                        <h5 data-aos="fade-up" data-aos-delay="900">Григорій Сковорода</h5>
                     </h4>
                 </div>
             </div>
+            <div class="text-heading" data-aos="fade-up" data-aos-delay="100">
+                <h1 data-aos="fade-up" data-aos-delay="200">Доступність</h1>
+            </div>
         </section>
-        <section class="about-pictograms" >
+        
+        <section class="about-pictograms" data-aos="fade-up" data-aos-duration="800">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 col-xl-6 p-0">
+                    <div class="col-12 col-xl-6 p-0" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
                         <div class="d-block d-md-flex flex-column flex-md-row h-100">
-                            <div class="col-12 col-md-6 main-image"
+                            <div class="col-12 col-md-6 main-image" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1200"
                                 style="background-image:url('/assets/images/traveller/lyplyanu.jpg');"></div>
-                            <div
-                                class="col-12 col-md-6 light-cream-bg quote-section padding-sides lg-padding-all md-padding-sides">
-                                <img src="/assets/images/about/quotes.svg" class="quote-icon margin-bottom-medium"
+                            <div class="col-12 col-md-6 light-cream-bg quote-section padding-sides lg-padding-all md-padding-sides" data-aos="fade-left" data-aos-delay="400">
+                                <img src="/assets/images/about/quotes.svg" class="quote-icon margin-bottom-medium" data-aos="zoom-in" data-aos-delay="500"
                                     alt="" data-no-retina="">
-                                <h4 class="section-title">
+                                <h4 class="section-title" data-aos="fade-up" data-aos-delay="600">
                                     Доступність
                                 </h4>
-                                <span class="description-text">
-                                    Зручний доступ до об’єктів показу для усіх категорій відвідувачів є важливим
+                                <span class="description-text" data-aos="fade-up" data-aos-delay="700">
+                                    Зручний доступ до об'єктів показу для усіх категорій відвідувачів є важливим
                                     пріоритетом розвитку дестинації Древній Жидичин
                                 </span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-xl-6 align-self-center">
+                    <div class="col-12 col-xl-6 align-self-center" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
                         <div class="d-flex flex-column two-elements">
-                            <div class="iconAndImg">
-                                <img src="/assets/images/traveller/notes.svg" alt="">
-                                <span>
-                                    На сайті представлено інформацію про доступність локацій Древнього Жидичина для людей з інвалідністю. На території облаштовано сучасну інклюзивну вбиральню, що відповідає всім необхідним стандартам.
-
-                                    Якщо у вас є запитання, звертайтеся за телефоном <b>067 104 22 88</b> – ми радо допоможемо зробити ваше перебування комфортним. </span>
+                            <div class="iconAndImg" data-aos="fade-up" data-aos-delay="800">
+                                <img src="/assets/images/traveller/notes.svg" alt="" data-aos="zoom-in" data-aos-delay="850">
+                                <span data-aos="fade-up" data-aos-delay="900">
+                                    На сайті представлено інформацію про доступність локацій Древнього Жидичина для
+                                    людей з інвалідністю. На території облаштовано сучасну інклюзивну вбиральню, що
+                                    відповідає всім необхідним стандартам.
+        
+                                    Якщо у вас є запитання, звертайтеся за телефоном <b>067 104 22 88</b> – ми радо
+                                    допоможемо зробити ваше перебування комфортним. </span>
                             </div>
-                            <div class="iconAndImg">
-                                <img src="/assets/images/traveller/rupor.svg" alt="">
-                                <span>
-
-                                    Наша команда працює над тим, щоб локації Древнього Жидичина були доступними для всіх. Ми запрошуємо спеціалістів з інклюзії та безбар’єрності до співпраці. Разом – зможемо створити ефективну дорожню карту адаптації просторів для кожного.
-                                    
-                                    Наша мета – забезпечити, безперешкодний доступ до історичної та культурної спадщини цього місця для усіх категорій мандрівників.
+                            <div class="iconAndImg" data-aos="fade-up" data-aos-delay="1000">
+                                <img src="/assets/images/traveller/rupor.svg" alt="" data-aos="zoom-in" data-aos-delay="1050">
+                                <span data-aos="fade-up" data-aos-delay="1100">
+                                    Наша команда працює над тим, щоб локації Древнього Жидичина були доступними для
+                                    всіх. Ми запрошуємо спеціалістів з інклюзії та безбар'єрності до співпраці. Разом –
+                                    зможемо створити ефективну дорожню карту адаптації просторів для кожного.
+        
+                                    Наша мета – забезпечити, безперешкодний доступ до історичної та культурної спадщини
+                                    цього місця для усіх категорій мандрівників.
                                 </span>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section>  
     </main>
     <div id="footer-container"></div>
 
@@ -1153,7 +1436,29 @@
     <script src="//instant.page/5.2.0" type="module"
         integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            offset: 120,
+            delay: 0,
+            duration: 800,
+            easing: 'ease',
+            once: true,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+            //disable: 'mobile'
+        });
 
+        // Refresh AOS when content loads and on window resize
+        window.addEventListener('load', function () {
+            AOS.refresh();
+        });
+
+        window.addEventListener('resize', function () {
+            AOS.refresh();
+        });
+    </script>
     <script src="../../assets/js/commonPlaces.js"></script>
     <script src="../../assets/js/travallerInfo.js"></script>
 

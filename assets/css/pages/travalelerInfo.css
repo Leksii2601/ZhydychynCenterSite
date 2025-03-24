@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    overflow-x: hidden;
 }
 /* Basic heading container styling */
 .heading {
@@ -25,7 +26,7 @@ body {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
     font-size: 80px;
     text-transform: uppercase;
     font-weight: 500;
@@ -136,7 +137,7 @@ body {
     transition: all 0.3s ease;
     position: relative;
     text-decoration: none;
-    overflow: hidden;
+    
 }
 
 .transport-option::after {
@@ -713,7 +714,7 @@ table thead svg{
 .excursion-info {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 50px;
     width:fit-content;
 }
 .nutrition {
@@ -938,28 +939,49 @@ table thead svg{
   /* Quote Section Styling */
 .textInside {
     display: flex;
-    justify-content: center;
+   
     padding: 50px 0 50px 0;
-    height: 300px;
+    height: 190px;
     align-items: center;
     text-align: justify;
+    flex-direction: row-reverse;
+    gap: 15%;
    
+  }
+  .text-heading h1{
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
   }
   
   /* Quote container */
   .text-overlay {
-    width: 100%;
-    max-width: 1200px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+.text-overlay {
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-overlay::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #98634a;
+}
   
   /* Text container and clear fix */
   .text {
     display: inline-block;
     width: 100%;
     position: relative;
+    top:20px;
   }
   
   .text::after {
@@ -1276,9 +1298,6 @@ table thead svg{
       font-size: 14px;
     }
     
-    .text {
-      padding-left: 20px;
-    }
     
     .text h5 {
       font-size: 12px;
@@ -2014,6 +2033,37 @@ table thead svg{
     .excursion-text li {
         margin-bottom: 10px;
     }
+    /* Фіксування проблеми з transport-option на малих екранах */
+    .transport-options {
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: flex-start; /* Змінюємо з center на flex-start */
+        gap: 15px; /* Додаємо фіксований відступ між елементами */
+    }
+    
+    .transport-option {
+        min-width: 120px;
+        flex-shrink: 0;
+        margin-right: 10px !important; /* Додаємо !important для уникнення конфліктів */
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .transport-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 24px;
+        min-height: 24px;
+    }
+    
+    .transport-icon svg {
+        width: 24px !important;
+        height: 24px !important;
+        display: block !important;
+        visibility: visible !important;
+    }
 }
 
 @media (max-width: 375px) {
@@ -2088,7 +2138,19 @@ table thead svg{
     .threeVariants{
         margin-bottom: -100px;
     }
+    .transport-options {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
     
+    .transport-option {
+        min-width: 105px; /* Трохи зменшуємо для найменших екранів */
+    }
+    
+    /* Переконуємося, що іконки видно */
+    .transport-option:first-child {
+        margin-left: 5px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -2100,5 +2162,126 @@ table thead svg{
         font-size: 54px;
     }
     
+}
+/* Основні стилі для textInside */
+.textInside {
+    display: flex;
+    padding: 50px 0 50px 0;
+    min-height: 190px;
+    height: auto;
+    align-items: center;
+    text-align: justify;
+    flex-direction: row-reverse;
+    gap: 15%;
+    margin: 60px 0;
+    width: 100%;
+}
+
+/* Покращення стилів для вертикальної лінії */
+.text-overlay {
+    position: relative;
+    padding-left: 20px;
+}
+
+.text-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #98634a;
+}
+
+/* Адаптивні медіа-запити */
+@media (max-width: 992px) {
+    .textInside {
+        gap: 8%;
+        padding: 40px 0;
+    }
+    
+    .text-heading h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .textInside {
+        flex-direction: column-reverse;
+        gap: 30px;
+        height: auto;
+        padding: 40px 20px;
+    }
+    
+    .text-overlay {
+        width: 90% !important;
+        margin-top: 20px;
+    }
+    
+    .text-heading h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    
+}
+
+@media (max-width: 576px) {
+    .textInside {
+        margin: 30px 0;
+        padding: 30px 15px;
+    }
+    
+    .text-overlay {
+        width: 100% !important;
+    }
+    
+    .text-heading h1 {
+        font-size: 30px;
+    }
+    
+    .text h1 {
+        font-size: 50px !important;
+    }
+    
+    .text h4 {
+        font-size: 14px !important;
+        width: calc(100% - 50px) !important;
+    }
+    
+    .text h5 {
+        width: 100% !important;
+        text-align: right !important;
+        font-size: 12px !important;
+    }
+    
+    .text-overlay::after {
+        width: 3px;
+    }
+}
+
+@media (max-width: 375px) {
+    .textInside {
+        padding: 20px 10px;
+    }
+    
+    .text-heading h1 {
+        font-size: 26px;
+    }
+    
+    .text h1 {
+        font-size: 40px !important;
+        padding-right: 5px !important;
+    }
+    
+    .text h4 {
+        font-size: 13px !important;
+        padding-top: 15px !important;
+    }
+    
+    .text::after {
+        display: block;
+        margin-top: 10px;
+    }
 }
 

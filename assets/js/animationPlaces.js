@@ -190,7 +190,7 @@ churchCards.forEach((card, index) => {
                 once: true,
                 mirror: false,
                 anchorPlacement: 'top-bottom',
-                disable: 'mobile'
+               // disable: 'mobile'
             });
             
             // Оновлення AOS при завантаженні сторінки та зміні розміру вікна
@@ -201,6 +201,49 @@ churchCards.forEach((card, index) => {
             window.addEventListener('resize', function() {
                 AOS.refresh();
             });
+        }
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Знаходимо всі посилання з класом anchor-link
+    const anchorLinks = document.querySelectorAll('.anchor-link');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetPage = this.getAttribute('href').split('#')[0];
+            const targetAnchor = this.getAttribute('data-target');
+            const currentPage = window.location.pathname;
+            
+            // Якщо ми вже на потрібній сторінці, просто прокручуємо до якоря
+            if (currentPage === targetPage || targetPage === '/') {
+                const targetElement = document.getElementById(targetAnchor);
+                if (targetElement) {
+                    // Збільшуємо затримку щоб дочекатись завершення анімації AOS
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 800); // Затримка відповідає тривалості анімації AOS
+                }
+            } else {
+                localStorage.setItem('scrollToAnchor', targetAnchor);
+                window.location.href = targetPage;
+            }
+        });
+    });
+    
+    // Перевіряємо, чи потрібно прокрутити до якоря після завантаження сторінки
+    const scrollToAnchor = localStorage.getItem('scrollToAnchor');
+    if (scrollToAnchor) {
+        const targetElement = document.getElementById(scrollToAnchor);
+        if (targetElement) {
+            // Збільшуємо затримку для завершення всіх анімацій
+            setTimeout(() => {
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                localStorage.removeItem('scrollToAnchor');
+            }, 1000); // Більша затримка для повного завантаження
+        } else {
+            localStorage.removeItem('scrollToAnchor');
         }
     }
 });
