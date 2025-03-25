@@ -1,39 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk_UA">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Базові мета-теги -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Жидичин центр">
+  <meta name="creator" content="Leksii2601">
+  <meta name="last-modified" content="2025-03-25T11:23:48+00:00">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    
-    <!-- AOS CSS for animations -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- SEO мета-описи -->
+  <meta name="description" content="Інформаційний центр для мандрівників до Жидичина: місця для відвідування, транспорт, екскурсії, харчування, проживання та доступність. Ми створили цей сайт для інтелектуалів, які цінують сенсовий відпочинок, паломників, сімей та всіх, хто шукає спокій та натхнення далеко від міської суєти.">
+  <meta name="description" lang="en" content="Information center for travelers to Zhydychyn: places to visit, transportation, excursions, dining, accommodation, and accessibility. We created this site for intellectuals who value meaningful recreation, pilgrims, families, and everyone seeking peace and inspiration away from city bustle.">
+  
+  <!-- Ключові слова -->
+  <meta name="keywords" content="Жидичин центр, мандрівник, туризм Жидичин, паломництво, сімейний відпочинок, екскурсії Жидичин, карта об'єктів, розклад богослужінь, події в Жидичині, проживання Жидичин, місцева кухня, доступність Жидичин, духовний відпочинок, Волинь туризм, історичні місця">
+  <meta name="keywords" lang="en" content="Zhydychyn center, traveler guide, Zhydychyn tourism, pilgrimage, family recreation, Zhydychyn excursions, site map, worship schedule, events in Zhydychyn, accommodation Zhydychyn, local cuisine, Zhydychyn accessibility, spiritual recreation, Volyn tourism, historical sites">
 
-    <title>Жидичин центр</title>
-    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
+  <!-- Дані для соціальних мереж (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhydychyn-center.com/">
+  <meta property="og:title" content="Жидичин центр | Путівник для мандрівників">
+  <meta property="og:description" content="Путівник для мандрівників до Жидичина з інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події. Ідеальне місце для спокійного та сенсового відпочинку далеко від міської суєти.">
+  <meta property="og:image" content="https://zhydychyn.center/assets/images/common/logo.png">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:locale:alternate" content="en_US">
 
-   
-    <link rel="stylesheet" href="../../assets/css/common/header.css">
-    <link rel="stylesheet" href="../../assets/css/common/footer.css">
-    <link rel="stylesheet" href="../../assets/css/pages/home.css">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Жидичин центр | Путівник для мандрівників">
+  <meta name="twitter:description" content="Путівник для мандрівників до Жидичина з інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події.">
+  <meta name="twitter:image" content="https://zhydychyn.center/assets/images/common/logo.png">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    
-    <!-- Додаткові стилі для виправлення горизонтального скролу -->
-    <style>
-        html, body {
-          overflow-x: hidden;
-        }
-        
-    </style>
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://zhydychyn-center.com/">
+
+  <!-- Preconnect для швидкого завантаження ресурсів -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS файли -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../../assets/css/common/header.css">
+  <link rel="stylesheet" href="../../assets/css/common/footer.css">
+  <link rel="stylesheet" href="../../assets/css/pages/home.css">
+
+  <!-- Шрифти -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
+
+  <!-- Структуровані дані для Google -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "TouristInformationCenter",
+      "name": "Жидичин центр",
+      "description": "Інформаційний центр для мандрівників до Жидичина з детальною інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події",
+      "url": "https://zhydychyn-center.com/",
+      "logo": "https://zhydychyn.center/assets/images/common/logo.png",
+      "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Жидичин",
+          "addressRegion": "Волинська область",
+          "addressCountry": "Україна"
+      },
+      "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+      },
+      "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+380671042288",
+          "contactType": "customer service"
+      },
+      "audience": [
+          {
+              "@type": "Audience",
+              "audienceType": "Intellectuals",
+              "description": "Інтелектуали, які полюбляють сенсовий відпочинок"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Religious pilgrims",
+              "description": "Паломники, яким важлива віра та духовність"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Families",
+              "description": "Сім'ї, для яких щастя - це миті проведені разом"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Urban escapees",
+              "description": "Кожен, хто стомився від міської суєти й потребує тиші та умиротворення"
+          }
+      ],
+      "potentialAction": {
+          "@type": "ViewAction",
+          "target": "https://zhydychyn-center.com/pages/travallerInfo/"
+      }
+  }
+  </script>
+
+  <!-- Структуровані дані для навігаційних посилань -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+          {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Місця",
+              "url": "https://zhydychyn-center.com/#pictograms",
+              "description": "Інформація про місця для відвідування в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Як доїхати",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/",
+              "description": "Інформація про транспорт до Жидичина"
+          },
+          {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Замовлення екскурсій",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#excursionLink",
+              "description": "Інформація про екскурсії та як їх замовити"
+          },
+          {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Карта об'єктів",
+              "url": "https://www.google.com/maps/d/edit?mid=1WNo2d_-1vdkK8DdIslOosoCI8bnCVFY&ll=50.81006391314466%2C25.30231281195603&z=19",
+              "description": "Інтерактивна карта об'єктів Жидичинського центру"
+          },
+          {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Розклад богослужінь",
+              "url": "https://zhydychyn-center.com/pages/schedule/",
+              "description": "Розклад богослужінь у Жидичинському монастирі"
+          },
+          {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Події",
+              "url": "https://zhydychyn-center.com/pages/events/",
+              "description": "Інформація про події та заходи в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Проживання",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#livingLink",
+              "description": "Інформація про варіанти проживання в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "Де поїсти",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#nutritionLink",
+              "description": "Інформація про місця харчування в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "Доступність",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#accessibility",
+              "description": "Інформація про доступність об'єктів для людей з інвалідністю"
+          }
+      ]
+  }
+  </script>
+
+  <!-- Додаткові стилі для виправлення горизонтального скролу -->
+  <style>
+      html, body {
+        overflow-x: hidden;
+      }
+  </style>
+
+  <title>Жидичин центр | Путівник для мандрівників</title>
 </head>
   <body style="background-color: white;">
     <div id="header-container"></div>

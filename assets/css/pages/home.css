@@ -7,6 +7,18 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important; 
   color:#393e42;
 }
+/* Apply to containers with animations */
+.animation-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Ensure no animations can break outside the container */
+[data-aos] {
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
 
 .swiper {
     width: 100%;
@@ -77,6 +89,8 @@ body{
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+ 
+  font-family: 'Montserrat', sans-serif;
 }
 .carousel{
    
@@ -722,7 +736,7 @@ a{
 }
 
 .section-title {
-  text-align: center;
+  text-align: start;
   font-size: 28px;
   margin-bottom: 30px;
   color: #333;

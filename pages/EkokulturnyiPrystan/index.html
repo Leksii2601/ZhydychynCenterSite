@@ -1,27 +1,123 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="uk_UA">
 
 <head>
+    <!-- Базові мета-теги -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Жидичин центр">
+    <meta name="last-modified" content="2025-03-24T20:25:32+00:00">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- SEO мета-описи -->
+    <meta name="description" content="Екокультурний простір ПриСтань у Жидичині – інноваційний проєкт відродження русла річки Стир. Створений ГО 'Спільна справа+' у 2024 році, простір поєднує екологію, історію та культурне дозвілля. Дев'ять інформаційних стендів з монахом-човнярем розповідають відвідувачам історію місця.">
+    <meta name="description" lang="en" content="PryStan Eco-cultural Space in Zhydychyn – an innovative project reviving the Styr River channel. Created by NGO 'Common Cause+' in 2024, the space combines ecology, history and cultural leisure. Nine information stands with a monk-boatman tell visitors the history of the place.">
+    
+    <!-- Ключові слова -->
+    <meta name="keywords" content="Екокультурний простір ПриСтань, Жидичин центр, відродження русла Стир, ГО Спільна справа+, екологічний простір, монах-човняр, громадський простір Жидичина, екологічні ініціативи, природа Жидичина, відпочинок на природі, екологічні стенди">
+    <meta name="keywords" lang="en" content="PryStan Eco-cultural Space, Zhydychyn center, Styr riverbed revival, Common Cause+ NGO, ecological space, monk-boatman, Zhydychyn public space, environmental initiatives, Zhydychyn nature, outdoor recreation, ecological stands">
+
+    <!-- Дані для соціальних мереж (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zhydychyn-center.com/pages/EkokulturnyiPrystan/">
+    <meta property="og:title" content="Екокультурний простір ПриСтань | Жидичин центр">
+    <meta property="og:description" content="Відкрийте для себе інноваційний проєкт відродження русла річки Стир у селі Жидичин. Екологічний простір з дев'ятьма інформаційними стендами, де монах-човняр проведе вас історичним маршрутом з меседжем 'Думай та роби'.">
+    <meta property="og:image" content="https://zhydychyn.center/assets/images/EkokulturnyiPrystan/photoEkokulturnyiPrystan (6).jpg">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Екокультурний простір ПриСтань | Жидичин центр">
+    <meta name="twitter:description" content="Відкрийте для себе інноваційний проєкт відродження русла річки Стир у селі Жидичин. Екологічний простір з дев'ятьма інформаційними стендами, де монах-човняр проведе вас історичним маршрутом.">
+    <meta name="twitter:image" content="https://zhydychyn.center/assets/images/EkokulturnyiPrystan/photoEkokulturnyiPrystan (6).jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://zhydychyn-center.com/pages/EkokulturnyiPrystan/">
+
+    <!-- Preconnect для швидкого завантаження ресурсів -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- CSS файли -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-    <title>Жидичин центр</title>
-    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
-
-    <link rel="stylesheet" href="../../assets/css/common/header.css">
-    <link rel="stylesheet" href="../../assets/css/common/footer.css">
+    <link rel="stylesheet" href="/assets/css/common/header.css">
+    <link rel="stylesheet" href="/assets/css/common/footer.css">
     <link rel="stylesheet" href="/assets/css/pages/placeDetail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <!-- Шрифти -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
+
+    <!-- Структуровані дані для Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TouristAttraction",
+        "name": "Екокультурний простір ПриСтань",
+        "description": "Інноваційний проєкт відродження русла річки Стир у селі Жидичин, що включає екологічний маршрут з дев'ятьма інформаційними стендами та персонажем-провідником монахом-човнярем.",
+        "url": "https://zhydychyn-center.com/pages/EkokulturnyiPrystan/",
+        "image": "https://zhydychyn.center/assets/images/EkokulturnyiPrystan/photoEkokulturnyiPrystan (6).jpg",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Жидичин",
+            "addressRegion": "Волинська область",
+            "addressCountry": "Україна"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "50.808532",
+            "longitude": "25.304041"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "isAccessibleForFree": true,
+        "touristType": ["Nature", "Cultural", "Educational"],
+        "foundingDate": "2024-11",
+        "foundingOrganization": {
+            "@type": "Organization",
+            "name": "ГО 'Спільна справа+'"
+        },
+        "additionalProperty": [
+            {
+                "@type": "PropertyValue",
+                "name": "Тривалість відвідування",
+                "value": "20-40 хвилин"
+            },
+            {
+                "@type": "PropertyValue",
+                "name": "Кількість інформаційних стендів",
+                "value": "9"
+            }
+        ],
+        "subjectOf": {
+            "@type": "CreativeWork",
+            "name": "Проєкт відродження русла річки Стир",
+            "description": "Ініціатива спрямована на відродження та інтеграцію втраченого русла річки Стир у громадський простір села Жидичин"
+        },
+        "containsPlace": {
+            "@type": "Place",
+            "name": "Інформаційна мапа маршруту",
+            "description": "Допомагає орієнтуватися відвідувачам та дізнаватися про локації"
+        }
+    }
+    </script>
+
+    <title>Екокультурний простір ПриСтань | Жидичин центр</title>
 </head>
 
 <body>

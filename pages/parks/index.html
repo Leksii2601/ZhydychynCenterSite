@@ -1,22 +1,163 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-    <title>Жидичин центр</title>
-    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
-
-    <link rel="stylesheet" href="../../assets/css/common/header.css">
-    <link rel="stylesheet" href="../../assets/css/common/footer.css">
-    <link rel="stylesheet" href="/assets/css/pages/place.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+<!DOCTYPE html>
+<html lang="uk_UA">
+    <head>
+        <!-- Базові мета-теги -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Жидичин центр">
+        <meta name="last-modified" content="2025-03-24T20:13:33+00:00">
+    
+        <!-- SEO мета-описи -->
+        <meta name="description" content="Природні локації Древнього Жидичина - 6 неймовірних парків, скверів та еко-просторів. Парк короля Данила, Лавандова ферма Purity, екокультурний простір ПриСтань та інші місця, де тиша милує око. Відпочиньте душею серед краси волинської природи.">
+        <meta name="description" lang="en" content="Natural locations of Ancient Zhydychyn - 6 incredible parks, squares and eco-spaces. King Danylo Park, Purity Lavender Farm, PryStan eco-cultural space and other places where silence pleases the eye. Rest your soul amidst the beauty of Volyn nature.">
+        
+        <!-- Ключові слова -->
+        <meta name="keywords" content="природа Жидичина, парк короля Данила, Лавандова ферма Purity, екокультурний простір ПриСтань, Фотозона Древній Жидичин, Липлянський сквер, Сквер вільних людей, еко-туризм, природні локації, відпочинок на природі, тиша яка милує око">
+        <meta name="keywords" lang="en" content="Zhydychyn nature, King Danylo Park, Purity Lavender Farm, PryStan eco-cultural space, Ancient Zhydychyn photo zone, Lyplyansky square, Free People Square, eco-tourism, natural locations, outdoor recreation, silence that pleases the eye">
+    
+        <!-- Дані для соціальних мереж (Open Graph) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://zhydychyn-center.com/pages/parks/">
+        <meta property="og:title" content="Природа Древнього Жидичина | 6 неймовірних локацій">
+        <meta property="og:description" content="Відкрийте для себе природні локації Древнього Жидичина – парки, сквери, лавандові поля та екокультурні простори, де краса природи зцілює душу, а тиша милує око.">
+        <meta property="og:image" content="https://zhydychyn.center/assets/images/parks/parks (6).jpg">
+        <meta property="og:locale" content="uk_UA">
+        <meta property="og:locale:alternate" content="en_US">
+    
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Природа Древнього Жидичина | 6 неймовірних локацій">
+        <meta name="twitter:description" content="Відкрийте для себе природні локації Древнього Жидичина – парки, сквери, лавандові поля та екокультурні простори, де краса природи зцілює душу, а тиша милує око.">
+        <meta name="twitter:image" content="https://zhydychyn.center/assets/images/parks/parks (6).jpg">
+    
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://zhydychyn-center.com/pages/parks/">
+    
+        <!-- Preconnect для швидкого завантаження ресурсів -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://unpkg.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+        <!-- CSS файли -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="/assets/css/common/header.css">
+        <link rel="stylesheet" href="/assets/css/common/footer.css">
+        <link rel="stylesheet" href="/assets/css/pages/place.css">
+    
+        <!-- Шрифти -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+        <link rel="icon" type="image/png" sizes="50x50" href="/assets/images/common/favicon.png">
+    
+        <!-- Структуровані дані для Google -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Природа Древнього Жидичина",
+            "description": "6 неймовірних природних локацій Древнього Жидичина, де тиша милує око",
+            "url": "https://zhydychyn-center.com/pages/parks/",
+            "image": "https://zhydychyn.center/assets/images/parks/parks (6).jpg",
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Парк короля Данила",
+                            "description": "Історичний парк, присвячений королю Данилу Галицькому",
+                            "url": "https://zhydychyn-center.com/pages/ParkDanylaHalytskoho/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (3).jpg"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Фотозона Древній Жидичин",
+                            "description": "Мальовнича локація для фотографій в історичному середовищі",
+                            "url": "https://zhydychyn-center.com/pages/FotozonaDrevnyiZhydychyn/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (2).jpg"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Липлянський сквер",
+                            "description": "Затишний сквер з історичною значимістю",
+                            "url": "https://zhydychyn-center.com/pages/PetroPavlivskyiSkver/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (1).jpg"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Лавандова ферма Purity",
+                            "description": "Чарівне поле лаванди в Жидичині, ідеальне місце для фотосесій та релаксу",
+                            "url": "https://zhydychyn-center.com/pages/LavenderFarmPurity/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (7).jpg"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Сквер вільних людей",
+                            "description": "Символічний простір свободи та пам'яті",
+                            "url": "https://zhydychyn-center.com/pages/SkverVilnykhLiudei/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (4).jpg"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 6,
+                        "item": {
+                            "@type": "TouristAttraction",
+                            "name": "Екокультрний прострір ПриСтань",
+                            "description": "Сучасний природний простір для відпочинку та культурних подій",
+                            "url": "https://zhydychyn-center.com/pages/EkokulturnyiPrystan/",
+                            "image": "https://zhydychyn.center/assets/images/parks/parks (5).jpg"
+                        }
+                    }
+                ]
+            },
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Головна",
+                        "item": "https://zhydychyn-center.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Природа",
+                        "item": "https://zhydychyn-center.com/pages/parks/"
+                    }
+                ]
+            }
+        }
+        </script>
+    
+        <title>Природа Древнього Жидичина | Жидичин центр</title>
+    </head>
    
  <body>
     <div id="header-container"></div>

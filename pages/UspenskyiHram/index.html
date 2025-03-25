@@ -1,24 +1,231 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
-
-    <title>Жидичин центр</title>
-    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
-
-    <link rel="stylesheet" href="../../assets/css/common/header.css">
-    <link rel="stylesheet" href="../../assets/css/common/footer.css">
-    <link rel="stylesheet" href="/assets/css/pages/placeDetail.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></head>
+<!DOCTYPE html>
+<html lang="uk_UA">
+    <head>
+        <!-- Базові мета-теги -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Жидичин центр">
+        <meta name="creator" content="Leksii2601">
+        <meta name="last-modified" content="2025-03-25T11:32:19+00:00">
+    
+        <!-- SEO мета-описи -->
+        <meta name="description" content="Успенський храм у Жидичині – підземний храм під Воскресенським собором, присвячений Успінню Пресвятої Богородиці. Це місце спокою і молитви, де цілий рік зберігається плащаниця Божої Матері після Єрусалимської утрені. Нижній храм з архітектурними елементами для поховань нагадує відвідувачам про пам'ять смертну – важливу складову християнського подвигу.">
+        <meta name="description" lang="en" content="The Assumption Church in Zhydychyn is an underground church beneath the Resurrection Cathedral, dedicated to the Dormition of the Mother of God. It's a place of peace and prayer where the Shroud of the Mother of God is kept year-round after the Jerusalem Matins service. The lower church with architectural elements for burials reminds visitors about mortality – an important component of Christian spirituality.">
+        
+        <!-- Ключові слова -->
+        <meta name="keywords" content="Успенський храм, підземний храм Жидичин, нижній храм, Успіння Пресвятої Богородиці, плащаниця Божої Матері, крипти, єрусалимська утреня, підземелля Воскресенського собору, Свято-Миколаївський монастир, храмові комплекси Жидичина, релігійна архітектура, сакральні споруди Волині">
+        <meta name="keywords" lang="en" content="Assumption Church, underground church Zhydychyn, lower church, Dormition of the Mother of God, Shroud of the Mother of God, crypts, Jerusalem Matins, underground of Resurrection Cathedral, St. Nicholas Monastery, church complexes of Zhydychyn, religious architecture, sacred buildings of Volyn">
+    
+        <!-- Дані для соціальних мереж (Open Graph) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://zhydychyn-center.com/pages/UspenskyiHram/">
+        <meta property="og:title" content="Успенський храм | Жидичин центр">
+        <meta property="og:description" content="Відкрийте для себе підземний храм Успіння Пресвятої Богородиці у Жидичині – місце духовного спокою, молитви та роздумів про вічність. Тут цілий рік зберігається плащаниця Божої Матері, створюючи особливий містичний простір.">
+        <meta property="og:image" content="https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (1).jpg">
+        <meta property="og:locale" content="uk_UA">
+        <meta property="og:locale:alternate" content="en_US">
+    
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Успенський храм | Жидичин центр">
+        <meta name="twitter:description" content="Підземний храм Успіння Пресвятої Богородиці у Жидичині – місце духовного спокою, молитви та роздумів про вічність.">
+        <meta name="twitter:image" content="https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (1).jpg">
+    
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://zhydychyn-center.com/pages/UspenskyiHram/">
+    
+        <!-- Preconnect для швидкого завантаження ресурсів -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+        <!-- CSS файли -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../../assets/css/common/header.css">
+        <link rel="stylesheet" href="../../assets/css/common/footer.css">
+        <link rel="stylesheet" href="/assets/css/pages/placeDetail.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/4.0.31/fancybox.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    
+        <!-- Шрифти -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+        <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
+    
+        <!-- Структуровані дані для Google -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Church",
+            "name": "Успенський храм",
+            "alternateName": ["Храм Успіння Пресвятої Богородиці", "Підземний храм Жидичинського монастиря"],
+            "description": "Підземний храм Успіння Пресвятої Богородиці, розташований під Воскресенським собором у Жидичині. Місце зберігання плащаниці Божої Матері та духовних роздумів про вічність.",
+            "url": "https://zhydychyn-center.com/pages/UspenskyiHram/",
+            "image": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (1).jpg",
+            "photos": [
+                "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (1).jpg",
+                "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (2).jpg",
+                "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (3).jpg",
+                "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (4).jpg",
+                "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (5).jpg"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Жидичин",
+                "addressRegion": "Волинська область",
+                "addressCountry": "Україна"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "50.809376",
+                "longitude": "25.305164"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "07:30",
+                "closes": "19:30"
+            },
+            "isAccessibleForFree": true,
+            "publicAccess": true,
+            "containsPlace": {
+                "@type": "CatholicChurch",
+                "name": "Воскресенський собор",
+                "description": "Головний храм Свято-Миколаївського монастиря в Жидичині"
+            },
+            "containedInPlace": {
+                "@type": "LandmarksOrHistoricalBuildings",
+                "name": "Свято-Миколаївський монастир",
+                "description": "Історичний православний монастир у селі Жидичин"
+            },
+            "additionalProperty": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "Розташування",
+                    "value": "Підземелля Воскресенського собору"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Тип споруди",
+                    "value": "Підземний храм"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Духовне значення",
+                    "value": "Місце для роздумів про тлінність життя та важливість молитви за померлих"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Особлива реліквія",
+                    "value": "Плащаниця Божої Матері, яка зберігається в храмі цілий рік після Єрусалимської утрені"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Архітектурні особливості",
+                    "value": "Ніші для поховань, що символізують пам'ять смертну як частину християнського подвигу"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Доступність",
+                    "value": "Недоступний для людей з обмеженими можливостями через підземне розташування"
+                }
+            ],
+            "event": {
+                "@type": "Event",
+                "name": "Єрусалимська утреня з чином погребіння плащаниці Божої Матері",
+                "description": "Особливе богослужіння, після якого плащаниця переноситься до Успенського храму, де зберігається цілий рік",
+                "startDate": "2025-08-28T00:00",
+                "eventStatus": "EventScheduled",
+                "eventAttendanceMode": "OfflineEventAttendanceMode",
+                "location": {
+                    "@type": "Place",
+                    "name": "Воскресенський собор та Успенський храм"
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "Свято-Миколаївський Жидичинський монастир"
+                }
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "lastReviewed": "2025-03-25T11:32:19+00:00"
+            }
+        }
+        </script>
+    
+        <!-- Структуровані дані для галереї зображень -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ImageGallery",
+            "name": "Галерея зображень Успенського храму",
+            "description": "Фотографії підземного Успенського храму в Жидичині",
+            "image": [
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (1).jpg",
+                    "description": "Успенський храм у Жидичині – нижній храм із криптами, частина монастирського комплексу"
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (2).jpg",
+                    "description": "Успенський храм у Жидичині – нижній храм із криптами, частина монастирського комплексу"
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (3).jpg",
+                    "description": "Успенський храм у Жидичині – нижній храм із криптами, частина монастирського комплексу"
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (4).jpg",
+                    "description": "Успенський храм у Жидичині – нижній храм із криптами, частина монастирського комплексу"
+                },
+                {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://zhydychyn.center/assets/images/UspenskyiHram/photoUspenskyiHram (5).jpg",
+                    "description": "Успенський храм у Жидичині – нижній храм із криптами, частина монастирського комплексу"
+                }
+            ]
+        }
+        </script>
+    
+        <!-- Хлібні крихти для навігації -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Головна",
+                    "item": "https://zhydychyn-center.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Храмові комплекси",
+                    "item": "https://zhydychyn-center.com/pages/churchComplex/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Успенський храм",
+                    "item": "https://zhydychyn-center.com/pages/UspenskyiHram/"
+                }
+            ]
+        }
+        </script>
+    
+        <title>Успенський храм | Жидичин центр</title>
+    </head>
    
  <body>
     <div id="header-container"></div>

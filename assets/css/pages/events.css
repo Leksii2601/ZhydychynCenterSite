@@ -4,6 +4,18 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
+/* Apply to containers with animations */
+[data-aos] {
+    overflow-x: hidden;
+    overflow-y: clip; /* Modern browsers support 'clip' which prevents scrollbar */
+}
+
+/* For older browsers */
+@supports not (overflow-y: clip) {
+    [data-aos] {
+        overflow-y: visible; /* Fallback */
+    }
+}
 
 .heading {
     margin: 100px 0;

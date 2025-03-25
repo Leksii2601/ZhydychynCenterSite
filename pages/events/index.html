@@ -1,28 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<html lang="uk_UA">
+    <head>
+        <!-- Базові мета-теги -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Жидичин центр">
+        <meta name="last-modified" content="2025-03-24T20:04:01+00:00">
     
-    <!-- AOS CSS для анімацій при скролінгу -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <title>Жидичин центр</title>
-    <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
-
-    <link rel="stylesheet" href="../../assets/css/common/header.css">
-    <link rel="stylesheet" href="../../assets/css/common/footer.css">
-    <link rel="stylesheet" href="/assets/css/pages/events.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- SEO мета-описи -->
+        <meta name="description" content="Заходи Жидичин центру - регулярні події та духовні свята для всіх вірян. Єрусалимська Утреня, Гостини Святого Миколая, благодійні ярмарки, лавандові майстер-класи та духовні лекторії в атмосфері спокою та віри Древнього Жидичина.">
+        <meta name="description" lang="en" content="Events at Zhydychyn Center - regular activities and spiritual celebrations for all believers. Jerusalem Matins, St. Nicholas Hospitality, charity fairs, lavender workshops and spiritual lectures in the peaceful and faithful atmosphere of Ancient Zhydychyn.">
+        
+        <!-- Ключові слова -->
+        <meta name="keywords" content="Заходи Жидичин центру, Єрусалимська Утреня, Гостини Святого Миколая, благодійні ярмарки, лавандові майстер-класи, духовні лекторії, Погребіння Пресвятої Богородиці, волонтерський рух, церковні події, духовні зустрічі, православні традиції">
+        <meta name="keywords" lang="en" content="Zhydychyn Center events, Jerusalem Matins, St. Nicholas Hospitality, charity fairs, lavender workshops, spiritual lectures, Burial of the Holy Theotokos, volunteer movement, church events, spiritual meetings, Orthodox traditions">
     
-  
-</head>
+        <!-- Дані для соціальних мереж (Open Graph) -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://zhydychyn-center.com/pages/events/">
+        <meta property="og:title" content="Заходи та події Жидичин центру | Духовні свята, благодійність та майстер-класи">
+        <meta property="og:description" content="Відкрийте для себе духовні, культурні та благодійні заходи Жидичин центру. Від священних богослужінь до творчих майстер-класів — знайдіть подію для душі та серця у Древньому Жидичині.">
+        <meta property="og:image" content="https://zhydychyn.center/assets/images/events/event (2).jpg">
+        <meta property="og:locale" content="uk_UA">
+        <meta property="og:locale:alternate" content="en_US">
+    
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Заходи та події Жидичин центру | Духовні свята та благодійність">
+        <meta name="twitter:description" content="Відкрийте для себе духовні, культурні та благодійні заходи Жидичин центру. Від священних богослужінь до творчих майстер-класів — знайдіть подію для душі та серця.">
+        <meta name="twitter:image" content="https://zhydychyn.center/assets/images/events/event (2).jpg">
+    
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://zhydychyn-center.com/pages/events/">
+    
+        <!-- Preconnect для швидкого завантаження ресурсів -->
+        <link rel="preconnect" href="https://cdn.jsdelivr.net">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://unpkg.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+        <!-- CSS файли -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="stylesheet" href="/assets/css/common/header.css">
+        <link rel="stylesheet" href="/assets/css/common/footer.css">
+        <link rel="stylesheet" href="/assets/css/pages/events.css">
+    
+        <!-- Шрифти -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+        <link rel="icon" type="image/png" sizes="50x50" href="/assets/images/common/favicon.png">
+    
+        <!-- Структуровані дані для Google -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Заходи Жидичин центру",
+            "description": "Регулярні події та свята у Древньому Жидичині: духовні, культурні та благодійні заходи для вірян та гостей",
+            "url": "https://zhydychyn-center.com/pages/events/",
+            "image": "https://zhydychyn.center/assets/images/events/event (2).jpg",
+            "mainEntity": {
+                "@type": "ItemList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@type": "Event",
+                            "name": "Єрусалимська Утреня",
+                            "description": "Чин Погребіння Пресвятої Богородиці – це особливе богослужіння, яке звершується в обителі кожної першої неділі після свята Успіння Пресвятої Богородиці.",
+                            "image": "https://zhydychyn.center/assets/images/events/event (2).jpg",
+                            "eventStatus": "EventScheduled",
+                            "eventAttendanceMode": "OfflineEventAttendanceMode",
+                            "organizer": {
+                                "@type": "Organization",
+                                "name": "Жидичин центр"
+                            },
+                            "location": {
+                                "@type": "Place",
+                                "name": "Свято-Миколаївський Жидичинський монастир",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Жидичин",
+                                    "addressRegion": "Волинська область",
+                                    "addressCountry": "Україна"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@type": "Event",
+                            "name": "Гостини Святого Миколая",
+                            "description": "Щороку, напередодні дня пам'яті Святого Миколая (6 грудня) у стінах древнього монастиря братія спільно з волонтерами дарують маленьким православним вірянам справжнє свято.",
+                            "image": "https://zhydychyn.center/assets/images/events/event (3).jpg",
+                            "eventStatus": "EventScheduled",
+                            "eventAttendanceMode": "OfflineEventAttendanceMode",
+                            "organizer": {
+                                "@type": "Organization",
+                                "name": "Жидичин центр"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "item": {
+                            "@type": "Event",
+                            "name": "Благодійні ярмарки",
+                            "description": "Щонеділі та у святкові дні волонтери проводять благодійні ярмарки на підтримку наших захисників.",
+                            "image": "https://zhydychyn.center/assets/images/events/event (1).jpg",
+                            "eventStatus": "EventScheduled",
+                            "eventAttendanceMode": "OfflineEventAttendanceMode",
+                            "organizer": {
+                                "@type": "Organization",
+                                "name": "Волонтерський рух імені Симона Киринейського"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "item": {
+                            "@type": "Event",
+                            "name": "Лавандові майстер-класи",
+                            "description": "У Жидичинському монастирі в період цвітіння лаванди (травень-червень) проходять лавандові майстер-класи, які поєднують творчість, духовність і затишок.",
+                            "image": "https://zhydychyn.center/assets/images/events/event (4).jpg",
+                            "eventStatus": "EventScheduled",
+                            "eventAttendanceMode": "OfflineEventAttendanceMode",
+                            "organizer": {
+                                "@type": "Organization",
+                                "name": "Жидичин центр"
+                            }
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "item": {
+                            "@type": "Event",
+                            "name": "Духовні лекторії",
+                            "description": "Щоп'ятниці у стінах обителі відбувається Духовний лекторій. Зустріч, на якій священники допомагають вірянам краще розуміти Святе Письмо.",
+                            "image": "https://zhydychyn.center/assets/images/events/event (5).jpg",
+                            "eventStatus": "EventScheduled",
+                            "eventAttendanceMode": "OfflineEventAttendanceMode",
+                            "organizer": {
+                                "@type": "Organization",
+                                "name": "Жидичин центр"
+                            }
+                        }
+                    }
+                ]
+            },
+            "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Головна",
+                        "item": "https://zhydychyn-center.com"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Заходи",
+                        "item": "https://zhydychyn-center.com/pages/events/"
+                    }
+                ]
+            }
+        }
+        </script>
+    
+        <title>Заходи та події | Жидичин центр</title>
+    </head>
    
 <body>
     <div id="header-container"></div>
@@ -120,7 +280,7 @@
             once: true, // чи анімувати елементи лише один раз
             mirror: false, // чи анімувати елементи при прокрутці вгору
             anchorPlacement: 'top-bottom', // прив'язка відносно вікна перегляду
-            disable: 'mobile' // відключити на мобільних пристроях, якщо є проблеми
+           // disable: 'mobile' // відключити на мобільних пристроях, якщо є проблеми
         });
         
         // Підтримка правильних розмірів при завантаженні та зміні розміру вікна

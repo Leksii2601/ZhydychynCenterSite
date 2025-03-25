@@ -14,6 +14,17 @@ body {
     margin-top: 50px;
 }
 
+.animation-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* Ensure no animations can break outside the container */
+  [data-aos] {
+    transform-origin: center center;
+    backface-visibility: hidden;
+  }
 /* Heading image styling */
 .heading img {
     width: 100%;
@@ -25,7 +36,7 @@ body {
 .heading h1 {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 400px;
     transform: translate(-50%, -50%) !important;
     font-size: 80px;
     text-transform: uppercase;
@@ -40,19 +51,19 @@ body {
 /* Media queries for responsive design */
 @media screen and (max-width: 2400px) {
     .heading h1 {
-        top: 45%;
+        top: 400px;
     }
 }
 
 @media (max-width: 2000px) {
     .heading h1 {
-        top: 45%;
+        top: 400px;
     }
 }
 
 @media (max-width: 1600px) {
     .heading h1 {
-        top: 50%;
+        top: 350px;
     }
 }
 
@@ -89,13 +100,14 @@ body {
     }
     .heading h1 {
         font-size: 30px;
-        
+        top:300px;
     }
 }
 
 @media (max-width: 375px) {
     .heading h1 {
         font-size: 24px;
+       
     }
 }
 .howToGetTo .container {
@@ -715,7 +727,7 @@ table thead svg{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    width:fit-content;
+    
 }
 .nutrition {
     display: flex;
@@ -2238,6 +2250,7 @@ table thead svg{
     
     .text-heading h1 {
         font-size: 30px;
+        
     }
     
     .text h1 {

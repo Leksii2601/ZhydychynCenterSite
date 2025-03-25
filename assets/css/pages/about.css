@@ -6,6 +6,17 @@ body {
   color: #333;
   overflow-x: hidden;
 }
+.animation-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Ensure no animations can break outside the container */
+[data-aos] {
+  transform-origin: center center;
+  backface-visibility: hidden;
+}
 
 /* Heading Section */
 .heading {

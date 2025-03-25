@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk_UA">
+
+<head>
+  <!-- Базові мета-теги -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Жидичин центр">
+  <meta name="creator" content="Leksii2601">
+  <meta name="last-modified" content="2025-03-25T11:23:48+00:00">
+
+  <!-- SEO мета-описи -->
+  <meta name="description" content="Інформаційний центр для мандрівників до Жидичина: місця для відвідування, транспорт, екскурсії, харчування, проживання та доступність. Ми створили цей сайт для інтелектуалів, які цінують сенсовий відпочинок, паломників, сімей та всіх, хто шукає спокій та натхнення далеко від міської суєти.">
+  <meta name="description" lang="en" content="Information center for travelers to Zhydychyn: places to visit, transportation, excursions, dining, accommodation, and accessibility. We created this site for intellectuals who value meaningful recreation, pilgrims, families, and everyone seeking peace and inspiration away from city bustle.">
+  
+  <!-- Ключові слова -->
+  <meta name="keywords" content="Жидичин центр, мандрівник, туризм Жидичин, паломництво, сімейний відпочинок, екскурсії Жидичин, карта об'єктів, розклад богослужінь, події в Жидичині, проживання Жидичин, місцева кухня, доступність Жидичин, духовний відпочинок, Волинь туризм, історичні місця">
+  <meta name="keywords" lang="en" content="Zhydychyn center, traveler guide, Zhydychyn tourism, pilgrimage, family recreation, Zhydychyn excursions, site map, worship schedule, events in Zhydychyn, accommodation Zhydychyn, local cuisine, Zhydychyn accessibility, spiritual recreation, Volyn tourism, historical sites">
+
+  <!-- Дані для соціальних мереж (Open Graph) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zhydychyn-center.com/">
+  <meta property="og:title" content="Жидичин центр | Путівник для мандрівників">
+  <meta property="og:description" content="Путівник для мандрівників до Жидичина з інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події. Ідеальне місце для спокійного та сенсового відпочинку далеко від міської суєти.">
+  <meta property="og:image" content="https://zhydychyn.center/assets/images/common/logo.png">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Жидичин центр | Путівник для мандрівників">
+  <meta name="twitter:description" content="Путівник для мандрівників до Жидичина з інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події.">
+  <meta name="twitter:image" content="https://zhydychyn.center/assets/images/common/logo.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://zhydychyn-center.com/">
+
+  <!-- Preconnect для швидкого завантаження ресурсів -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS файли -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="../../assets/css/common/header.css">
+  <link rel="stylesheet" href="../../assets/css/common/footer.css">
+  <link rel="stylesheet" href="../../assets/css/pages/home.css">
+
+  <!-- Шрифти -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/common/logo-dark.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" href="/assets/images/common/logo-light.png" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/svg" sizes="50x50" href="/assets/images/common/icon.svg">
+
+  <!-- Структуровані дані для Google -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "TouristInformationCenter",
+      "name": "Жидичин центр",
+      "description": "Інформаційний центр для мандрівників до Жидичина з детальною інформацією про місця для відвідування, транспорт, екскурсії, харчування, проживання та події",
+      "url": "https://zhydychyn-center.com/",
+      "logo": "https://zhydychyn.center/assets/images/common/logo.png",
+      "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Жидичин",
+          "addressRegion": "Волинська область",
+          "addressCountry": "Україна"
+      },
+      "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+      },
+      "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+380671042288",
+          "contactType": "customer service"
+      },
+      "audience": [
+          {
+              "@type": "Audience",
+              "audienceType": "Intellectuals",
+              "description": "Інтелектуали, які полюбляють сенсовий відпочинок"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Religious pilgrims",
+              "description": "Паломники, яким важлива віра та духовність"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Families",
+              "description": "Сім'ї, для яких щастя - це миті проведені разом"
+          },
+          {
+              "@type": "Audience",
+              "audienceType": "Urban escapees",
+              "description": "Кожен, хто стомився від міської суєти й потребує тиші та умиротворення"
+          }
+      ],
+      "potentialAction": {
+          "@type": "ViewAction",
+          "target": "https://zhydychyn-center.com/pages/travallerInfo/"
+      }
+  }
+  </script>
+
+  <!-- Структуровані дані для навігаційних посилань -->
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+          {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Місця",
+              "url": "https://zhydychyn-center.com/#pictograms",
+              "description": "Інформація про місця для відвідування в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Як доїхати",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/",
+              "description": "Інформація про транспорт до Жидичина"
+          },
+          {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Замовлення екскурсій",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#excursionLink",
+              "description": "Інформація про екскурсії та як їх замовити"
+          },
+          {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Карта об'єктів",
+              "url": "https://www.google.com/maps/d/edit?mid=1WNo2d_-1vdkK8DdIslOosoCI8bnCVFY&ll=50.81006391314466%2C25.30231281195603&z=19",
+              "description": "Інтерактивна карта об'єктів Жидичинського центру"
+          },
+          {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Розклад богослужінь",
+              "url": "https://zhydychyn-center.com/pages/schedule/",
+              "description": "Розклад богослужінь у Жидичинському монастирі"
+          },
+          {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Події",
+              "url": "https://zhydychyn-center.com/pages/events/",
+              "description": "Інформація про події та заходи в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 7,
+              "name": "Проживання",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#livingLink",
+              "description": "Інформація про варіанти проживання в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 8,
+              "name": "Де поїсти",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#nutritionLink",
+              "description": "Інформація про місця харчування в Жидичині"
+          },
+          {
+              "@type": "ListItem",
+              "position": 9,
+              "name": "Доступність",
+              "url": "https://zhydychyn-center.com/pages/travallerInfo/#accessibility",
+              "description": "Інформація про доступність об'єктів для людей з інвалідністю"
+          }
+      ]
+  }
+  </script>
+
+  <!-- Додаткові стилі для виправлення горизонтального скролу -->
+  <style>
+      html, body {
+        overflow-x: hidden;
+      }
+  </style>
+
+  <title>Жидичин центр | Путівник для мандрівників</title>
+</head>
+  <body style="background-color: white;">
+    <div id="header-container"></div>
+    <main>
+        <section style="margin-top: 100px;" class="traveller">
+          <div class="col-lg-12">
+            <div class="heading-section" data-aos="fade-up">
+                <h2 style="text-align: center;" data-aos="fade-up" data-aos-delay="200">наш мадрівник</h2>
+                <h5 style="text-align: center;" data-aos="fade-up" data-aos-delay="300">Хто він?</h5>
+            </div>
+          </div>
+          <div class="overall" data-aos="fade-up" data-aos-delay="400">
+            <div class="textInside">
+              <div class="textandicon" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+                <img src="/assets/images/home/logo-head.svg" alt="" data-aos="zoom-in" data-aos-delay="300">
+                <p data-aos="fade-up" data-aos-delay="400">Інтелектуал, який полюбляє сенсовий відпочинок</p>
+              </div>
+              <div class="textandicon" data-aos="fade-right" data-aos-delay="300" data-aos-duration="800">
+                <img src="/assets/images/home/logo-scale.svg" alt="" data-aos="zoom-in" data-aos-delay="400">
+                <p data-aos="fade-up" data-aos-delay="500">Людина з глибокими цінностями, яка мислить, цінує спокій та натхнення</p>
+              </div>
+            <div class="textandicon" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800">
+              <img src="/assets/images/home/logo-dove.svg" alt="" data-aos="zoom-in" data-aos-delay="500">
+              <p data-aos="fade-up" data-aos-delay="600">Паломник, якому важлива віра та духовність </p>
+            </div>
+            <div class="textandicon" data-aos="fade-right" data-aos-delay="500" data-aos-duration="800">
+              <img src="/assets/images/home/logo-family.svg" alt="" data-aos="zoom-in" data-aos-delay="600">
+              <p data-aos="fade-up" data-aos-delay="700">Сім'я, для якої щастя  - це миті проведені разом</p>
+            </div> <div id="mandrivnuky2" class="textandicon" data-aos="fade-right" data-aos-delay="600" data-aos-duration="800">
+              <img src="/assets/images/home/logo-tree.svg" alt="" data-aos="zoom-in" data-aos-delay="700">
+              
+              <p data-aos="fade-up" data-aos-delay="800">Кожен, хто стомився від міської суєти й потребує тиші та умиротворення </p>
+             
+            </div>
+            
+          </div>
+          </div>
+            
+        </div>
+        </section>
+        <section class="whatToDo">
+          <div id="mandrivnuky" class="col-lg-12">
+            <div class="heading-section" data-aos="fade-up" data-aos-duration="800">
+                <h2 style="text-align: center;" data-aos="fade-up" data-aos-delay="200">Мандрівнику</h2>
+            </div>
+
+            <div class="mosaic">
+              <a href="/#pictograms" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+               <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+                  <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"/>
+                  <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
+                </svg>
+                <div class="textbox">
+                  <h3>Місця</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="/pages/travallerInfo/" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+               <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bus-front" viewBox="0 0 16 16">
+                  <path d="M5 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0m8 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-6-1a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2zm1-6c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9s3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44 44 0 0 0 8 4m0-1c-1.837 0-3.353.107-4.448.22a.5.5 0 1 1-.104-.994A44 44 0 0 1 8 2c1.876 0 3.426.109 4.552.226a.5.5 0 1 1-.104.994A43 43 0 0 0 8 3"/>
+                  <path d="M15 8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1V2.64c0-1.188-.845-2.232-2.064-2.372A44 44 0 0 0 8 0C5.9 0 4.208.136 3.064.268 1.845.408 1 1.452 1 2.64V4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v3.5c0 .818.393 1.544 1 2v2a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5V14h6v1.5a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-2c.607-.456 1-1.182 1-2zM8 1c2.056 0 3.71.134 4.822.261.676.078 1.178.66 1.178 1.379v8.86a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5V2.64c0-.72.502-1.301 1.178-1.379A43 43 0 0 1 8 1"/>
+                </svg>
+                  <div class="textbox">
+                  <h3>Як доїхати</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="/pages/travallerInfo/#excursionLink" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 80a48 48 0 1 1 96 0A48 48 0 1 1 48 80zM0 224c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l0 224 32 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l32 0 0-192-32 0c-17.7 0-32-14.3-32-32z"/></svg>
+                <div class="textbox">
+                  <h3>Замовлення екскурсій</h3>
+                </div>
+              </div>
+            </a>
+            <a target="_blank" href="https://www.google.com/maps/d/edit?mid=1WNo2d_-1vdkK8DdIslOosoCI8bnCVFY&ll=50.81006391314466%2C25.30231281195603&z=19" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 576 512" fill="currentColor"><path d="M408 120c0 54.6-73.1 151.9-105.2 192c-7.7 9.6-22 9.6-29.6 0C241.1 271.9 168 174.6 168 120C168 53.7 221.7 0 288 0s120 53.7 120 120zm8 80.4c3.5-6.9 6.7-13.8 9.6-20.6c.5-1.2 1-2.5 1.5-3.7l116-46.4C558.9 123.4 576 135 576 152l0 270.8c0 9.8-6 18.6-15.1 22.3L416 503l0-302.6zM137.6 138.3c2.4 14.1 7.2 28.3 12.8 41.5c2.9 6.8 6.1 13.7 9.6 20.6l0 251.4L32.9 502.7C17.1 509 0 497.4 0 480.4L0 209.6c0-9.8 6-18.6 15.1-22.3l122.6-49zM327.8 332c13.9-17.4 35.7-45.7 56.2-77l0 249.3L192 449.4 192 255c20.5 31.3 42.3 59.6 56.2 77c20.5 25.6 59.1 25.6 79.6 0zM288 152a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                <div class="textbox">
+                  <h3>Карта об'єктів</h3>
+                </div>
+              </div>
+            </a>
+            <a href="/pages/schedule/" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar2-check" viewBox="0 0 16 16">
+                  <path d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                  <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+                <div class="textbox">
+                  <h3>Розклад богослужінь</h3>
+                </div>
+              </div>
+            </a>
+
+            <a href="/pages/events/" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M287.9 0c9.2 0 17.6 5.2 21.6 13.5l68.6 141.3 153.2 22.6c9 1.3 16.5 7.6 19.3 16.3s.5 18.1-5.9 24.5L433.6 328.4l26.2 155.6c1.5 9-2.2 18.1-9.7 23.5s-17.3 6-25.3 1.7l-137-73.2L151 509.1c-8.1 4.3-17.9 3.7-25.3-1.7s-11.2-14.5-9.7-23.5l26.2-155.6L31.1 218.2c-6.5-6.4-8.7-15.9-5.9-24.5s10.3-14.9 19.3-16.3l153.2-22.6L266.3 13.5C270.4 5.2 278.7 0 287.9 0zm0 79L235.4 187.2c-3.5 7.1-10.2 12.1-18.1 13.3L99 217.9 184.9 303c5.5 5.5 8.1 13.3 6.8 21L171.4 443.7l105.2-56.2c7.1-3.8 15.6-3.8 22.6 0l105.2 56.2L384.2 324.1c-1.3-7.7 1.2-15.5 6.8-21l85.9-85.1L358.6 200.5c-7.8-1.2-14.6-6.1-18.1-13.3L287.9 79z"/></svg>                <div class="textbox">
+                  <h3>Події</h3>
+                </div>
+              </div>
+            </a> 
+          
+           
+            <a href="/pages/travallerInfo/#livingLink" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M32 32c17.7 0 32 14.3 32 32l0 256 224 0 0-160c0-17.7 14.3-32 32-32l224 0c53 0 96 43 96 96l0 224c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-32-224 0-32 0L64 416l0 32c0 17.7-14.3 32-32 32s-32-14.3-32-32L0 64C0 46.3 14.3 32 32 32zm144 96a80 80 0 1 1 0 160 80 80 0 1 1 0-160z"/></svg>                <div class="textbox">
+                  <h3>Проживання</h3>
+                </div>
+              </div>
+            </a> 
+
+            <a href="/pages/travallerInfo/#nutritionLink" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 512" fill="currentColor"><path d="M416 0C400 0 288 32 288 176l0 112c0 35.3 28.7 64 64 64l32 0 0 128c0 17.7 14.3 32 32 32s32-14.3 32-32l0-128 0-112 0-208c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7L80 480c0 17.7 14.3 32 32 32s32-14.3 32-32l0-224.4c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16l0 134.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8L64 16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+                <div class="textbox">
+                  <h3>Де поїсти</h3>
+                </div>
+              </div>
+            </a> 
+
+            <a href="/pages/travallerInfo/#accessibility" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000">
+              <div class="panel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M192 96a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM120.5 247.2c12.4-4.7 18.7-18.5 14-30.9s-18.5-18.7-30.9-14C43.1 225.1 0 283.5 0 352c0 88.4 71.6 160 160 160c61.2 0 114.3-34.3 141.2-84.7c6.2-11.7 1.8-26.2-9.9-32.5s-26.2-1.8-32.5 9.9C240 440 202.8 464 160 464C98.1 464 48 413.9 48 352c0-47.9 30.1-88.8 72.5-104.8zM259.8 176l-1.9-9.7c-4.5-22.3-24-38.3-46.8-38.3c-30.1 0-52.7 27.5-46.8 57l23.1 115.5c6 29.9 32.2 51.4 62.8 51.4l5.1 0c.4 0 .8 0 1.3 0l94.1 0c6.7 0 12.6 4.1 15 10.4L402 459.2c6 16.1 23.8 24.6 40.1 19.1l48-16c16.8-5.6 25.8-23.7 20.2-40.5s-23.7-25.8-40.5-20.2l-18.7 6.2-25.5-68c-11.7-31.2-41.6-51.9-74.9-51.9l-68.5 0-9.6-48 63.4 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-76.2 0z"/></svg>
+                <div class="textbox">
+                  <h3>Доступність</h3>
+                </div>
+              </div>
+            </a> 
+            </div>
+          </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="//instant.page/5.2.0" type="module" integrity="sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z"></script>
+    <script src="../../assets/js/commonPlaces.js"></script>
+    
+    <!-- AOS JavaScript бібліотека для анімацій при скролінгу -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Ініціалізація AOS
+        AOS.init({
+            offset: 120, // зміщення в пікселях 
+            delay: 0, // час затримки
+            duration: 800, // тривалість анімації
+            easing: 'ease', // ефект переходу
+            once: true, // чи анімувати елементи лише один раз
+            mirror: false, // чи анімувати елементи при прокрутці вгору
+            anchorPlacement: 'top-bottom', // прив'язка відносно вікна перегляду
+           // disable: 'mobile' // відключити на мобільних пристроях, якщо є проблеми
+        });
+        
+        // Підтримка правильних розмірів при завантаженні та зміні розміру вікна
+        window.addEventListener('load', function() {
+            AOS.refresh();
+        });
+        
+        window.addEventListener('resize', function() {
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
