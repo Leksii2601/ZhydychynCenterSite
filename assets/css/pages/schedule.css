@@ -128,7 +128,7 @@ hr{
     position: absolute;
     left: 50%;
     top: 40%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
     font-size: 90px;
     text-transform: uppercase;
     font-weight: 500;
@@ -137,6 +137,17 @@ hr{
     text-align: center;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
+}
+.animation-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Ensure no animations can break outside the container */
+[data-aos] {
+    transform-origin: center center;
+    backface-visibility: hidden;
 }
 
 
