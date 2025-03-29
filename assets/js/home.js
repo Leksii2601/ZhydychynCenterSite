@@ -55,59 +55,59 @@ window.addEventListener("scroll", function () {
   });
 });
 
-$(document).ready(function() {
-  // Ініціалізуємо marquee з оптимальними налаштуваннями
-  $('#marquee').marquee({
-      // Швидкість прокрутки (менше число = швидше)
-      duration: 30000,
-      // Важливо: встановлюємо нульовий проміжок між копіями
-      gap: 0,
-      // Плавна зупинка при наведенні
-      pauseOnHover: true,
-      // Без затримки перед початком
-      delayBeforeStart: 0,
-      // Напрямок прокрутки
-      direction: 'left',
-      // Лінійний рух для плавності
-      easing: 'linear',
-      // КРИТИЧНО для безперервної анімації
-      duplicated: true,
-      // Починаємо з видимим вмістом
-      startVisible: true,
-      // Використовуємо CSS3 для кращої продуктивності
-      css3: true
-  });
+// Оновлення коду анімації партнерів
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.partners-track');
   
-  // Змінні для зберігання швидкостей
-  var originalSpeed = 30000;
-  var slowDownSpeed = 150000;
-  
-  // Налаштовуємо плавне сповільнення при наведенні
-  $('.marquee-container').on('mouseenter', function() {
-      $('#marquee').marquee('option', 'duration', slowDownSpeed);
-  }).on('mouseleave', function() {
-      $('#marquee').marquee('option', 'duration', originalSpeed);
-  });
-  
-  // Адаптуємо швидкість для різних екранів
-  function updateSpeed() {
-      originalSpeed = window.innerWidth <= 768 ? 25000 : 30000;
-      slowDownSpeed = originalSpeed * 5;
-      
-      if (!$('.marquee-container:hover').length) {
-          $('#marquee').marquee('option', 'duration', originalSpeed);
+  // Забезпечуємо правильну ширину контейнера для безперервного прокручування
+  function setupInfiniteScroll() {
+    // Отримуємо загальну ширину всіх оригінальних елементів
+    const originalWidth = Array.from(track.children)
+      .slice(0, track.children.length / 2) // тільки оригінальні елементи
+      .reduce((width, item) => width + item.offsetWidth, 0);
+    
+    // Встановлюємо CSS змінну для анімації
+    document.documentElement.style.setProperty('--scroll-width', `-${originalWidth}px`);
+    
+    // Оновлюємо keyframes анімації
+    const keyframes = `
+      @keyframes scrollPartners {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(var(--scroll-width)); }
       }
+    `;
+    
+    // Додаємо або оновлюємо стиль
+    let styleEl = document.getElementById('partners-keyframes');
+    if (!styleEl) {
+      styleEl = document.createElement('style');
+      styleEl.id = 'partners-keyframes';
+      document.head.appendChild(styleEl);
+    }
+    styleEl.textContent = keyframes;
+    
+    // Налаштування швидкості анімації
+    const screenWidth = window.innerWidth;
+    let duration = 40; // базова швидкість
+    
+    if (screenWidth < 768) {
+      duration = 30; // швидше на мобільних
+    }
+    
+    // Застосовуємо оптимальну швидкість
+    track.style.animationDuration = `${duration}s`;
   }
   
-  // Викликаємо при завантаженні і зміні розміру
-  updateSpeed();
-  $(window).on('resize', updateSpeed);
+  // Запускаємо налаштування
+  setupInfiniteScroll();
+  window.addEventListener('resize', setupInfiniteScroll);
   
-  // Прибираємо будь-які transition для уникнення дьоргання
-  setTimeout(function() {
-      $('.js-marquee-wrapper').css({
-          'transition': 'none !important',
-          'animation-timing-function': 'linear !important'
-      });
-  }, 100);
+  // Додаємо паузу при наведенні
+  track.addEventListener('mouseenter', () => {
+    track.style.animationPlayState = 'paused';
+  });
+  
+  track.addEventListener('mouseleave', () => {
+    track.style.animationPlayState = 'running';
+  });
 });

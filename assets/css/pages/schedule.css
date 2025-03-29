@@ -322,7 +322,12 @@ hr{
         padding: 12px;
         bottom: -15px;
         left: auto;
-        
+    }
+    .excursion-text {
+        padding: 20px 0 0 47px;
+    }
+    .excursion-text::before {
+        left: 35px !important;
     }
     .excursion-container:nth-of-type(even) .excursion-caption {
         right: auto;
@@ -341,7 +346,7 @@ hr{
     
     .excursion-text {
         width: 100%;
-        padding: 25px 20px;
+       
         margin-left: 0;
         margin-top: 40px;
         
@@ -365,6 +370,7 @@ hr{
     
     .excursion-text li {
         margin-bottom: 10px;
+        text-align: left;
     }
     .heading img {
         height: 400px;
@@ -382,9 +388,6 @@ hr{
 }
 
 @media (max-width: 375px) {
-    .excursion-text {
-        padding: 20px 15px;
-    }
     
     .excursion-text ul {
         font-size: 14px;
@@ -395,10 +398,11 @@ hr{
     
     .excursion-info {
         gap: 10px;
-        text-align: left;
+      
         align-items: flex-start;
         width: 100%;
     }
+   
 
     .excursion-text li {
         text-align: left;
