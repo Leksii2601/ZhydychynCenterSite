@@ -1,1 +1,1 @@
-Site for Zhydychyn center: zhydychyn.center
+Site for Zhydychyn center: https://zhydychyn.center/
